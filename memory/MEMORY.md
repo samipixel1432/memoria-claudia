@@ -9,3 +9,4 @@
 - [Tovelya WhatsApp](reference_tovelya_whatsapp.md) — 322 vs 323 still unconfirmed; Meta Ads only has a +1 555 test number
 - [Hainrixz skill packs](reference_hainrixz_skills.md) — 7 plugins + 2 project folders installed 2026-10-19, how to start each
 - [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT Plus account; use codex.cmd on Windows
+- [Working from the cloud](reference_sesion_nube.md) — repo setup, available connectors/skills, local scripts not there; pull on PC before working
