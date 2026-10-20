@@ -1,0 +1,11 @@
+- [Samuel](user_samuel.md) — store owner, plain Spanish, not a programmer, wants Claude to do the whole job
+- [Memory lives on GitHub](reference_memoria_github.md) — samipixel1432/memoria-claudia; save new memories there and push
+- [Tovelya Shopify + installed skills](project_tovelya_shopify_skills.md) — Shopify COD store context, 7 skills installed in .claude/skills
+- [Use installed dropshipping skills](feedback_use_installed_dropshipping_skills.md) — always invoke the matching skill instead of improvising
+- [Always send the store link](feedback_always_send_store_link.md) — include it after every published change, unprompted
+- [Landing: add CTAs, don't remove](feedback_landing_add_ctas_dont_remove.md) — replace distracting blocks with selling sections; keep the page long
+- [Neon floating icons](feedback_neon_floating_icons.md) — neon only for benefits/steps; color by function (orange CTA, blue trust, gold savings)
+- [Cepillo v2 is live](project_cepillo_v2_live.md) — brush page uses template product.cepillo-v2; check templateSuffix before editing
+- [Tovelya WhatsApp](reference_tovelya_whatsapp.md) — 322 vs 323 still unconfirmed; Meta Ads only has a +1 555 test number
+- [Hainrixz skill packs](reference_hainrixz_skills.md) — 7 plugins + 2 project folders installed 2026-10-19, how to start each
+- [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT Plus account; use codex.cmd on Windows
