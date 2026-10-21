@@ -8,3 +8,5 @@ metadata:
 Samuel owns and runs Tovelya (Shopify COD dropshipping, Colombia). He writes fast, informal Spanish with typos and wants answers in plain Spanish without jargon. He is not a programmer.
 
 He prefers that Claude does the whole job itself ("haz todo lo que tengas que hacer, tienes acceso a todo", 2026-10-19) instead of handing him steps, and only asks for his help where he must act himself (payments, logins, passwords).
+
+**Keep answers SHORT.** On 2026-10-21 he wrote in capitals "RESPONDEME CORTO SIN MUCHO TEXTO" after a long answer. A few lines, the verdict first, no long lists or caveats unless he asks.

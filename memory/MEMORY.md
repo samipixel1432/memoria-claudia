@@ -1,4 +1,4 @@
-- [Samuel](user_samuel.md) — store owner, plain Spanish, not a programmer, wants Claude to do the whole job
+- [Samuel](user_samuel.md) — store owner, plain Spanish, not a programmer, wants Claude to do the whole job; SHORT answers
 - [Memory lives on GitHub](reference_memoria_github.md) — samipixel1432/memoria-claudia; save new memories there and push
 - [Tovelya Shopify + installed skills](project_tovelya_shopify_skills.md) — Shopify COD store context, 7 skills installed in .claude/skills
 - [Use installed dropshipping skills](feedback_use_installed_dropshipping_skills.md) — always invoke the matching skill instead of improvising
