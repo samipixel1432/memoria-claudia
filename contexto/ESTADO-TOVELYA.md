@@ -8,7 +8,7 @@
   - El formulario muestra **envío gratis**; total del cepillo $129.900.
 - Proveedor principal: Premier (API de catálogo en `premier.optimalabsconsulting.com/api/zapatos`).
 - Fórmula de precio (de `shopify/sync-premier-catalog.ps1`): `(costo + 22000 + 18000 + 2000) / 0.75`, redondeado hacia arriba a …9.900.
-- WhatsApp oficial: **+57 322 601 8352** (confirmado por Samuel el 2026-10-21). Pendiente: el +57 323 255 2543 sigue en el inicio, en la landing del cepillo y en Meta; hay que cambiarlo por el 322.
+- WhatsApp oficial: **+57 323 255 2543** (confirmado por Samuel el 2026-10-21). Ya está en el inicio, en la landing del cepillo y en Meta. Pendiente: las políticas todavía tienen el +57 322 601 8352; hay que cambiarlo por el 323.
 
 ## Cómo se trabaja la tienda (desde el proyecto local)
 - Carpeta del proyecto: `C:\Users\PC\OneDrive\Documentos\ChatGPT\1proyecto_shopifu` (repositorio git local, **sin remoto en GitHub**).
