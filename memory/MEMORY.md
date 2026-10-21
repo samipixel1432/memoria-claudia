@@ -10,3 +10,4 @@
 - [Hainrixz skill packs](reference_hainrixz_skills.md) — 7 plugins on PC (2026-10-19) and in the cloud via repo settings (2026-10-21), how to start each
 - [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT Plus account; use codex.cmd on Windows
 - [Working from the cloud](reference_sesion_nube.md) — repo setup, available connectors/skills, local scripts not there; pull on PC before working
+- [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files
