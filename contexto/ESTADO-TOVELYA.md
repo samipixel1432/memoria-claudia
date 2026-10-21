@@ -1,4 +1,4 @@
-# Estado de Tovelya (actualizado 2026-10-19)
+# Estado de Tovelya (actualizado 2026-10-21)
 
 ## La tienda
 - Shopify: `tovelya-store.myshopify.com` (dominio permanente `kh0tp1-dp.myshopify.com`). Pago contra entrega (COD) en Colombia.
@@ -8,7 +8,7 @@
   - El formulario muestra **envío gratis**; total del cepillo $129.900.
 - Proveedor principal: Premier (API de catálogo en `premier.optimalabsconsulting.com/api/zapatos`).
 - Fórmula de precio (de `shopify/sync-premier-catalog.ps1`): `(costo + 22000 + 18000 + 2000) / 0.75`, redondeado hacia arriba a …9.900.
-- WhatsApp: hay dos números en uso y **falta que Samuel confirme cuál es el oficial**: +57 322 601 8352 (políticas; la memoria lo da como el real) y +57 323 255 2543 (en el inicio, en la landing del cepillo y en Meta).
+- WhatsApp oficial: **+57 322 601 8352** (confirmado por Samuel el 2026-10-21). Pendiente: el +57 323 255 2543 sigue en el inicio, en la landing del cepillo y en Meta; hay que cambiarlo por el 322.
 
 ## Cómo se trabaja la tienda (desde el proyecto local)
 - Carpeta del proyecto: `C:\Users\PC\OneDrive\Documentos\ChatGPT\1proyecto_shopifu` (repositorio git local, **sin remoto en GitHub**).
@@ -51,9 +51,8 @@
 - **Codex para terminal** (`@openai/codex` 0.163.0), instalado el 2026-10-19 para generar imágenes con la cuenta de ChatGPT Plus de Samuel. En PowerShell se usa `codex.cmd`, porque Windows bloquea los `.ps1`. Al cerrar la sesión, el inicio de sesión (`codex.cmd login`) estaba en curso y sin confirmar.
 
 ## Preguntas abiertas para Samuel
-1. ¿Cuál WhatsApp es el oficial: 322 o 323?
-2. Bomba de vacío: la landing vende solo BLANCO a $119.900, pero en Shopify existen NEGRO y "Única" a $109.900, con precio tachado de $149.900. ¿Cuál es la oferta real?
-3. La landing de la bomba muestra "Ref. Premier 1454" al cliente: ¿se quita?
-4. El peluche y el traje impermeable no están en ninguna categoría.
-5. Precio del peluche: $99.900 (el mercado está entre $55.000 y $69.900).
-6. Confirmar con Premier el stock y el costo del TPMS (ref 1633) y del compresor (ref 1581).
+1. Bomba de vacío: la landing vende solo BLANCO a $119.900, pero en Shopify existen NEGRO y "Única" a $109.900, con precio tachado de $149.900. ¿Cuál es la oferta real?
+2. La landing de la bomba muestra "Ref. Premier 1454" al cliente: ¿se quita?
+3. El peluche y el traje impermeable no están en ninguna categoría.
+4. Precio del peluche: $99.900 (el mercado está entre $55.000 y $69.900).
+5. Confirmar con Premier el stock y el costo del TPMS (ref 1633) y del compresor (ref 1581).

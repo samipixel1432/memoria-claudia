@@ -1,6 +1,6 @@
 ---
 name: reference-tovelya-whatsapp
-description: "Tovelya's real WhatsApp number is +57 322 601 8352 (the \"322\"); Meta Ads only has a +1 555 test number connected"
+description: "Tovelya's official WhatsApp is +57 322 601 8352 (confirmed 2026-10-21); the 323 number still appears on the home page, the brush landing and Meta"
 metadata:
   node_type: memory
   type: reference
@@ -8,7 +8,7 @@ metadata:
   modified: 2026-10-09T02:33:12.969Z
 ---
 
-Open question (2026-10-19): the homepage, the brush landing and Meta use +57 323 255 2543, while the policies use 322. Ask Samuel which one is official before changing either.
+On 2026-10-21 Samuel confirmed the official number is the **322** (+57 322 601 8352). As of 2026-10-19 the homepage, the brush landing and Meta still used +57 323 255 2543; those should be switched to the 322.
 
 Tovelya's real customer WhatsApp (as of 2026-10-08): **+57 322 601 8352** (wa.me/573226018352, used in the theme footer/home). The user calls it "el 322".
 
