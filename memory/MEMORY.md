@@ -11,4 +11,5 @@
 - [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT plan; works in the cloud (CA env var + device login code)
 - [Working from the cloud](reference_sesion_nube.md) — repo setup, available connectors/skills, local scripts not there; pull on PC before working
 - [Shopify from the cloud](reference_shopify_desde_nube.md) — tested recipe: Codex images → staged upload → edit a theme copy (MAIN is write-blocked) → Samuel publishes
+- [Landing: clear and simple](feedback_landing_clara_y_simple.md) — say what it is and what it's for in plain words; uses with photos right after the videos
 - [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files

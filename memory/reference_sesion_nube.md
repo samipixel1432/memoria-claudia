@@ -13,5 +13,7 @@ In the cloud:
 - Connectors seen in the session: Shopify, Meta (ads), Canva and Claude Docs. Meta showing up here does not mean the Tovelya Ads account is reachable; check before promising.
 - Skills seen: `landing-cro` (sales landing from one URL, single HTML) and `landing-a-secciones` (HTML landing → Shopify Dawn `.liquid` sections). The Moni Makers skills (`landing-basica`, `validador-producto-basico`, `combos-cod-basico`, `politicas-legales-basico`, `youtube-research-basico`, `direct-ads`, `indirect-ads`) live only on the PC, so they are not there (checked 2026-10-21). The Hainrixz plugins are now in the cloud too, see [[reference-hainrixz-skills]]; they load only in a session started on (or after a reload with) this repo. To bring the Moni Makers skills to the cloud, copy their folders from the PC project's `.claude/skills/` into this repo's `.claude/skills/` and push: every session that clones this repo then loads them.
 
+- A cloud session cannot control Samuel's PC (no computer-use tools, checked 2026-10-21), and the Shopify connector cannot publish themes. Publishing a theme copy is always his click.
+
 **Why:** Samuel wants to switch devices and keep the same memory.
 **How to apply:** on the PC, run `git pull` in the `memoria-claudia` copy before working, since cloud sessions push too. See [[reference-memoria-github]].
