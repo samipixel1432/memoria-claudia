@@ -8,6 +8,6 @@
 - [Cepillo v2 is live](project_cepillo_v2_live.md) — brush page uses template product.cepillo-v2; check templateSuffix before editing
 - [Tovelya WhatsApp](reference_tovelya_whatsapp.md) — official is 323 (confirmed 2026-10-21); policies still show the old 322
 - [Hainrixz skill packs](reference_hainrixz_skills.md) — 7 plugins on PC (2026-10-19) and in the cloud via repo settings (2026-10-21), how to start each
-- [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT Plus account; use codex.cmd on Windows
+- [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT plan; works in the cloud (CA env var + device login code)
 - [Working from the cloud](reference_sesion_nube.md) — repo setup, available connectors/skills, local scripts not there; pull on PC before working
 - [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files
