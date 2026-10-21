@@ -1,0 +1,55 @@
+{
+  "enabledPlugins": {
+    "claude-ads@tododeia-claude-ads": true,
+    "creative-architect@creative-architect": true,
+    "claude-seo-ai@claude-seo-ai": true,
+    "motion-architect@motion-architect": true,
+    "jarvis-architect@jarvis-architect": true,
+    "the-architect@soyenriquerocha": true,
+    "matriz-viralidad@matriz-viralidad": true
+  },
+  "extraKnownMarketplaces": {
+    "tododeia-claude-ads": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/claude-ads"
+      }
+    },
+    "creative-architect": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/creative-architect"
+      }
+    },
+    "claude-seo-ai": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/claude-seo-ai"
+      }
+    },
+    "motion-architect": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/motion-architect"
+      }
+    },
+    "jarvis-architect": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/jarvis-architect"
+      }
+    },
+    "soyenriquerocha": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/the-architect"
+      }
+    },
+    "matriz-viralidad": {
+      "source": {
+        "source": "github",
+        "repo": "Hainrixz/matriz-viralidad"
+      }
+    }
+  }
+}

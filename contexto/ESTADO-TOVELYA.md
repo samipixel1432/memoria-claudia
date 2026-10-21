@@ -46,8 +46,9 @@
   - Imágenes livianas en el inicio; productos asignados a sus categorías.
 - Pendiente: una página "Quiénes somos", razón social/NIT, garantía y especificaciones por producto, testimonios.
 
-## Herramientas instaladas en el computador
-- Plugins de Hainrixz: claude-ads, creative-architect, claude-seo-ai, motion-architect, jarvis-architect, the-architect, matriz-viralidad (ver la nota `reference_hainrixz_skills.md`).
+## Herramientas instaladas
+- En la nube (desde 2026-10-21): los 7 plugins de Hainrixz se instalan solos en cualquier sesión abierta sobre este repositorio (`.claude/settings.json`). Las skills de Moni Makers todavía no están en la nube.
+- En el computador: plugins de Hainrixz: claude-ads, creative-architect, claude-seo-ai, motion-architect, jarvis-architect, the-architect, matriz-viralidad (ver la nota `reference_hainrixz_skills.md`).
 - **Codex para terminal** (`@openai/codex` 0.163.0), instalado el 2026-10-19 para generar imágenes con la cuenta de ChatGPT Plus de Samuel. En PowerShell se usa `codex.cmd`, porque Windows bloquea los `.ps1`. Al cerrar la sesión, el inicio de sesión (`codex.cmd login`) estaba en curso y sin confirmar.
 
 ## Preguntas abiertas para Samuel
