@@ -10,4 +10,5 @@
 - [Hainrixz skill packs](reference_hainrixz_skills.md) — 7 plugins on PC (2026-10-19) and in the cloud via repo settings (2026-10-21), how to start each
 - [Codex CLI for images](reference_codex_cli_images.md) — generates images with the ChatGPT plan; works in the cloud (CA env var + device login code)
 - [Working from the cloud](reference_sesion_nube.md) — repo setup, available connectors/skills, local scripts not there; pull on PC before working
+- [Shopify from the cloud](reference_shopify_desde_nube.md) — tested recipe: Codex images → staged upload → edit a theme copy (MAIN is write-blocked) → Samuel publishes
 - [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files

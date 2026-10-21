@@ -14,5 +14,7 @@ Demo videos are stored as Shopify Files (`tovelya-cepillo-video-*.mp4`) and refe
 
 Update 2026-10-19: the order form is now EasySell (Releasit was uninstalled). Copy, order and sections are set by `shopify/deploy-cepillo-landing-v3.py`, which re-reads the live template and can be re-run. It adds the "oferta" and "comopedir" sections and hides the FAQ and the 2-pack. Current state is in `contexto/ESTADO-TOVELYA.md`.
 
+Update 2026-10-21 (cloud): new photos and real head names went into the theme copy `181838774519`, waiting for Samuel to publish it (see `contexto/ESTADO-TOVELYA.md`, recipe in [[reference-shopify-desde-nube]]). Until it is published, do not edit the live brush template (including re-running `deploy-cepillo-landing-v3.py` on the PC): that change would be lost when the copy is published. After it is published, that copy *is* the live theme and its id becomes the MAIN id.
+
 **Why:** on 2026-10-05 I edited the old section first and the change wasn't visible because the product had already been switched to the v2 template.
 **How to apply:** before editing the brush landing, check the product's `templateSuffix` through the Admin API and edit the `tovelya-cepillo-v2-*` sections and template. Deploy pattern: `shopify/deploy-cepillo-v2-videos.py`. See [[project-tovelya-shopify-skills]].

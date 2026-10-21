@@ -18,13 +18,19 @@
 - Commits: `git -c user.name="Samuel" -c user.email="<su correo>" commit`, con la línea `Co-Authored-By: Claude`.
 - En el computador hay un hook (plugin matriz-viralidad) que bloquea comandos con `.env`, `.*` en regex, `python -c`, `node -e`, `env` o `printenv`: escribir scripts en archivos.
 
+## Cómo se trabaja la tienda desde la nube
+Ver la nota `memory/reference_shopify_desde_nube.md`: subir imágenes, editar plantillas en una copia del tema (el conector no deja escribir en el tema en vivo) y revisar en celular con `herramientas/captura.mjs`.
+
 ## Landings
 - Sistema v2: plantillas `templates/product.<sufijo>.json` hechas con secciones `sections/tovelya-cepillo-v2-*`. Antes de editar una landing, revisar el `templateSuffix` del producto.
 - **Cepillo eléctrico** (`cepillo-electrico-recargable-7-en-1`, plantilla `cepillo-v2`). Reformada el 2026-10-19 con `shopify/deploy-cepillo-landing-v3.py`:
   - Título "Limpia el baño sin arrodillarte" (igual al anuncio ganador del video en la ducha).
   - Orden: inicio → video → pedido → confianza → beneficios → antes/ahora → lo que recibes → cabezales → **oferta** (nueva) → cómo se usa → **cómo pedir en 3 pasos** (nueva) → $0 pago adelantado → cierre. Hay 8 botones de pedir.
   - Las preguntas frecuentes y el pack de 2 quedaron ocultos (no borrados). Samuel dijo que las preguntas distraen y pidió más llamados a la acción, **no quitar secciones**.
-  - Falta: testimonios reales de clientes (no inventar reseñas). La foto principal en celular se ve cortada arriba.
+  - Falta: testimonios reales de clientes (no inventar reseñas).
+  - **Fotos nuevas (2026-10-21, desde la nube)**: 15 fotos hechas con Codex/ChatGPT a partir de la foto real del kit, sin texto horneado, todas cuadradas (archivos `tovelya-cepillo-v3-*.jpg` en Shopify Files). La foto principal ya no se corta en celular (en celular el hero se ve en 4:3). Los 7 cabezales ahora tienen su nombre real (cerdas largas, domo, cerdas cortas, fibra verde, fibra azul, esponja, fibra gris) y su propia foto; antes decían "Juntas", "Esquinas", etc. y repetían fotos.
+  - **Esos cambios están en el tema copia `Tovelya - cepillo fotos nuevas 2026-10-21` (`gid://shopify/OnlineStoreTheme/181838774519`), SIN PUBLICAR.** Samuel tiene que publicarlo (Tienda online → Temas → Publicar). Se copió del tema en vivo el 2026-10-21 02:36 UTC: si se editó el tema en vivo después, al publicar la copia se pierde ese cambio. Respaldo del antes/después en `respaldos/`.
+  - Galería del producto (en vivo): se agregaron 7 fotos v3 y se quitó la `10-oferta-final` porque decía "$119.900 pago anticipado", que contradice "no pagas nada ahora" (el archivo sigue en Files).
 - Otros productos activos con landing: trapero, bomba de vacío, compresor/arrancador, mini proyector, inflador 4 en 1, hidrolavadora, camisilla térmica, faja, soporte térmico de hombro, chaleco postural, CarPlay para moto, traje impermeable, báscula, trampolín, robot limpiador, cepillo de cocina, monitor TPMS, peluche de Jesús (rojo/azul).
 - Peluche de Jesús: las imágenes nuevas se generan con los prompts de `assets/products/peluche-jesus/landing/PROMPTS-CODEX.md`. Cuando estén en `.../landing/generated/`, se suben con `shopify/deploy-peluche-jesus-images.py`.
 
