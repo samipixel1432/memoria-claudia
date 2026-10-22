@@ -9,6 +9,7 @@
 .tov-img__fig{ margin: 0; overflow: hidden; border-radius: var(--tov-img-radio); opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .tov-img__fig.is-visible{ opacity: 1; transform: none; }
 .tov-img__fig img{ display: block; width: 100%; height: auto; }
+.tov-img__link{ display: block; }
 .tov-img__cta{ padding: 20px 16px 28px; text-align: center; }
 .tov-img__btn{ display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 58px; padding: 0 20px; border-radius: 999px; background: linear-gradient(180deg, var(--tov-img-cta-1), var(--tov-img-cta-2)); color: var(--tov-img-cta-texto); font-family: inherit; font-weight: 700; font-size: 17px; line-height: 1.1; text-decoration: none; box-shadow: 0 10px 24px rgba(255, 138, 31, .28); transition: transform .15s ease; white-space: nowrap; }
 .tov-img__btn:active{ transform: scale(.98); }
@@ -39,12 +40,15 @@
         {%- when 'imagen' -%}
           {%- if block.settings.imagen != blank -%}
             <figure class="tov-img__fig" {{ block.shopify_attributes }}>
+              {%- if block.settings.enlace != blank -%}<a href="{{ block.settings.enlace }}" class="tov-img__link">{%- endif -%}
               {{ block.settings.imagen | image_url: width: 1080 | image_tag: loading: 'lazy', widths: '540, 720, 1080', sizes: '(min-width: 750px) 620px, 100vw', alt: block.settings.alt }}
+              {%- if block.settings.enlace != blank -%}</a>{%- endif -%}
             </figure>
           {%- endif -%}
         {%- when 'boton' -%}
           <div class="tov-img__cta" {{ block.shopify_attributes }}>
-            <a class="tov-img__btn" href="#comprar" data-tov-img-cta>
+            {%- comment -%} Sin enlace: abre el formulario de pago contra entrega. Con enlace: va a esa página o sección. {%- endcomment -%}
+            <a class="tov-img__btn" href="{{ block.settings.enlace | default: '#comprar' }}"{% if block.settings.enlace == blank %} data-tov-img-cta{% endif %}>
               <span>{{ block.settings.texto }}</span>
               {%- if block.settings.precio != blank -%}<span aria-hidden="true">·</span><span>{{ block.settings.precio }}</span>{%- endif -%}
             </a>
@@ -107,7 +111,8 @@
       "name": "Imagen",
       "settings": [
         { "type": "image_picker", "id": "imagen", "label": "Imagen" },
-        { "type": "text", "id": "alt", "label": "Texto alternativo" }
+        { "type": "text", "id": "alt", "label": "Texto alternativo" },
+        { "type": "text", "id": "enlace", "label": "Enlace al tocar la imagen (opcional)" }
       ]
     },
     {
@@ -116,7 +121,8 @@
       "settings": [
         { "type": "text", "id": "texto", "label": "Texto", "default": "Pedir contra entrega" },
         { "type": "text", "id": "precio", "label": "Precio" },
-        { "type": "text", "id": "nota", "label": "Nota debajo", "default": "Pagas al recibir · Envío gratis" }
+        { "type": "text", "id": "nota", "label": "Nota debajo", "default": "Pagas al recibir · Envío gratis" },
+        { "type": "text", "id": "enlace", "label": "Enlace (vacío = abre el formulario de pedido)" }
       ]
     }
   ],

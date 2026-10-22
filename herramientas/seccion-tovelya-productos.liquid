@@ -1,0 +1,110 @@
+{%- comment -%}
+  Tovelya · Productos de una categoría
+  Tarjetas con foto, nombre, precio y botón. Dos columnas en celular, cuatro en escritorio.
+{%- endcomment -%}
+{% stylesheet %}
+.tov-prod{ background: var(--tov-prod-fondo); color: var(--tov-prod-tinta); padding: var(--tov-prod-pt-m) 16px var(--tov-prod-pb-m); scroll-margin-top: 72px; }
+.tov-prod__in{ max-width: 1240px; margin: 0 auto; }
+.tov-prod__head{ text-align: center; margin-bottom: 22px; }
+.tov-prod__eyebrow{ margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--tov-prod-acento); }
+.tov-prod__title{ margin: 0; font-size: 28px; line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+.tov-prod__title em{ font-style: normal; color: var(--tov-prod-acento); }
+.tov-prod__grid{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tov-prod__card{ display: flex; flex-direction: column; background: var(--tov-prod-tarjeta); border: 1px solid var(--tov-prod-linea); border-radius: 18px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 6px 18px rgba(31, 22, 17, .06); transition: transform .2s ease, box-shadow .2s ease; }
+.tov-prod__card:hover{ transform: translateY(-3px); box-shadow: 0 14px 28px rgba(31, 22, 17, .12); }
+.tov-prod__media{ aspect-ratio: 1 / 1; background: var(--tov-prod-linea); overflow: hidden; }
+.tov-prod__media img{ width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.tov-prod__card:hover .tov-prod__media img{ transform: scale(1.04); }
+.tov-prod__body{ display: flex; flex-direction: column; gap: 6px; padding: 12px 12px 14px; flex: 1; }
+.tov-prod__name{ margin: 0; font-size: 14px; line-height: 1.25; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 35px; }
+.tov-prod__price{ font-size: 17px; font-weight: 800; }
+.tov-prod__cod{ font-size: 12px; color: var(--tov-prod-suave); }
+.tov-prod__btn{ margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 42px; border-radius: 999px; background: linear-gradient(180deg, var(--tov-prod-cta-1), var(--tov-prod-cta-2)); color: var(--tov-prod-cta-texto); font-size: 14px; font-weight: 800; }
+.tov-prod__more{ display: flex; justify-content: center; margin-top: 22px; }
+.tov-prod__more a{ display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; border: 2px solid var(--tov-prod-tinta); color: var(--tov-prod-tinta); font-weight: 800; font-size: 15px; text-decoration: none; }
+@media screen and (min-width: 750px){
+  .tov-prod{ padding: var(--tov-prod-pt) 32px var(--tov-prod-pb); }
+  .tov-prod__title{ font-size: 40px; }
+  .tov-prod__grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .tov-prod__name{ font-size: 15px; }
+}
+@media screen and (min-width: 990px){
+  .tov-prod__grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+}
+@media (prefers-reduced-motion: reduce){ .tov-prod__card, .tov-prod__media img{ transition: none; } }
+{% endstylesheet %}
+
+{%- assign coleccion = section.settings.coleccion -%}
+<section class="tov-prod"{% if section.settings.ancla != blank %} id="{{ section.settings.ancla }}"{% endif %} style="
+  --tov-prod-fondo: {{ section.settings.color_fondo }};
+  --tov-prod-tinta: {{ section.settings.color_tinta }};
+  --tov-prod-suave: {{ section.settings.color_suave }};
+  --tov-prod-acento: {{ section.settings.color_acento }};
+  --tov-prod-tarjeta: {{ section.settings.color_tarjeta }};
+  --tov-prod-linea: {{ section.settings.color_linea }};
+  --tov-prod-cta-1: {{ section.settings.color_cta }};
+  --tov-prod-cta-2: {{ section.settings.color_cta_2 }};
+  --tov-prod-cta-texto: {{ section.settings.color_cta_texto }};
+  --tov-prod-pt: {{ section.settings.padding_superior }}px;
+  --tov-prod-pb: {{ section.settings.padding_inferior }}px;
+  --tov-prod-pt-m: {{ section.settings.padding_superior_movil }}px;
+  --tov-prod-pb-m: {{ section.settings.padding_inferior_movil }}px;">
+  <div class="tov-prod__in">
+    <div class="tov-prod__head">
+      {%- if section.settings.eyebrow != blank -%}<p class="tov-prod__eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      {%- if section.settings.titulo != blank -%}<h2 class="tov-prod__title">{{ section.settings.titulo }}</h2>{%- endif -%}
+    </div>
+    {%- if coleccion != blank -%}
+      <div class="tov-prod__grid">
+        {%- for product in coleccion.products limit: section.settings.cantidad -%}
+          <a class="tov-prod__card" href="{{ product.url }}">
+            <div class="tov-prod__media">
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 450, 600', sizes: '(min-width: 990px) 300px, (min-width: 750px) 33vw, 50vw', alt: product.title }}
+              {%- endif -%}
+            </div>
+            <div class="tov-prod__body">
+              <h3 class="tov-prod__name">{{ product.title }}</h3>
+              <span class="tov-prod__price">{{ product.price | money_without_trailing_zeros }}</span>
+              <span class="tov-prod__cod">Pagas al recibir</span>
+              <span class="tov-prod__btn">{{ section.settings.texto_boton }}</span>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.texto_ver_todos != blank -%}
+        <div class="tov-prod__more"><a href="{{ coleccion.url }}">{{ section.settings.texto_ver_todos }}</a></div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Productos de categoría",
+  "tag": "div",
+  "settings": [
+    { "type": "collection", "id": "coleccion", "label": "Categoría" },
+    { "type": "range", "id": "cantidad", "label": "Cuántos productos", "min": 2, "max": 12, "step": 1, "default": 8 },
+    { "type": "text", "id": "ancla", "label": "Ancla (para enlaces #)" },
+    { "type": "text", "id": "eyebrow", "label": "Antetítulo", "default": "Catálogo Tovelya" },
+    { "type": "inline_richtext", "id": "titulo", "label": "Título", "default": "Lo más <em>pedido</em>" },
+    { "type": "text", "id": "texto_boton", "label": "Texto del botón", "default": "Ver producto" },
+    { "type": "text", "id": "texto_ver_todos", "label": "Texto de ver todos", "default": "Ver toda la categoría" },
+    { "type": "color", "id": "color_fondo", "label": "Fondo", "default": "#FFFFFF" },
+    { "type": "color", "id": "color_tinta", "label": "Texto", "default": "#1F1611" },
+    { "type": "color", "id": "color_suave", "label": "Texto suave", "default": "#6B5B4E" },
+    { "type": "color", "id": "color_acento", "label": "Acento", "default": "#B5743A" },
+    { "type": "color", "id": "color_tarjeta", "label": "Tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "color_linea", "label": "Borde", "default": "#EADFD3" },
+    { "type": "color", "id": "color_cta", "label": "Botón (arriba)", "default": "#FFB547" },
+    { "type": "color", "id": "color_cta_2", "label": "Botón (abajo)", "default": "#FF8A1F" },
+    { "type": "color", "id": "color_cta_texto", "label": "Texto del botón", "default": "#2A1A10" },
+    { "type": "range", "id": "padding_superior", "label": "Espacio superior", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_inferior", "label": "Espacio inferior", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_superior_movil", "label": "Espacio superior móvil", "min": 0, "max": 100, "step": 4, "default": 44, "unit": "px" },
+    { "type": "range", "id": "padding_inferior_movil", "label": "Espacio inferior móvil", "min": 0, "max": 100, "step": 4, "default": 44, "unit": "px" }
+  ],
+  "presets": [{ "name": "Productos de categoría" }]
+}
+{% endschema %}
