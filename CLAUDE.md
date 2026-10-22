@@ -7,6 +7,16 @@ Este repositorio es la memoria permanente de Claude para el trabajo con Samuel e
 2. Lee `contexto/ESTADO-TOVELYA.md`: estado actual de la tienda, campañas, landings, scripts y pendientes.
 3. Responde siempre en **español**, claro y sin tecnicismos: Samuel no es programador.
 
+## Así se hace siempre una landing (aprobado por Samuel el 2026-10-22: "perfecto, hermoso")
+1. **Fotos con IA a partir de la foto real del producto** (Codex/ChatGPT con `herramientas/generar.sh`). El producto no se inventa ni se cambia; se revisa contra la foto real antes de subir.
+2. **Inicio corto**: foto que llame la atención, título que diga qué es y para qué sirve, 3 checks cortos, precio y botón naranja.
+3. **Poco texto, muchas imágenes con texto adentro**: banners 4:5 (1080×1350) hechos con `herramientas/banner.sh` (foto arriba, panel crema, etiqueta, título grande en 2 líneas, una línea pequeña), uno debajo del otro con la sección `tovelya-imagenes` (`herramientas/seccion-tovelya-imagenes.liquid`).
+4. **Un botón de pedir cada 2 o 3 imágenes**, con precio y "Pagas al recibir · Envío gratis".
+5. Al final: formulario de pedido, cierre y barra fija. Las secciones de texto largo (comparativa, beneficios, preguntas) van ocultas.
+6. **Sin descuentos inventados** (nada de precio tachado que nunca existió) y, en alimentos, sin promesas de salud.
+7. Yo subo todo y lo dejo en una copia del tema; Samuel solo toca **Publicar**. Le mando el link.
+Detalles en `memory/feedback_menos_texto_mas_imagenes.md` y `memory/reference_shopify_desde_nube.md`.
+
 ## Cómo guardar memoria
 - Cada nota es un archivo en `memory/` con este encabezado:
   ```markdown
