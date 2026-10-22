@@ -5,7 +5,8 @@ const { chromium } = pw;
 const [url, out] = process.argv.slice(2);
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' }).catch(() => chromium.launch());
 const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
-await page.goto(url, { waitUntil: 'networkidle', timeout: 90000 });
+await page.goto(url, { waitUntil: 'load', timeout: 90000 });
+await page.waitForTimeout(3000);
 // Baja despacio para que carguen las imágenes diferidas
 for (let y = 0; y < 20000; y += 600) { await page.evaluate(v => window.scrollTo(0, v), y); await page.waitForTimeout(250); }
 await page.evaluate(() => window.scrollTo(0, 0));

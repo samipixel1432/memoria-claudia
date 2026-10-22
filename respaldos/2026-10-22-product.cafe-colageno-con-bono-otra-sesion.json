@@ -1,0 +1,843 @@
+{
+  "sections": {
+    "topbar": {
+      "type": "tovelya-cepillo-v2-topbar",
+      "blocks": {
+        "topbar_1": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "<strong>Bono de $20.000</strong> en tu pedido · Pagas $99.900 al recibir",
+            "solo_escritorio": false
+          }
+        },
+        "topbar_2": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Envío gratis a toda Colombia",
+            "solo_escritorio": true
+          }
+        },
+        "topbar_3": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Confirmamos tu pedido por WhatsApp",
+            "solo_escritorio": true
+          }
+        }
+      },
+      "block_order": [
+        "topbar_1",
+        "topbar_2",
+        "topbar_3"
+      ],
+      "settings": {
+        "color_fondo_1": "#2A1A10",
+        "color_fondo_2": "#3B2416",
+        "color_texto": "#FFFFFF",
+        "color_punto": "#E2B98A"
+      }
+    },
+    "cabecera": {
+      "type": "tovelya-cepillo-v2-cabecera",
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-horizontal.png",
+        "tamano_logo": 32,
+        "tamano_logo_movil": 28,
+        "texto_boton": "Pedir con bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "color_fondo": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_logo": "#1F1611",
+        "color_logo_punto": "#B5743A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "hero": {
+      "type": "tovelya-cepillo-v2-hero",
+      "blocks": {
+        "hero_1": {
+          "type": "check",
+          "settings": {
+            "texto": "Café, colágeno, vitaminas y minerales en una taza"
+          }
+        },
+        "hero_2": {
+          "type": "check",
+          "settings": {
+            "texto": "Cremoso gracias a la crema de coco"
+          }
+        },
+        "hero_3": {
+          "type": "check",
+          "settings": {
+            "texto": "Bono de $20.000 ya aplicado: pagas $99.900"
+          }
+        }
+      },
+      "block_order": [
+        "hero_1",
+        "hero_2",
+        "hero_3"
+      ],
+      "settings": {
+        "imagen": "shopify://shop_images/tovelya-cafe-tarro-hero.jpg",
+        "miniatura_1": "shopify://shop_images/tovelya-cafe-tarro-cuchara.jpg",
+        "miniatura_2": "shopify://shop_images/tovelya-cafe-tarro-frio.jpg",
+        "miniatura_3": "shopify://shop_images/tovelya-cafe-mujer-manana.jpg",
+        "miniatura_4": "shopify://shop_images/tovelya-cafe-tarro-estudio.jpg",
+        "eyebrow": "Oferta de bienvenida · Tarro de 400 g",
+        "titulo": "Tu café con colágeno <em>+ $20.000 de bono</em>",
+        "mostrar_valoracion": false,
+        "etiqueta_ahorro": "Bono de $20.000",
+        "etiqueta_confianza": "Pagas al recibir",
+        "entradilla": "Cremoso, a base de crema de coco y café soluble. Listo en un minuto, caliente o frío, sin cafetera. Hoy con tu bono de bienvenida incluido.",
+        "precio": "$99.900",
+        "precio_anterior": "$119.900",
+        "aria_precio_anterior": "Precio sin bono: $119.900",
+        "ahorro": "Ahorras $20.000 con tu bono",
+        "nota_precio": "No pagas nada ahora · Pagas en efectivo cuando te llega",
+        "texto_boton": "Pedir con mi bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "texto_boton_2": "",
+        "riesgo_1": "Pagas al recibir",
+        "riesgo_2": "Envío gratis a toda Colombia",
+        "riesgo_3": "Confirmamos por WhatsApp",
+        "metodos_pago": "Contraentrega, Efectivo",
+        "tamano_titulo": 56,
+        "tamano_titulo_movil": 34,
+        "color_fondo_1": "#FFFFFF",
+        "color_fondo_2": "#F6EFE6",
+        "color_texto": "#1F1611",
+        "color_acento": "#B5743A",
+        "color_acento_claro": "#8A5A2B",
+        "color_acento_titulo_2": "#B5743A",
+        "color_tarjeta": "#FFFFFF",
+        "color_tinta": "#1F1611",
+        "color_tinta_suave": "#6B5B4E",
+        "color_linea": "#EADFD3",
+        "color_papel": "#FAF6F0",
+        "color_pagos_texto": "#8A5A2B",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "datos": {
+      "type": "tovelya-cepillo-v2-datos",
+      "blocks": {
+        "datos_1": {
+          "type": "dato",
+          "settings": {
+            "numero": "$20.000",
+            "texto": "de bono en tu pedido"
+          }
+        },
+        "datos_2": {
+          "type": "dato",
+          "settings": {
+            "numero": "13",
+            "texto": "tazas aprox. por tarro de 400 g"
+          }
+        },
+        "datos_3": {
+          "type": "dato",
+          "settings": {
+            "numero": "1 min",
+            "texto": "para prepararlo, sin cafetera"
+          }
+        },
+        "datos_4": {
+          "type": "dato",
+          "settings": {
+            "numero": "$0",
+            "texto": "por adelantado: pagas al recibir"
+          }
+        }
+      },
+      "block_order": [
+        "datos_1",
+        "datos_2",
+        "datos_3",
+        "datos_4"
+      ],
+      "settings": {
+        "imagen": "shopify://shop_images/tovelya-cafe-tarro-estudio.jpg",
+        "opacidad_fondo": 20,
+        "eyebrow": "En números",
+        "titulo": "Un tarro. <em>13 tazas.</em> Un bono.",
+        "entradilla": "Lo que te llevas hoy.",
+        "color_fondo_1": "#2A1A10",
+        "color_fondo_2": "#3B2416",
+        "color_acento": "#B5743A",
+        "color_texto": "#FFFFFF",
+        "color_eyebrow": "#E2B98A",
+        "color_acento_titulo_2": "#E2B98A",
+        "color_numero": "#F1D4AE",
+        "color_numero_2": "#E2B98A"
+      }
+    },
+    "confianza": {
+      "type": "tovelya-cepillo-v2-confianza",
+      "blocks": {
+        "confianza_1": {
+          "type": "item",
+          "settings": {
+            "icono": "billete",
+            "titulo": "Pago al recibir",
+            "subtitulo": "Cero pago adelantado"
+          }
+        },
+        "confianza_2": {
+          "type": "item",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "subtitulo": "A toda Colombia"
+          }
+        },
+        "confianza_3": {
+          "type": "item",
+          "settings": {
+            "icono": "chat",
+            "titulo": "Confirmación personal",
+            "subtitulo": "Te escribimos antes de despachar"
+          }
+        },
+        "confianza_4": {
+          "type": "item",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Tarro sellado",
+            "subtitulo": "Según política de devoluciones"
+          }
+        }
+      },
+      "block_order": [
+        "confianza_1",
+        "confianza_2",
+        "confianza_3",
+        "confianza_4"
+      ],
+      "settings": {
+        "color_linea": "#EADFD3",
+        "color_texto": "#1F1611",
+        "color_texto_suave": "#6B5B4E"
+      }
+    },
+    "beneficios": {
+      "type": "tovelya-cepillo-v2-beneficios",
+      "blocks": {
+        "beneficios_1": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "capas",
+            "titulo": "Tarro de 400 g",
+            "texto": "Café, colágeno, vitaminas y minerales juntos."
+          }
+        },
+        "beneficios_2": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "gota",
+            "titulo": "Cremoso de verdad",
+            "texto": "La base de crema de coco le da cuerpo a tu taza."
+          }
+        },
+        "beneficios_3": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "reloj",
+            "titulo": "Listo en un minuto",
+            "texto": "Sirves la porción, agregas agua y mezclas."
+          }
+        },
+        "beneficios_4": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "estrella",
+            "titulo": "Caliente o frío",
+            "texto": "Para la mañana, la tarde o con hielo."
+          }
+        },
+        "beneficios_5": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "texto": "Llega a tu puerta en toda Colombia."
+          }
+        },
+        "beneficios_6": {
+          "type": "beneficio",
+          "settings": {
+            "icono": "billete",
+            "titulo": "Bono de $20.000",
+            "texto": "Ya descontado: pagas $99.900 al recibir."
+          }
+        }
+      },
+      "block_order": [
+        "beneficios_1",
+        "beneficios_2",
+        "beneficios_3",
+        "beneficios_4",
+        "beneficios_5",
+        "beneficios_6"
+      ],
+      "settings": {
+        "eyebrow": "Incluido",
+        "titulo": "¿Qué recibes <em>en tu pedido?</em>",
+        "color_fondo": "#FFFFFF",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_subrayado": "#E2B98A",
+        "color_tarjeta": "#FAF6F0",
+        "color_linea": "#EADFD3",
+        "color_tinta_suave": "#6B5B4E",
+        "color_icono_1": "#F1D4AE",
+        "color_icono_2": "#E2B98A",
+        "color_icono": "#2A1A10"
+      }
+    },
+    "bono": {
+      "type": "tovelya-cepillo-v2-ctafinal",
+      "settings": {
+        "eyebrow": "Tu bono de bienvenida",
+        "titulo": "Bono de <em>$20.000</em> en tu tarro",
+        "precio": "$99.900",
+        "precio_anterior": "$119.900",
+        "aria_precio_anterior": "Precio sin bono: $119.900",
+        "ahorro": "Bono aplicado automáticamente",
+        "nota_precio": "Envío gratis · Pagas en efectivo cuando te llega",
+        "texto_boton": "Usar mi bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "riesgo_1": "Sin códigos",
+        "riesgo_2": "Sin pago adelantado",
+        "riesgo_3": "Confirmamos por WhatsApp",
+        "metodos_pago": "Contraentrega, Efectivo",
+        "color_fondo_1": "#3B2416",
+        "color_fondo_2": "#2A1A10",
+        "color_acento": "#B5743A",
+        "color_texto": "#FFFFFF",
+        "color_eyebrow": "#E2B98A",
+        "color_acento_titulo_2": "#E2B98A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "pedido": {
+      "type": "tovelya-cepillo-v2-pedido",
+      "settings": {
+        "eyebrow": "No pagas nada ahora",
+        "titulo": "Pídelo hoy con tu bono y págalo cuando llegue",
+        "texto": "Solo tu nombre, celular y dirección. Te escribimos por WhatsApp para confirmar antes de enviarlo y pagas $99.900 en efectivo cuando lo tengas en la mano.",
+        "texto_boton": "Pedir contra entrega · $99.900",
+        "color_fondo": "#FFFFFF",
+        "color_texto": "#1F1611",
+        "color_texto_suave": "#6B5B4E",
+        "color_linea": "#EADFD3",
+        "color_acento": "#B5743A"
+      }
+    },
+    "pasos": {
+      "type": "tovelya-cepillo-v2-pasos",
+      "blocks": {
+        "pasos_1": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-tarro-cuchara.jpg",
+            "etiqueta": "01",
+            "titulo": "Sirve una porción",
+            "texto": "La cantidad que indica la etiqueta, en tu taza."
+          }
+        },
+        "pasos_2": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-preparacion.jpg",
+            "etiqueta": "02",
+            "titulo": "Agrega agua",
+            "texto": "Caliente para la mañana o fría con hielo."
+          }
+        },
+        "pasos_3": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-mujer-manana.jpg",
+            "etiqueta": "03",
+            "titulo": "Mezcla y disfruta",
+            "texto": "Cremoso en un minuto."
+          }
+        }
+      },
+      "block_order": [
+        "pasos_1",
+        "pasos_2",
+        "pasos_3"
+      ],
+      "settings": {
+        "eyebrow": "Cómo funciona",
+        "titulo": "De la cuchara a la taza en <em>3 pasos</em>",
+        "mostrar_cta": true,
+        "texto_boton": "Pedir con mi bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "riesgo_1": "Pagas al recibir",
+        "riesgo_2": "Envío gratis",
+        "color_fondo": "#F3ECE3",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_subrayado": "#E2B98A",
+        "color_tinta_suave": "#6B5B4E",
+        "color_numero": "#8A5A2B",
+        "color_neon_1": "#F1D4AE",
+        "color_neon_2": "#E2B98A",
+        "color_neon_texto": "#2A1A10",
+        "color_tarjeta": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_placeholder": "#F3ECE3",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "momentos": {
+      "type": "tovelya-cepillo-v2-cabezales",
+      "blocks": {
+        "momentos_1": {
+          "type": "cabezal",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-mujer-manana.jpg",
+            "numero": "01",
+            "titulo": "Al despertar",
+            "texto": "Caliente, listo en un minuto."
+          }
+        },
+        "momentos_2": {
+          "type": "cabezal",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-frio.jpg",
+            "numero": "02",
+            "titulo": "Frío en la tarde",
+            "texto": "Con hielo, igual de cremoso."
+          }
+        },
+        "momentos_3": {
+          "type": "cabezal",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-oficina.jpg",
+            "numero": "03",
+            "titulo": "En la oficina",
+            "texto": "Sin cafetera: solo una taza y agua."
+          }
+        },
+        "momentos_4": {
+          "type": "cabezal",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-pareja.jpg",
+            "numero": "04",
+            "titulo": "Para compartir",
+            "texto": "El tarro rinde 13 tazas aprox."
+          }
+        },
+        "momentos_5": {
+          "type": "cabezal",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-preparacion.jpg",
+            "numero": "05",
+            "titulo": "Así queda",
+            "texto": "Cremoso apenas lo mezclas."
+          }
+        }
+      },
+      "block_order": [
+        "momentos_1",
+        "momentos_2",
+        "momentos_3",
+        "momentos_4",
+        "momentos_5"
+      ],
+      "settings": {
+        "eyebrow": "Para cada momento",
+        "titulo": "Tu ritual, <em>a tu manera</em>",
+        "entradilla": "Caliente al despertar, frío en la tarde o en la oficina.",
+        "etiqueta_carrusel": "Momentos para tomarlo",
+        "etiqueta_anterior": "Anterior",
+        "etiqueta_siguiente": "Siguiente",
+        "color_fondo": "#FAF6F0",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_subrayado": "#E2B98A",
+        "color_lead": "#6B5B4E",
+        "color_numero": "#F1D4AE",
+        "color_numero_2": "#E2B98A",
+        "color_numero_texto": "#2A1A10",
+        "color_tarjeta": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_placeholder": "#F3ECE3"
+      }
+    },
+    "comparativa": {
+      "type": "tovelya-cepillo-v2-comparativa",
+      "blocks": {
+        "comparativa_1": {
+          "type": "item",
+          "settings": {
+            "columna": "si",
+            "texto": "Café, colágeno y vitaminas en una taza"
+          }
+        },
+        "comparativa_2": {
+          "type": "item",
+          "settings": {
+            "columna": "si",
+            "texto": "Cremoso por la crema de coco"
+          }
+        },
+        "comparativa_3": {
+          "type": "item",
+          "settings": {
+            "columna": "si",
+            "texto": "Listo en un minuto, caliente o frío"
+          }
+        },
+        "comparativa_4": {
+          "type": "item",
+          "settings": {
+            "columna": "si",
+            "texto": "Rinde 13 tazas aprox."
+          }
+        },
+        "comparativa_5": {
+          "type": "item",
+          "settings": {
+            "columna": "no",
+            "texto": "Solo café, nada más"
+          }
+        },
+        "comparativa_6": {
+          "type": "item",
+          "settings": {
+            "columna": "no",
+            "texto": "Leche o crema aparte para que quede cremoso"
+          }
+        },
+        "comparativa_7": {
+          "type": "item",
+          "settings": {
+            "columna": "no",
+            "texto": "El colágeno, si lo tomas, va por separado"
+          }
+        },
+        "comparativa_8": {
+          "type": "item",
+          "settings": {
+            "columna": "no",
+            "texto": "Otra bebida si lo quieres frío"
+          }
+        }
+      },
+      "block_order": [
+        "comparativa_1",
+        "comparativa_2",
+        "comparativa_3",
+        "comparativa_4",
+        "comparativa_5",
+        "comparativa_6",
+        "comparativa_7",
+        "comparativa_8"
+      ],
+      "settings": {
+        "eyebrow": "Antes y ahora",
+        "titulo": "Tu café de siempre vs. <em>Coffee + Colágeno</em>",
+        "titulo_si": "Coffee + Colágeno",
+        "titulo_no": "Café instantáneo común",
+        "texto_boton": "Quiero mi café con bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "riesgo_1": "Pagas al recibir",
+        "riesgo_2": "Envío gratis a toda Colombia",
+        "color_texto": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_acento_titulo": "#B5743A",
+        "color_subrayado": "#E2B98A",
+        "color_si": "#2A1A10",
+        "color_si_2": "#3B2416",
+        "color_si_texto": "#FFFFFF",
+        "color_borde_1": "#F1D4AE",
+        "color_borde_2": "#B5743A",
+        "color_no": "#FAF6F0",
+        "color_linea": "#EADFD3",
+        "color_tinta_suave": "#6B5B4E",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "comopedir": {
+      "type": "tovelya-cepillo-v2-pasos",
+      "blocks": {
+        "comopedir_1": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cepillo-v3-pedido-1-datos.jpg",
+            "etiqueta": "Paso 1",
+            "titulo": "Llenas tus datos",
+            "texto": "Nombre, celular y dirección. No pagas nada en este momento."
+          }
+        },
+        "comopedir_2": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cepillo-v3-pedido-2-confirmacion.jpg",
+            "etiqueta": "Paso 2",
+            "titulo": "Te confirmamos por WhatsApp",
+            "texto": "Revisamos contigo la dirección y te contamos cuándo llega a tu ciudad."
+          }
+        },
+        "comopedir_3": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-tarro-mano.jpg",
+            "etiqueta": "Paso 3",
+            "titulo": "Recibes y pagas $99.900",
+            "texto": "Pagas en efectivo al transportador cuando tienes el tarro en la mano."
+          }
+        }
+      },
+      "block_order": [
+        "comopedir_1",
+        "comopedir_2",
+        "comopedir_3"
+      ],
+      "settings": {
+        "eyebrow": "Así de fácil es pedir",
+        "titulo": "Pedirlo te toma <em>un minuto</em>",
+        "mostrar_cta": true,
+        "texto_boton": "Hacer mi pedido",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "riesgo_1": "Sin pago adelantado",
+        "riesgo_2": "Envío gratis",
+        "color_fondo": "#FAF6F0",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_subrayado": "#E2B98A",
+        "color_tinta_suave": "#6B5B4E",
+        "color_numero": "#8A5A2B",
+        "color_neon_1": "#F1D4AE",
+        "color_neon_2": "#E2B98A",
+        "color_neon_texto": "#2A1A10",
+        "color_tarjeta": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_placeholder": "#F3ECE3",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "garantia": {
+      "type": "tovelya-cepillo-v2-garantia",
+      "settings": {
+        "eyebrow": "Compra sin riesgo",
+        "titulo": "No pagas nada <em>hasta tenerlo en la mano</em>",
+        "entradilla": "Te escribimos por WhatsApp para confirmar, lo recibes en tu puerta y pagas ahí. Si llega en mal estado, te respondemos según nuestra política de devoluciones.",
+        "sello_numero": "$0",
+        "sello_linea_1": "pago",
+        "sello_linea_2": "adelantado",
+        "texto_boton": "Pedir sin riesgo",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "color_fondo_1": "#FAF6F0",
+        "color_fondo_2": "#FFFFFF",
+        "color_texto": "#1F1611",
+        "color_lead": "#6B5B4E",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "faq": {
+      "type": "tovelya-cepillo-v2-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cómo funciona el bono de $20.000?",
+            "respuesta": "<p>Se aplica solo en tu pedido, sin códigos. El tarro queda en $99.900 y eso es lo único que pagas al recibir.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cómo funciona el pago contra entrega?",
+            "respuesta": "<p>Haces el pedido sin pagar nada. Te escribimos por WhatsApp para confirmar datos, despachamos y pagas en efectivo al recibir.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Es una suscripción?",
+            "respuesta": "<p>No. Es un pago único. No hay cobros recurrentes.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto cuesta el envío?",
+            "respuesta": "<p>Nada. El envío es gratis a toda Colombia.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuánto tarda en llegar?",
+            "respuesta": "<p>Depende de tu ciudad. Te confirmamos el tiempo exacto por WhatsApp antes de despachar.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cuántas tazas rinde?",
+            "respuesta": "<p>El tarro de 400 g rinde unas 13 porciones.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Lo puedo tomar frío?",
+            "respuesta": "<p>Sí. Lo preparas con agua caliente o fría, y con hielo queda igual de cremoso.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Necesito cafetera?",
+            "respuesta": "<p>No. Solo una taza, agua y una cuchara.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "titulo": "Antes de <em>pedir</em>",
+        "entradilla": "¿Otra duda? Escríbenos por WhatsApp.",
+        "primera_abierta": true,
+        "color_fondo": "#FAF6F0",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#8A5A2B",
+        "color_subrayado": "#E2B98A",
+        "color_lead": "#6B5B4E",
+        "color_linea": "#EADFD3",
+        "color_icono": "#B5743A",
+        "color_tarjeta": "#FFFFFF"
+      }
+    },
+    "ctafinal": {
+      "type": "tovelya-cepillo-v2-ctafinal",
+      "settings": {
+        "eyebrow": "Tu tarro te espera",
+        "titulo": "Empieza tu mañana <em>con colágeno</em>",
+        "precio": "$99.900",
+        "precio_anterior": "$119.900",
+        "aria_precio_anterior": "Precio sin bono: $119.900",
+        "ahorro": "Incluye bono de $20.000",
+        "nota_precio": "Pago único · Tarro de 400 g, 13 porciones aprox.",
+        "texto_boton": "Pedir con mi bono",
+        "precio_boton": "$99.900",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "riesgo_1": "Pagas al recibir",
+        "riesgo_2": "Envío gratis",
+        "riesgo_3": "Confirmamos por WhatsApp",
+        "metodos_pago": "Contraentrega, Efectivo",
+        "color_fondo_1": "#3B2416",
+        "color_fondo_2": "#2A1A10",
+        "color_acento": "#B5743A",
+        "color_texto": "#FFFFFF",
+        "color_eyebrow": "#E2B98A",
+        "color_acento_titulo_2": "#E2B98A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "footer": {
+      "type": "tovelya-cepillo-v2-footer",
+      "blocks": {
+        "footer_1": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Privacidad",
+            "enlace": "/policies/privacy-policy"
+          }
+        },
+        "footer_2": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Términos",
+            "enlace": "/policies/terms-of-service"
+          }
+        },
+        "footer_3": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Garantía y devoluciones",
+            "enlace": "/policies/refund-policy"
+          }
+        }
+      },
+      "block_order": [
+        "footer_1",
+        "footer_2",
+        "footer_3"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-white.png",
+        "color_fondo": "#2A1A10"
+      }
+    },
+    "barracompra": {
+      "type": "tovelya-cepillo-v2-barracompra",
+      "settings": {
+        "etiqueta": "Con bono de $20.000 · pagas al recibir",
+        "precio": "$99.900",
+        "precio_anterior": "$119.900",
+        "aria_precio_anterior": "Precio sin bono: $119.900",
+        "texto_boton": "Pedir con bono",
+        "variant_id": "51377169793271",
+        "url_boton": "#pedido",
+        "color_linea": "#EADFD3",
+        "color_tinta": "#1F1611",
+        "color_tinta_suave": "#6B5B4E",
+        "color_cta_texto": "#2A1A10"
+      }
+    }
+  },
+  "order": [
+    "topbar",
+    "cabecera",
+    "hero",
+    "datos",
+    "confianza",
+    "beneficios",
+    "bono",
+    "pedido",
+    "pasos",
+    "momentos",
+    "comparativa",
+    "comopedir",
+    "garantia",
+    "faq",
+    "ctafinal",
+    "footer",
+    "barracompra"
+  ]
+}
+

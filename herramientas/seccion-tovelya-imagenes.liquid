@@ -1,0 +1,125 @@
+{%- comment -%}
+  Tovelya · Imágenes con texto
+  Landing visual: banners con el texto dentro de la imagen, uno debajo del otro,
+  con botones de pedido entre ellos. El botón abre el formulario de pago contra entrega.
+{%- endcomment -%}
+{% stylesheet %}
+.tov-img{ background: var(--tov-img-fondo); padding: var(--tov-img-pt-m) 0 var(--tov-img-pb-m); }
+.tov-img__col{ max-width: var(--tov-img-ancho); margin: 0 auto; display: flex; flex-direction: column; gap: var(--tov-img-gap); }
+.tov-img__fig{ margin: 0; overflow: hidden; border-radius: var(--tov-img-radio); opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.tov-img__fig.is-visible{ opacity: 1; transform: none; }
+.tov-img__fig img{ display: block; width: 100%; height: auto; }
+.tov-img__cta{ padding: 20px 16px 28px; text-align: center; }
+.tov-img__btn{ display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 58px; padding: 0 20px; border-radius: 999px; background: linear-gradient(180deg, var(--tov-img-cta-1), var(--tov-img-cta-2)); color: var(--tov-img-cta-texto); font-family: inherit; font-weight: 700; font-size: 17px; line-height: 1.1; text-decoration: none; box-shadow: 0 10px 24px rgba(255, 138, 31, .28); transition: transform .15s ease; white-space: nowrap; }
+.tov-img__btn:active{ transform: scale(.98); }
+.tov-img__nota{ margin: 12px 0 0; font-size: 14px; color: var(--tov-img-nota); }
+@media screen and (min-width: 750px){
+  .tov-img{ padding: var(--tov-img-pt) 0 var(--tov-img-pb); }
+  .tov-img__btn{ font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce){ .tov-img__fig{ opacity: 1; transform: none; transition: none; } }
+{% endstylesheet %}
+
+<div class="tov-img" id="tov-img-{{ section.id }}" style="
+  --tov-img-fondo: {{ section.settings.color_fondo }};
+  --tov-img-ancho: {{ section.settings.ancho_maximo }}px;
+  --tov-img-gap: {{ section.settings.espacio }}px;
+  --tov-img-radio: {{ section.settings.redondeo }}px;
+  --tov-img-pt: {{ section.settings.padding_superior }}px;
+  --tov-img-pb: {{ section.settings.padding_inferior }}px;
+  --tov-img-pt-m: {{ section.settings.padding_superior_movil }}px;
+  --tov-img-pb-m: {{ section.settings.padding_inferior_movil }}px;
+  --tov-img-cta-1: {{ section.settings.color_cta }};
+  --tov-img-cta-2: {{ section.settings.color_cta_2 }};
+  --tov-img-cta-texto: {{ section.settings.color_cta_texto }};
+  --tov-img-nota: {{ section.settings.color_nota }};">
+  <div class="tov-img__col">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'imagen' -%}
+          {%- if block.settings.imagen != blank -%}
+            <figure class="tov-img__fig" {{ block.shopify_attributes }}>
+              {{ block.settings.imagen | image_url: width: 1080 | image_tag: loading: 'lazy', widths: '540, 720, 1080', sizes: '(min-width: 750px) 620px, 100vw', alt: block.settings.alt }}
+            </figure>
+          {%- endif -%}
+        {%- when 'boton' -%}
+          <div class="tov-img__cta" {{ block.shopify_attributes }}>
+            <a class="tov-img__btn" href="#comprar" data-tov-img-cta>
+              <span>{{ block.settings.texto }}</span>
+              {%- if block.settings.precio != blank -%}<span aria-hidden="true">·</span><span>{{ block.settings.precio }}</span>{%- endif -%}
+            </a>
+            {%- if block.settings.nota != blank -%}<p class="tov-img__nota">{{ block.settings.nota }}</p>{%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+  (function(){
+    var root = document.getElementById('tov-img-{{ section.id }}');
+    if (!root) return;
+
+    // Aparición suave al hacer scroll
+    var figs = root.querySelectorAll('.tov-img__fig');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -10% 0px' });
+      figs.forEach(function(f){ io.observe(f); });
+    } else {
+      figs.forEach(function(f){ f.classList.add('is-visible'); });
+    }
+
+    // Botón: abre el formulario de pago contra entrega; si aún no cargó, baja a la sección de pedido
+    root.querySelectorAll('[data-tov-img-cta]').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        if (typeof window.openTysloForm === 'function') { window.openTysloForm(); return; }
+        var pedido = document.getElementById('pedido');
+        if (pedido) pedido.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Imágenes con texto",
+  "tag": "section",
+  "settings": [
+    { "type": "color", "id": "color_fondo", "label": "Fondo", "default": "#FAF6F0" },
+    { "type": "range", "id": "ancho_maximo", "label": "Ancho máximo en escritorio", "min": 400, "max": 1000, "step": 20, "default": 620, "unit": "px" },
+    { "type": "range", "id": "espacio", "label": "Espacio entre imágenes", "min": 0, "max": 40, "step": 2, "default": 0, "unit": "px" },
+    { "type": "range", "id": "redondeo", "label": "Redondeo de las imágenes", "min": 0, "max": 32, "step": 2, "default": 0, "unit": "px" },
+    { "type": "color", "id": "color_cta", "label": "Botón (arriba)", "default": "#FFB547" },
+    { "type": "color", "id": "color_cta_2", "label": "Botón (abajo)", "default": "#FF8A1F" },
+    { "type": "color", "id": "color_cta_texto", "label": "Texto del botón", "default": "#2A1A10" },
+    { "type": "color", "id": "color_nota", "label": "Texto bajo el botón", "default": "#6B5B4E" },
+    { "type": "range", "id": "padding_superior", "label": "Espacio superior", "min": 0, "max": 120, "step": 4, "default": 0, "unit": "px" },
+    { "type": "range", "id": "padding_inferior", "label": "Espacio inferior", "min": 0, "max": 120, "step": 4, "default": 0, "unit": "px" },
+    { "type": "range", "id": "padding_superior_movil", "label": "Espacio superior móvil", "min": 0, "max": 100, "step": 4, "default": 0, "unit": "px" },
+    { "type": "range", "id": "padding_inferior_movil", "label": "Espacio inferior móvil", "min": 0, "max": 100, "step": 4, "default": 0, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "imagen",
+      "name": "Imagen",
+      "settings": [
+        { "type": "image_picker", "id": "imagen", "label": "Imagen" },
+        { "type": "text", "id": "alt", "label": "Texto alternativo" }
+      ]
+    },
+    {
+      "type": "boton",
+      "name": "Botón de pedido",
+      "settings": [
+        { "type": "text", "id": "texto", "label": "Texto", "default": "Pedir contra entrega" },
+        { "type": "text", "id": "precio", "label": "Precio" },
+        { "type": "text", "id": "nota", "label": "Nota debajo", "default": "Pagas al recibir · Envío gratis" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Imágenes con texto" }]
+}
+{% endschema %}
