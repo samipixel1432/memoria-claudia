@@ -21,6 +21,14 @@
 ## Cómo se trabaja la tienda desde la nube
 Ver la nota `memory/reference_shopify_desde_nube.md`: subir imágenes, editar plantillas en una copia del tema (el conector no deja escribir en el tema en vivo) y revisar en celular con `herramientas/captura.mjs`.
 
+## Categorías
+- **Salud y bienestar** (creada el 2026-10-22, pedida por Samuel): `/collections/salud`, `gid://shopify/Collection/507579269367`. Es automática: entra todo producto con la etiqueta **`Salud`**. Tiene 6: café con colágeno, soporte térmico de hombro, chaleco postural, báscula inteligente, faja deportiva y camisilla térmica. Publicada en la tienda online.
+- Ya existían: Hogar, Tecnologia, Belleza, Bienestar, Mascotas, Mas vendidos (etiqueta "Tovelya destacado").
+
+## Página principal
+- `templates/index.json` usa una sola sección grande, `sections/tovelya-home.liquid`, con todo escrito a mano: título "Lo útil también puede sentirse especial", 3 categorías fijas (Hogar, Entretenimiento y movimiento, Bienestar) con productos por handle, pasos, opiniones, preguntas y cierre.
+- **Pendiente (pedido 2026-10-22):** rehacerla con la estructura nueva (poco texto, banners con texto, botones) y con una sección de Salud. Se frenó porque la nube no tenía acceso a OpenAI ni a la tienda para hacer y revisar las fotos.
+
 ## Landings
 - Sistema v2: plantillas `templates/product.<sufijo>.json` hechas con secciones `sections/tovelya-cepillo-v2-*`. Antes de editar una landing, revisar el `templateSuffix` del producto.
 - **Cepillo eléctrico** (`cepillo-electrico-recargable-7-en-1`, plantilla `cepillo-v2`). Reformada el 2026-10-19 con `shopify/deploy-cepillo-landing-v3.py`:
