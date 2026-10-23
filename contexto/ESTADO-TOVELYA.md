@@ -137,7 +137,8 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 ## Campaña de Meta del cepillo
 - Cuenta "Tovelya Ads". Campaña `TOV | Ventas | Cepillo eléctrico | Prueba`, presupuesto de campaña $20.000/día, Advantage+.
 - **Apagada desde el 2026-10-13**: la cuenta tiene **saldo pendiente sin pagar** y Meta dejó de entregar. Samuel tiene que pagarlo.
-- El conector de Meta (MCP) todavía no está habilitado para esa cuenta. Chrome no tenía la sesión de Facebook abierta.
+- El conector de Meta (MCP) todavía no está habilitado para esa cuenta. Se volvió a revisar el 2026-10-23: Meta responde "se está habilitando poco a poco". Ese mismo día la cuenta salía ACTIVA y con método de pago. Las otras dos cuentas que ve el conector no son de Tovelya: `2193609430978035` es la personal, con publicaciones de Marketplace, y `AllDrop`. No crear campañas de Tovelya ahí.
+- 2026-10-23: Samuel pidió una campaña CBO de $20.000/día para la pantalla CarPlay, copiando la estructura de la del cepillo, desde el 2026-10-24 a las 5. No se pudo crear desde la nube porque el conector no tiene permiso en Tovelya Ads y la extensión Claude in Chrome no está conectada a la sesión. Se le dieron los pasos para duplicarla él mismo en el Administrador de anuncios. Chrome no tenía la sesión de Facebook abierta.
 - Datos de Shopify del 1 al 19 de octubre: 478 visitas a la landing → 87 empezaron el pedido → 9 pedidos → 6 válidos (3 anulados). Del 5 al 8 de octubre hubo 214 visitas de anuncios y 0 pedidos (causa sin revisar).
 - Anuncio ganador según los UTM: `cepillo-video-ducha`.
 - Plan completo: `assets/ads/cepillo/PLAN-ESTRATEGIA.md` (en el proyecto local). Costo máximo por pedido ≈ $27.000; meta ≤ $18.000.

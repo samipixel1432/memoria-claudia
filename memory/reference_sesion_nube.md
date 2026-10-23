@@ -19,6 +19,7 @@ In the cloud:
   - After about 10 automated page loads, Shopify answers 429 for roughly 10 minutes.
   - For a real form test, either allow `challenges.cloudflare.com` (Turnstile may still reject a headless browser) or ask Samuel to place the order from his phone. Then find it with an `orders` query (tag `easysell_cod_form`) and cancel or delete it.
   - The script is in the `herramientas/pedido-prueba.mjs`. Field placeholders: "Eje: Camilo Andres", "Eje: 3045675789", Departamento/Ciudad selects (option text has spaces, so pick by index), "Eje: Calle 45 # 13-25", "#Casa / Torre / Apto / Barrio o Referencia". Submit button: "PEDIR Y PAGAR AL RECIBIR".
+- Meta connector (checked 2026-10-23): the "Tovelya Ads" account (`1814097669595453`) has `is_ads_mcp_enabled: false` ("gradually being rolled out"), so campaigns there cannot be created or read from the cloud. Check `ads_get_ad_accounts` again before saying no. The Claude in Chrome tools were not available in the session either.
 - A cloud session cannot control Samuel's PC (no computer-use tools, checked 2026-10-21), and the Shopify connector cannot publish themes. Publishing a theme copy is always his click.
 
 **Why:** Samuel wants to switch devices and keep the same memory.
