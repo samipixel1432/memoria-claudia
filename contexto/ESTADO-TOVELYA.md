@@ -86,6 +86,26 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - Landing: plantilla `product.cafe-colageno` (en el tema publicado `181838774519`, en vivo), hecha con las mismas secciones `tovelya-cepillo-v2-*` cambiando los colores a blanco, café y caramelo (estilo Apple, pedido por Samuel). Botones naranja y confianza azul como en las demás. No tiene precio tachado inventado: el ancla es "unos $7.700 por taza". No tiene preguntas frecuentes.  - **Versión visual (2026-10-22, sin publicar)** en el tema `Tovelya - café colágeno con bono (prueba)` (`gid://shopify/OnlineStoreTheme/181906309367`). Samuel dijo que había "demasiado texto" y pidió más imágenes con texto. Quedó: cabecera, inicio corto, confianza, **7 banners** con el texto dentro (`tovelya-cafe-b1…b7.jpg`, hechos con `herramientas/banner.sh`: foto arriba y panel crema con Inter Display) con 3 botones de pedido entre ellos (sección nueva `sections/tovelya-imagenes.liquid`, copia en `herramientas/`), pedido, cierre y barra. Se quitaron las secciones de texto (datos, beneficios, bono, pasos, momentos, comparativa, cómo pedir, garantía, preguntas).
   - Ese tema de prueba lo creó **otra sesión** el 2026-10-22 con un **"bono de $20.000"** y el precio tachado "$119.900" (precio sin bono). Se quitó, porque el tarro nunca se vendió a $119.900 y un descuento inventado se puede ver como publicidad engañosa. Respaldo completo de esa versión en `respaldos/2026-10-22-product.cafe-colageno-con-bono-otra-sesion.json`. El tema de prueba también tiene el cepillo igual al que está en vivo, así que publicarlo no lo daña.
   - Es alimento: no prometer resultados de salud ni de belleza (INVIMA y Meta lo prohíben). El texto habla de sabor, preparación, rendimiento y lo que dice la etiqueta.
+- **Pantalla CarPlay para moto** (`/products/pantalla-carplay-para-moto`, variante 51219372933367, plantilla `product.carplay-para-moto`).
+  - **Precio, cambiado en vivo el 2026-10-23:** pasó de $229.900 a **$179.900** (Samuel: "me sale a 100, ponlo en 180").
+    - Costo registrado en Shopify: $100.000.
+    - Con $30.000 de envío y $15.000 de publicidad quedan unos $35.000 por venta.
+    - No tiene precio tachado.
+  - **Landing nueva, en el tema de prueba `181906309367`, sin publicar:**
+    - Mismo estándar que el café, con los **colores originales** (azul marino y verde azulado).
+    - Estructura:
+      - Inicio con la foto `tovelya-carplay-v2-hero.jpg`, 3 checks, precio y botón.
+      - Confianza.
+      - **6 banners** `tovelya-carplay-b1…b6.jpg`, hechos con `PALETA=tovelya herramientas/banner.sh`, con 3 botones de pedido entre ellos.
+      - Formulario de pedido, cierre, pie y barra fija.
+    - El botón abre EasySell (probado).
+    - La plantilla vieja (sección `tovelya-landing` con las fotos `tovelya-carplay-moto-*.webp`) sigue en el tema en vivo hasta que se publique.
+    - Se hace con `herramientas/plantilla-carplay-v2.mjs`; las fotos, con `herramientas/generar-carplay.sh`.
+    - Respaldo de la plantilla: `respaldos/2026-10-23-product.carplay-para-moto-v2.json`.
+  - **Textos:**
+    - Siempre "con la moto detenida".
+    - No se promete resistencia al agua.
+    - Se ofrece confirmar por WhatsApp la compatibilidad con el celular y la moto.
 - Otros productos activos con landing: trapero, bomba de vacío, compresor/arrancador, mini proyector, inflador 4 en 1, hidrolavadora, camisilla térmica, faja, soporte térmico de hombro, chaleco postural, CarPlay para moto, traje impermeable, báscula, trampolín, robot limpiador, cepillo de cocina, monitor TPMS, peluche de Jesús (rojo/azul).
 - Peluche de Jesús: las imágenes nuevas se generan con los prompts de `assets/products/peluche-jesus/landing/PROMPTS-CODEX.md`. Cuando estén en `.../landing/generated/`, se suben con `shopify/deploy-peluche-jesus-images.py`.
 
