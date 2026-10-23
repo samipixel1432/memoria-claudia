@@ -69,6 +69,23 @@ const t = {
       block_order: ['c1', 'c2', 'c3', 'c4'],
       settings: {}
     },
+    videos: {
+      type: 'tovelya-cepillo-v2-encasa',
+      blocks: {
+        v1: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-carplay-video-funciones.mp4', nombre: 'Llamadas, música y mapa', detalle: 'Todo en la pantalla del manubrio', sonido: true } },
+        v2: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-carplay-video-llamadas-gps.mp4', nombre: 'Sin sacar el celular', detalle: 'Navega, llama y escucha música', sonido: true } },
+        v3: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-carplay-video-instalacion.mp4', nombre: 'Así se instala', detalle: 'En el manubrio de tu moto', sonido: true } }
+      },
+      block_order: ['v1', 'v2', 'v3'],
+      settings: {
+        eyebrow: 'Mírala funcionando',
+        titulo: 'Así se ve <em>en la moto</em>',
+        entradilla: 'Videos reales de la pantalla instalada y en uso.',
+        etiqueta_carrusel: 'Videos de la pantalla en uso',
+        padding_superior_movil: 48,
+        padding_inferior_movil: 48
+      }
+    },
     imagenes: {
       type: 'tovelya-imagenes',
       blocks: {
@@ -129,7 +146,7 @@ const t = {
       settings: { etiqueta: 'Precio final · pagas al recibir', precio: PRECIO, precio_anterior: '', aria_precio_anterior: '', texto_boton: 'Pedir · pago al recibir', variant_id: VARIANTE, url_boton: '#pedido' }
     }
   },
-  order: ['topbar', 'cabecera', 'hero', 'confianza', 'imagenes', 'pedido', 'ctafinal', 'footer', 'barracompra']
+  order: ['topbar', 'cabecera', 'hero', 'confianza', 'videos', 'imagenes', 'pedido', 'ctafinal', 'footer', 'barracompra']
 };
 writeFileSync(process.argv[2], JSON.stringify(t));
 console.log('listo');

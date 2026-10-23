@@ -99,6 +99,11 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
       - **6 banners** `tovelya-carplay-b1…b6.jpg`, hechos con `PALETA=tovelya herramientas/banner.sh`, con 3 botones de pedido entre ellos.
       - Formulario de pedido, cierre, pie y barra fija.
     - El botón abre EasySell (probado).
+    - **Videos (2026-10-23)**: 3 videos reales que mandó Samuel, comprimidos con ffmpeg y subidos como archivos de Shopify: `tovelya-carplay-video-funciones.mp4`, `-llamadas-gps.mp4` e `-instalacion.mp4`.
+      - En la landing van en un carrusel (sección `tovelya-cepillo-v2-encasa`, "Así se ve en la moto") justo después de la confianza.
+      - También quedaron en la galería del producto, ya en vivo.
+      - Se suben con `stagedUploadsCreate` resource VIDEO + POST multipart (GoogleAccessId, key, policy, signature, file) y luego `fileCreate` contentType VIDEO.
+      - Uno es de un creador ("Yahir Arévalo"): ojo con los derechos si se usa en anuncios.
     - La plantilla vieja (sección `tovelya-landing` con las fotos `tovelya-carplay-moto-*.webp`) sigue en el tema en vivo hasta que se publique.
     - Se hace con `herramientas/plantilla-carplay-v2.mjs`; las fotos, con `herramientas/generar-carplay.sh`.
     - Respaldo de la plantilla: `respaldos/2026-10-23-product.carplay-para-moto-v2.json`.
