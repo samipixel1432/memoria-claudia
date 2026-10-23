@@ -1,24 +1,26 @@
 ---
 name: project-home-categorias
-description: New white/cream home + one sub-landing per category (Hogar, Salud, Carro y moto, Entretenimiento), built 2026-10-23 in test theme 181906309367
+description: Home v3 (original info + original navy/teal colors + one button per category) and 4 category sub-landings, 2026-10-23, test theme 181906309367
 metadata:
   type: project
 ---
-On 2026-10-23 I built a new home and 4 category sub-landings in the test theme `181906309367` ("Tovelya - café colágeno con bono (prueba)"). Samuel only has to publish that theme. Full detail is in `contexto/ESTADO-TOVELYA.md` (Categorías, Fotos limpias, Página principal).
+On 2026-10-23 I built the home and 4 category sub-landings in test theme `181906309367`. Samuel only has to publish that theme. Details are in `contexto/ESTADO-TOVELYA.md` (Categorías, Fotos limpias, Página principal).
 
-**Why:** Samuel said the old home looked "re pailas": a projector photo with the logo pasted on and red clamps, and every product crammed into one page. He wanted it like the café landing (white/cream, modern, very professional), plus a separate page per category that explains "qué hay en esta sección" and recommends, not products just thrown there. He picked 4 categories, the white/cream style, and new clean photos for every product.
+**Why:**
+- Samuel called the old home "re pailas": a projector photo with the logo pasted on and red clamps.
+- He also wanted one page per category with "qué hay en esta sección" and recommendations.
+- My first try was a white/cream café-style home. He said it was "muy sencilla".
+- He likes ALL the information of the original home and its original colors (navy #081B35/#0F223B, teal #0A7A6E/#5EF0D8, orange buttons).
+- He wants each category as a button.
+- The café/cream palette belongs ONLY to the café con colágeno product.
 
 **How to apply:**
-- Category page pattern:
-  - cover banner with the text inside
-  - subgroups with photos
-  - "¿Cuál es para ti?" (need → product)
-  - all products
-  - one recommended product with 3 checks
-  - trust and the COD + WhatsApp banner
-  - other categories
-- New categories reuse the section `tovelya-categoria` and the generator `herramientas/plantillas-home-categorias.mjs`.
-- Every product's first photo is now a cream-background catalog shot. Do the same for any new product (`herramientas/generar-packshots.sh`).
-- The home keeps the old message he liked: "Lo útil también puede sentirse especial", 4 steps, the 2 real reviews and the 4 FAQs. Don't invent reviews or ratings.
-- If he dislikes it, revert with `respaldos/2026-10-23-index-ANTES-original.json`. He has rejected a home redesign before (2026-10-22, "DEJALO COMO ESTABA ANTES"), so ask before changing direction.
+- **Changing the home:** start from the original section (`sections/tovelya-home-v3.liquid` = original + category buttons + new hero photo) and add to it. Don't replace it with a minimal page.
+- **Colors:** keep Tovelya's navy/teal everywhere except the café landing. Banners use `PALETA=tovelya herramientas/banner.sh`.
+- **Category pages:**
+  - Order: cover banner → subgroups → "¿Cuál es para ti?" (need → product) → all products → recommended → trust → COD/WhatsApp banner → other categories.
+  - Built with `herramientas/plantillas-categorias.mjs` and the section `tovelya-categoria`.
+- **Product photos:** each product's first photo is a clean catalog shot. Do the same for new products with `herramientas/generar-packshots.sh`.
+- **Content rules:** don't invent reviews or ratings.
+- **Big redesigns:** ask before changing direction. He rejected two redesigns (2026-10-22 and the first try on 2026-10-23).
 - Related: [[feedback-menos-texto-mas-imagenes]], [[reference-shopify-desde-nube]].

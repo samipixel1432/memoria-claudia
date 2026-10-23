@@ -4,7 +4,9 @@
 # El texto se escribe con tipografía real (no IA): sin letras raras.
 foto="$1"; out="$2"; tag="$3"; titulo="$4"; acento="$5"; sub="$6"; dy="${7:-50}"
 F=/usr/share/fonts/opentype/inter
+# Colores: por defecto los del café (crema). PALETA=tovelya usa los colores originales de la marca (azul marino y verde azulado).
 CREMA='#FAF6F0'; TINTA='#1F1611'; CAFE='#B5743A'; SUAVE='#6B5B4E'; PILL='#F1D4AE'
+if [ "$PALETA" = tovelya ]; then CREMA='#F5F9F8'; TINTA='#10243F'; CAFE='#0A7A6E'; SUAVE='#52637A'; PILL='#CFF5EE'; fi
 
 tmp=$(mktemp -d)
 # Foto: cuadrada a 1080 y recorte vertical a 980 (dy = cuánto se quita arriba, 0-100)

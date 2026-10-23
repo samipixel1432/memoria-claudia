@@ -30,12 +30,7 @@
         "t2",
         "t3"
       ],
-      "settings": {
-        "color_fondo_1": "#2A1A10",
-        "color_fondo_2": "#3B2416",
-        "color_texto": "#FFFFFF",
-        "color_punto": "#E2B98A"
-      }
+      "settings": {}
     },
     "cabecera": {
       "type": "tovelya-cepillo-v2-cabecera",
@@ -47,11 +42,7 @@
         "precio_boton": "",
         "variant_id": "",
         "url_boton": "#productos",
-        "color_fondo": "#FFFFFF",
-        "color_linea": "#EADFD3",
-        "color_logo": "#1F1611",
-        "color_logo_punto": "#B5743A",
-        "color_cta_texto": "#2A1A10"
+        "color_fondo": "#FFFFFF"
       }
     },
     "portada": {
@@ -60,7 +51,7 @@
         "img_1": {
           "type": "imagen",
           "settings": {
-            "imagen": "shopify://shop_images/tovelya-cat-hogar-portada.jpg",
+            "imagen": "shopify://shop_images/tovelya-cat-hogar-portada-v2.jpg",
             "alt": "Hogar y limpieza: tu casa limpia sin tanto esfuerzo"
           }
         },
@@ -78,7 +69,9 @@
         "btn"
       ],
       "settings": {
-        "color_fondo": "#FAF6F0"
+        "color_fondo": "#F5F9F8",
+        "color_cta_texto": "#0F223B",
+        "color_nota": "#52637A"
       }
     },
     "guia": {
@@ -176,6 +169,12 @@
         "nec_6"
       ],
       "settings": {
+        "color_tinta": "#10243F",
+        "color_suave": "#52637A",
+        "color_acento": "#0A7A6E",
+        "color_linea": "#D9E3EA",
+        "color_cta_texto": "#0F223B",
+        "color_pill": "#CFF5EE",
         "color_fondo": "#FFFFFF"
       }
     },
@@ -185,7 +184,12 @@
         "cantidad": 12,
         "ancla": "productos",
         "texto_boton": "Ver producto",
-        "color_fondo": "#FAF6F0",
+        "color_fondo": "#F5F9F8",
+        "color_tinta": "#10243F",
+        "color_suave": "#52637A",
+        "color_acento": "#0A7A6E",
+        "color_linea": "#D9E3EA",
+        "color_cta_texto": "#0F223B",
         "eyebrow": "Hogar y limpieza",
         "titulo": "Todos los <em>productos</em>"
       }
@@ -209,6 +213,12 @@
         "rec"
       ],
       "settings": {
+        "color_tinta": "#10243F",
+        "color_suave": "#52637A",
+        "color_acento": "#0A7A6E",
+        "color_linea": "#D9E3EA",
+        "color_cta_texto": "#0F223B",
+        "color_pill": "#CFF5EE",
         "titulo_recomendado": "Si solo vas a llevar <em>uno</em>",
         "color_fondo": "#FFFFFF"
       }
@@ -255,11 +265,7 @@
         "c3",
         "c4"
       ],
-      "settings": {
-        "color_linea": "#EADFD3",
-        "color_texto": "#1F1611",
-        "color_texto_suave": "#6B5B4E"
-      }
+      "settings": {}
     },
     "cierre": {
       "type": "tovelya-imagenes",
@@ -267,7 +273,7 @@
         "img_1": {
           "type": "imagen",
           "settings": {
-            "imagen": "shopify://shop_images/tovelya-home-b6-pago.jpg",
+            "imagen": "shopify://shop_images/tovelya-pago-v2.jpg",
             "alt": "No pagas nada hasta recibirlo"
           }
         },
@@ -285,7 +291,9 @@
         "btn"
       ],
       "settings": {
-        "color_fondo": "#FAF6F0",
+        "color_fondo": "#F5F9F8",
+        "color_cta_texto": "#0F223B",
+        "color_nota": "#52637A",
         "padding_superior_movil": 24,
         "padding_superior": 40
       }
@@ -327,6 +335,12 @@
         "sub_3"
       ],
       "settings": {
+        "color_tinta": "#10243F",
+        "color_suave": "#52637A",
+        "color_acento": "#0A7A6E",
+        "color_linea": "#D9E3EA",
+        "color_cta_texto": "#0F223B",
+        "color_pill": "#CFF5EE",
         "eyebrow_subgrupos": "Sigue explorando",
         "titulo_subgrupos": "Otras <em>categorías</em>",
         "color_fondo": "#FFFFFF"
@@ -363,8 +377,7 @@
         "f3"
       ],
       "settings": {
-        "logo": "shopify://shop_images/tovelya-logo-white.png",
-        "color_fondo": "#2A1A10"
+        "logo": "shopify://shop_images/tovelya-logo-white.png"
       }
     }
   },

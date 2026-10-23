@@ -1,0 +1,514 @@
+{% liquid
+  assign cat_ids = 'hogar|movimiento|bienestar' | split: '|'
+  assign cat_kickers = 'Para tu espacio|Tecnología útil|Para sentirte mejor' | split: '|'
+  assign cat_titles = 'Hogar y cocina|Entretenimiento y movimiento|Bienestar y cuidado personal' | split: '|'
+  assign cat_texts = 'Soluciones para limpiar, organizar y simplificar las tareas de todos los días.|Equipos para disfrutar en casa, viajar mejor y estar preparado en el camino.|Opciones pensadas para acompañar tu postura, entrenamiento y comodidad diaria.' | split: '|'
+  assign cat_handles = 'cepillo-electrico-recargable-7-en-1,hidrolavadora-inalambrica-48v,bomba-vacio-alimentos,trapero-electrico-inalambrico|mini-proyector-led,traje-impermeable-lluvia,pantalla-carplay-para-moto,inflador-arrancador-portatil-4-en-1|chaleco-soporte-postural,soporte-termico-hombro,faja-waist-trainer,camisilla-termica-hombre' | split: '|'
+  assign cat_links = '/collections/hogar|/collections/tecnologia|/collections/bienestar' | split: '|'
+  assign wa = 'https://wa.me/573232552543?text=Hola%20Tovelya%2C%20quiero%20conocer%20sus%20productos.'
+%}
+
+<div class="tvh" data-tovelya-brand-home>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <symbol id="tvh-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="tvh-camion" viewBox="0 0 24 24"><path d="M2.5 6.5h12v10h-12zM14.5 10h4l2.5 3v3.5h-6.5"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></symbol>
+    <symbol id="tvh-billete" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></symbol>
+    <symbol id="tvh-chat" viewBox="0 0 24 24"><path d="M4 5.5h16v10H9l-5 4z"/><path d="M8 10.5h8"/></symbol>
+    <symbol id="tvh-escudo" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-3 8.1-7 10-4-1.9-7-5.4-7-10V6z"/><path d="M9 12l2 2 4-4.5"/></symbol>
+    <symbol id="tvh-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="tvh-abajo" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="tvh-izq" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="tvh-der" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="tvh-estrella" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></symbol>
+    <symbol id="tvh-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.894 6.99c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  </defs></svg>
+
+  <div class="tvh-topbar"><div class="tvh-wrap">{{ section.settings.announcement }}</div></div>
+
+  <header class="tvh-header" data-tvh-header>
+    <div class="tvh-wrap tvh-header-in">
+      <a class="tvh-logo" href="{{ routes.root_url }}" aria-label="Tovelya, inicio">
+        {%- if settings.logo != blank -%}
+          {{ settings.logo | image_url: width: 400 | image_tag: loading: 'eager', alt: 'Tovelya', widths: '200, 400', sizes: '140px' }}
+        {%- else -%}
+          <img src="https://cdn.shopify.com/s/files/1/0955/3523/5319/t/1/assets/tovelya-logo-horizontal.png?v=1789520576" alt="Tovelya" width="1844" height="534">
+        {%- endif -%}
+      </a>
+      <nav class="tvh-nav" aria-label="Navegación principal">
+        <a class="tvh-nav-link" href="#descubrir">Productos</a>
+        <a class="tvh-nav-link" href="#como-compras">Cómo compras</a>
+        <a class="tvh-nav-link" href="#opiniones">Opiniones</a>
+        <a class="tvh-wa-btn" href="{{ wa }}" target="_blank" rel="noopener" aria-label="Hablar con Tovelya por WhatsApp"><svg aria-hidden="true"><use href="#tvh-wa"/></svg></a>
+        <a class="tvh-btn tvh-btn-sm" href="#descubrir">Ver productos</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="tvh-main">
+    <section class="tvh-hero" aria-labelledby="tvh-hero-title">
+      <div class="tvh-wrap tvh-hero-in">
+        <div class="tvh-hero-copy">
+          <p class="tvh-eyebrow">Tovelya · Colombia</p>
+          <h1 id="tvh-hero-title">Lo útil también puede sentirse <em>especial</em></h1>
+          <p class="tvh-lead">Productos pensados para hacer más fácil la rutina, el hogar y tus planes.</p>
+          <div class="tvh-hero-ctas">
+            <a class="tvh-btn" href="#descubrir">Ver productos <svg aria-hidden="true"><use href="#tvh-abajo"/></svg></a>
+            <a class="tvh-btn tvh-btn-ghost-light" href="#como-compras">Cómo compras</a>
+          </div>
+          <ul class="tvh-risk" aria-label="Así compras en Tovelya">
+            <li><svg aria-hidden="true"><use href="#tvh-check"/></svg>Pagas al recibir</li>
+            <li><svg aria-hidden="true"><use href="#tvh-check"/></svg>Envío en Colombia</li>
+            <li><svg aria-hidden="true"><use href="#tvh-check"/></svg>Confirmación por WhatsApp</li>
+          </ul>
+        </div>
+        <figure class="tvh-hero-media">
+          <img src="{{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}" srcset="{{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}&width=960 960w, {{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}&width=1400 1400w, {{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }} 2000w" sizes="(max-width: 749px) 195vw, 100vw" alt="Selección de productos Tovelya para el hogar, entretenimiento y recorridos." width="2000" height="768" loading="eager" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="tvh-trust" aria-label="Por qué comprar tranquilo">
+      <div class="tvh-wrap tvh-trust-grid">
+        <div class="tvh-trust-item"><span class="tvh-badge-trust"><svg aria-hidden="true"><use href="#tvh-billete"/></svg></span><span><b>Pago al recibir</b>Pagas cuando llega tu pedido</span></div>
+        <div class="tvh-trust-item"><span class="tvh-badge-trust"><svg aria-hidden="true"><use href="#tvh-camion"/></svg></span><span><b>Envío en Colombia</b>Sujeto a cobertura de tu ciudad</span></div>
+        <div class="tvh-trust-item"><span class="tvh-badge-trust"><svg aria-hidden="true"><use href="#tvh-chat"/></svg></span><span><b>Confirmación personal</b>Hablamos contigo antes de enviar</span></div>
+        <div class="tvh-trust-item"><span class="tvh-badge-trust"><svg aria-hidden="true"><use href="#tvh-escudo"/></svg></span><span><b>Compra respaldada</b>Según nuestras políticas publicadas</span></div>
+      </div>
+    </section>
+
+    <section class="tvh-manifesto">
+      <div class="tvh-wrap tvh-head tvh-head-center" data-rv>
+        <p class="tvh-eyebrow">Nuestra forma de elegir</p>
+        <h2>Menos complicaciones. <em>Más momentos que sí importan.</em></h2>
+        <p class="tvh-lead">Reunimos soluciones prácticas para acompañar tu día sin llenarlo de cosas innecesarias.</p>
+      </div>
+    </section>
+
+    <section class="tvh-catalog" id="descubrir" aria-labelledby="tvh-catalog-title">
+      <div class="tvh-wrap tvh-head tvh-head-center">
+        <p class="tvh-eyebrow">Catálogo Tovelya</p>
+        <h2 id="tvh-catalog-title">Encuentra lo que <em>necesitas</em></h2>
+        <p class="tvh-lead">Elige un producto y entra a su página para conocerlo completo.</p>
+        <nav class="tvh-chips" aria-label="Categorías">
+          {%- for id in cat_ids -%}<a href="#cat-{{ id }}">{{ cat_titles[forloop.index0] }}</a>{%- endfor -%}
+        </nav>
+      </div>
+
+      {%- for id in cat_ids -%}
+        {%- assign i = forloop.index0 -%}
+        {%- assign handles = cat_handles[i] | split: ',' -%}
+        <section class="tvh-cat{% if i == 1 %} tvh-cat-dark{% endif %}{% if i == 2 %} tvh-cat-paper{% endif %}" id="cat-{{ id }}" aria-labelledby="tvh-cat-title-{{ id }}">
+          <div class="tvh-wrap">
+            <div class="tvh-cat-head">
+              <div><p class="tvh-eyebrow">{{ cat_kickers[i] }}</p><h3 id="tvh-cat-title-{{ id }}">{{ cat_titles[i] }}</h3></div>
+              <p>{{ cat_texts[i] }}<a class="tvh-cat-all" href="{{ cat_links[i] }}">Ver toda la categoría <svg aria-hidden="true"><use href="#tvh-flecha"/></svg></a></p>
+            </div>
+            <div class="tvh-cards">
+              {%- for h in handles -%}
+                {%- assign p = all_products[h] -%}
+                {%- if p == empty or p == nil or p.title == blank -%}{%- continue -%}{%- endif -%}
+                <article class="tvh-card" data-rv style="--i:{{ forloop.index0 }}">
+                  <a class="tvh-card-media" href="{{ p.url }}" tabindex="-1" aria-hidden="true">
+                    {%- if p.featured_image != blank -%}
+                      {{ p.featured_image | image_url: width: 720 | image_tag: widths: '320, 480, 640, 720', sizes: '(min-width: 990px) 280px, (min-width: 750px) 45vw, 74vw', loading: 'lazy', alt: p.title }}
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'tvh-placeholder' }}
+                    {%- endif -%}
+                    {%- if p.compare_at_price > p.price -%}<span class="tvh-save">-{{ p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price }}%</span>{%- endif -%}
+                  </a>
+                  <div class="tvh-card-body">
+                    {%- if p.type != blank -%}<p class="tvh-card-type">{{ p.type }}</p>{%- endif -%}
+                    <h4><a href="{{ p.url }}">{{ p.title }}</a></h4>
+                    <div class="tvh-price"><strong>{% if p.price_varies %}Desde {% endif %}{{ p.price | money_without_trailing_zeros }}</strong>{%- if p.compare_at_price > p.price -%}<s>{{ p.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}</div>
+                    <a class="tvh-card-link" href="{{ p.url }}">Ver producto <svg aria-hidden="true"><use href="#tvh-flecha"/></svg></a>
+                  </div>
+                </article>
+              {%- endfor -%}
+            </div>
+          </div>
+        </section>
+      {%- endfor -%}
+    </section>
+
+    <section class="tvh-steps" id="como-compras" aria-labelledby="tvh-steps-title">
+      <div class="tvh-wrap">
+        <div class="tvh-head tvh-head-center">
+          <p class="tvh-eyebrow">Cómo compras</p>
+          <h2 id="tvh-steps-title">Pides hoy. <em>Pagas cuando llegue.</em></h2>
+        </div>
+        <ol class="tvh-steps-grid">
+          <li class="tvh-step" data-rv style="--i:0"><span class="tvh-step-n" aria-hidden="true">1</span><h3>Elige tu producto</h3><p>Entra a su página y haz el pedido en menos de un minuto.</p></li>
+          <li class="tvh-step" data-rv style="--i:1"><span class="tvh-step-n" aria-hidden="true">2</span><h3>Te confirmamos</h3><p>Revisamos contigo por WhatsApp tus datos, dirección y cobertura.</p></li>
+          <li class="tvh-step" data-rv style="--i:2"><span class="tvh-step-n" aria-hidden="true">3</span><h3>Despachamos</h3><p>Enviamos tu pedido a tu ciudad en Colombia.</p></li>
+          <li class="tvh-step" data-rv style="--i:3"><span class="tvh-step-n" aria-hidden="true">4</span><h3>Recibes y pagas</h3><p>Pagas al transportador cuando lo tienes en la mano.</p></li>
+        </ol>
+        <div class="tvh-cta-mid"><a class="tvh-btn" href="#descubrir">Ver productos <svg aria-hidden="true"><use href="#tvh-flecha"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="tvh-inspiration" aria-labelledby="tvh-insp-title">
+      <div class="tvh-wrap">
+        <div class="tvh-track-head">
+          <div class="tvh-head"><p class="tvh-eyebrow">Tovelya en la vida real</p><h2 id="tvh-insp-title">Pequeñas soluciones. <em>Grandes diferencias.</em></h2></div>
+          <div class="tvh-track-nav"><button type="button" data-dir="-1" aria-label="Imagen anterior"><svg aria-hidden="true"><use href="#tvh-izq"/></svg></button><button type="button" data-dir="1" aria-label="Imagen siguiente"><svg aria-hidden="true"><use href="#tvh-der"/></svg></button></div>
+        </div>
+        <div class="tvh-track" data-tvh-track tabindex="0" role="region" aria-label="Productos Tovelya en uso">
+          <figure><img src="{{ 'tovelya-cepillo-cambio-cabezal-v1.png' | asset_url }}&width=800&format=pjpg" srcset="{{ 'tovelya-cepillo-cambio-cabezal-v1.png' | asset_url }}&width=480&format=pjpg 480w, {{ 'tovelya-cepillo-cambio-cabezal-v1.png' | asset_url }}&width=800&format=pjpg 800w, {{ 'tovelya-cepillo-cambio-cabezal-v1.png' | asset_url }}&width=1100&format=pjpg 1100w" sizes="(min-width: 990px) 34vw, 80vw" alt="Cambio de cabezal del cepillo eléctrico Tovelya." width="1536" height="1024" loading="lazy"><figcaption>Adáptalo a cada tarea</figcaption></figure>
+          <figure><img src="{{ 'tovelya-mini-proyector-03-cine-en-casa.webp' | asset_url }}&width=800" srcset="{{ 'tovelya-mini-proyector-03-cine-en-casa.webp' | asset_url }}&width=480 480w, {{ 'tovelya-mini-proyector-03-cine-en-casa.webp' | asset_url }}&width=800 800w, {{ 'tovelya-mini-proyector-03-cine-en-casa.webp' | asset_url }}&width=1100 1100w" sizes="(min-width: 990px) 34vw, 80vw" alt="Noche de cine familiar con mini proyector." width="1122" height="1402" loading="lazy"><figcaption>Comparte algo diferente</figcaption></figure>
+          <figure><img src="{{ 'tovelya-inflador-arrancador-04-inflado-digital.jpg' | asset_url }}&width=800" srcset="{{ 'tovelya-inflador-arrancador-04-inflado-digital.jpg' | asset_url }}&width=480 480w, {{ 'tovelya-inflador-arrancador-04-inflado-digital.jpg' | asset_url }}&width=800 800w, {{ 'tovelya-inflador-arrancador-04-inflado-digital.jpg' | asset_url }}&width=1100 1100w" sizes="(min-width: 990px) 34vw, 80vw" alt="Inflador portátil junto a la rueda de un vehículo." width="1122" height="1402" loading="lazy"><figcaption>Prepárate para el camino</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="tvh-social" id="opiniones" aria-labelledby="tvh-social-title">
+      <div class="tvh-wrap">
+        <div class="tvh-head"><p class="tvh-eyebrow">Compras confirmadas</p><h2 id="tvh-social-title">Experiencias reales, <em>sin adornos</em></h2></div>
+        <div class="tvh-quotes">
+          <blockquote class="tvh-quote" data-rv style="--i:0"><span class="tvh-stars" role="img" aria-label="5 de 5 estrellas">{% for s in (1..5) %}<svg aria-hidden="true"><use href="#tvh-estrella"/></svg>{% endfor %}</span><p>“Me llegó rápido y en buen estado. Lo probé para limpiar el baño y hace la limpieza mucho más fácil.”</p><cite><svg aria-hidden="true"><use href="#tvh-check"/></svg>Compra confirmada en Tovelya</cite></blockquote>
+          <blockquote class="tvh-quote" data-rv style="--i:1"><span class="tvh-stars" role="img" aria-label="5 de 5 estrellas">{% for s in (1..5) %}<svg aria-hidden="true"><use href="#tvh-estrella"/></svg>{% endfor %}</span><p>“Me llegó rápido y bien empacado. Ya lo probé para inflar una llanta y funcionó perfectamente.”</p><cite><svg aria-hidden="true"><use href="#tvh-check"/></svg>Compra confirmada en Tovelya</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="tvh-faq" aria-labelledby="tvh-faq-title">
+      <div class="tvh-wrap tvh-faq-grid">
+        <div class="tvh-head"><p class="tvh-eyebrow">Preguntas frecuentes</p><h2 id="tvh-faq-title">Antes de <em>pedir</em></h2><p class="tvh-lead">¿Otra duda? Escríbenos por <a href="{{ wa }}" target="_blank" rel="noopener">WhatsApp</a>.</p></div>
+        <div class="tvh-faq-list">
+          <details><summary>¿Cómo funciona el pago al recibir?</summary><div class="tvh-faq-a"><p>Haces tu pedido y pagas al transportador cuando lo recibes. Antes de despachar te confirmamos los datos por WhatsApp.</p></div></details>
+          <details><summary>¿Hacen envíos a toda Colombia?</summary><div class="tvh-faq-a"><p>Enviamos en Colombia, sujeto a la cobertura de la transportadora en tu ciudad. Te informamos el tiempo estimado cuando confirmamos tu pedido.</p></div></details>
+          <details><summary>¿Qué pasa si mi producto llega con un problema?</summary><div class="tvh-faq-a"><p>Escríbenos por WhatsApp y lo revisamos contigo. Aplicamos nuestra <a href="/policies/refund-policy">política de devoluciones</a>.</p></div></details>
+          <details><summary>¿Cómo me comunico con Tovelya?</summary><div class="tvh-faq-a"><p>Por <a href="{{ wa }}" target="_blank" rel="noopener">WhatsApp al +57 323 255 2543</a>. Te respondemos y te acompañamos antes del envío.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="tvh-closing" aria-labelledby="tvh-closing-title">
+      <img src="{{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}" srcset="{{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}&width=960 960w, {{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }}&width=1400 1400w, {{ 'tovelya-hero-banner-tres-productos.jpg' | asset_url }} 2000w" sizes="100vw" alt="" width="2000" height="768" loading="lazy">
+      <div class="tvh-wrap tvh-closing-in">
+        <p class="tvh-eyebrow">Descubre tu próxima solución</p>
+        <h2 id="tvh-closing-title">Hazle espacio a lo que <em>sí te ayuda</em></h2>
+        <a class="tvh-btn" href="#descubrir">Explorar la selección <svg aria-hidden="true"><use href="#tvh-flecha"/></svg></a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="tvh-footer">
+    <div class="tvh-wrap">
+      <div class="tvh-footer-top">
+        <a class="tvh-footer-logo" href="{{ routes.root_url }}" aria-label="Tovelya, inicio">
+          {%- if settings.logo_inverse != blank -%}
+            {{ settings.logo_inverse | image_url: width: 400 | image_tag: loading: 'lazy', alt: 'Tovelya', widths: '200, 400', sizes: '150px' }}
+          {%- else -%}
+            <img src="https://cdn.shopify.com/s/files/1/0955/3523/5319/t/1/assets/tovelya-logo-white.png?v=1789520577" alt="Tovelya" width="1844" height="534" loading="lazy">
+          {%- endif -%}
+        </a>
+        <p>Productos útiles, ofertas claras y acompañamiento antes del envío.</p>
+      </div>
+      <div class="tvh-footer-bottom">
+        <small>© {{ 'now' | date: '%Y' }} Tovelya · Colombia</small>
+        <nav aria-label="Información de Tovelya"><a href="/policies/shipping-policy">Envíos</a><a href="/policies/refund-policy">Devoluciones</a><a href="/policies/privacy-policy">Privacidad</a><a href="{{ wa }}" target="_blank" rel="noopener">WhatsApp</a></nav>
+      </div>
+    </div>
+    <div class="tvh-echo" aria-hidden="true">tovelya</div>
+  </footer>
+
+  <a class="tvh-wa-float" href="{{ wa }}" target="_blank" rel="noopener" aria-label="Escribir a Tovelya por WhatsApp"><svg aria-hidden="true"><use href="#tvh-wa"/></svg></a>
+</div>
+
+{% stylesheet %}
+  body:has([data-tovelya-brand-home]) .shopify-section-group-header-group,
+  body:has([data-tovelya-brand-home]) .shopify-section-group-footer-group{display:none}
+
+  .tvh{
+    --navy:#081B35; --navy-2:#0F223B; --ink:#10243F; --soft:#52637A; --line:#D9E3EA;
+    --paper:#F5F9F8; --paper-2:#EAF3F1; --accent:#0FA896; --accent-ink:#0A7A6E; --accent-light:#5EF0D8;
+    --neon-1:#8BFFF1; --neon-2:#19D3FF; --cta-1:#FFB547; --cta-2:#FF8A1F; --cta-ink:#0F223B;
+    --trust-1:#6AA8FF; --trust-2:#2F6FE4; --gold-1:#FFE08A; --gold-2:#FFC23D; --gold-ink:#5A3D00; --ok:#1FB36B; --wa:#1EAE59;
+    --fd:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --fb:"Manrope","Tovelya Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --ease:cubic-bezier(.22,.8,.35,1); --gut:20px; --sy:64px; --head-gap:32px;
+    --h1:38px; --h2:30px; --h3:24px; --lead:16px;
+    --sh-sm:0 1px 2px rgba(16,36,63,.06),0 4px 12px rgba(16,36,63,.05); --sh-md:0 14px 34px -14px rgba(16,36,63,.22); --sh-lg:0 28px 70px -24px rgba(8,27,53,.45);
+    width:100%; max-width:none; margin:0; color:var(--ink); background:#fff; font-family:var(--fb); font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:clip;
+  }
+  .tvh *,.tvh *::before,.tvh *::after{box-sizing:border-box}
+  .tvh img{display:block;max-width:100%;height:auto}
+  .tvh a{color:inherit}
+  .tvh svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .tvh :focus-visible{outline:3px solid #2E6FD9;outline-offset:3px;border-radius:6px}
+  .tvh h1,.tvh h2,.tvh h3,.tvh h4{margin:0;font-family:var(--fd);font-weight:800;letter-spacing:-0.025em;line-height:1.08;text-wrap:balance;color:inherit}
+  .tvh p{margin:0}
+  .tvh h2 em,.tvh h1 em{font-style:normal;color:var(--accent-ink);text-decoration:underline;text-decoration-color:var(--accent-light);text-decoration-thickness:.09em;text-underline-offset:.14em;text-decoration-skip-ink:none}
+  .tvh-hero h1 em,.tvh-closing h2 em{text-decoration:none;background:linear-gradient(135deg,var(--accent-light),var(--neon-2));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+  .tvh-wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gut)}
+  .tvh-eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+  .tvh-eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:currentColor;opacity:.7}
+  .tvh-lead{font-size:var(--lead);color:var(--soft);text-wrap:pretty}
+  .tvh-lead a{color:var(--accent-ink);font-weight:800;text-underline-offset:3px}
+  .tvh-head{display:grid;gap:12px;max-width:680px;margin-bottom:var(--head-gap)}
+  .tvh-head h2{font-size:var(--h2)}
+  .tvh-head-center{text-align:center;justify-items:center;margin-inline:auto}
+
+  .tvh-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border:0;border-radius:999px;font-family:var(--fb);font-size:15px;font-weight:800;line-height:1.2;text-align:center;text-decoration:none;cursor:pointer;color:var(--cta-ink);background:linear-gradient(135deg,var(--cta-1),var(--cta-2));box-shadow:0 10px 24px -8px rgba(255,138,31,.55);transition:transform .16s var(--ease),box-shadow .16s var(--ease),filter .16s var(--ease),background-color .16s,color .16s}
+  .tvh-btn:hover{transform:translateY(-2px);filter:saturate(1.1) brightness(1.03);box-shadow:0 16px 30px -10px rgba(255,138,31,.65);color:var(--cta-ink)}
+  .tvh-btn:active{transform:translateY(1px) scale(.98)}
+  .tvh-btn svg{width:18px;height:18px;stroke-width:2.2;transition:transform .16s var(--ease)}
+  .tvh-btn:hover svg{transform:translateX(3px)}
+  .tvh-btn-sm{min-height:44px;padding:0 20px;font-size:14px;box-shadow:0 6px 16px -8px rgba(255,138,31,.6)}
+  .tvh-btn-ghost-light{color:#fff;background:transparent;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+  .tvh-btn-ghost-light:hover{color:var(--navy);background:#fff;box-shadow:inset 0 0 0 2px #fff;filter:none}
+
+  .tvh-topbar{background:var(--navy);color:rgba(255,255,255,.88);font-size:12px;font-weight:700;letter-spacing:.01em;text-align:center}
+  .tvh-topbar .tvh-wrap{display:flex;min-height:36px;align-items:center;justify-content:center;padding-block:6px}
+
+  .tvh-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.5) blur(12px);-webkit-backdrop-filter:saturate(1.5) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}
+  .tvh-header.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 20px -14px rgba(16,36,63,.35)}
+  .tvh-header-in{display:flex;height:64px;align-items:center;justify-content:space-between;gap:16px}
+  .tvh-logo{display:inline-flex;border-radius:8px}
+  .tvh-logo img{width:auto;height:32px}
+  .tvh-nav{display:flex;align-items:center;gap:10px}
+  .tvh-nav-link{display:none;padding:10px 8px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;color:var(--ink);transition:color .16s}
+  .tvh-nav-link:hover{color:var(--accent-ink)}
+  .tvh-wa-btn{display:grid;width:44px;height:44px;place-items:center;border-radius:50%;color:#fff;background:var(--wa);box-shadow:0 6px 16px -8px rgba(30,174,89,.7);transition:transform .16s var(--ease)}
+  .tvh-wa-btn:hover{transform:translateY(-2px);color:#fff}
+  .tvh-wa-btn svg,.tvh-wa-float svg{fill:currentColor;stroke:none;width:22px;height:22px}
+  .tvh-nav .tvh-btn-sm{display:none}
+
+  .tvh-hero{color:#fff;padding-block:40px 56px;background:radial-gradient(60% 55% at 15% 15%,rgba(15,168,150,.42) 0%,transparent 70%),radial-gradient(45% 40% at 92% 96%,rgba(255,138,31,.14) 0%,transparent 70%),linear-gradient(165deg,var(--navy) 0%,var(--navy-2) 100%)}
+  .tvh-hero-in{display:grid;gap:32px}
+  .tvh-hero-copy{display:grid;gap:16px;justify-items:start;max-width:760px}
+  .tvh-hero .tvh-eyebrow{color:var(--accent-light)}
+  .tvh-hero h1{font-size:var(--h1);line-height:1.02}
+  .tvh-hero .tvh-lead{color:rgba(255,255,255,.76);font-size:17px;max-width:560px}
+  .tvh-hero-ctas{display:grid;gap:10px;width:100%;margin-top:4px}
+  .tvh-risk{display:flex;flex-wrap:wrap;gap:8px 18px;margin:4px 0 0;padding:0;list-style:none;font-size:14px;font-weight:600;color:rgba(255,255,255,.82)}
+  .tvh-risk li{display:inline-flex;align-items:center;gap:7px}
+  .tvh-risk svg{width:18px;height:18px;padding:3px;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--trust-1),var(--trust-2));stroke-width:2.8}
+  .tvh-hero-media{margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--sh-lg);background:var(--navy-2)}
+  .tvh-hero-media img{width:100%;height:100%;aspect-ratio:16/10;object-fit:cover;object-position:center}
+
+  .tvh-trust{background:#fff;border-bottom:1px solid var(--line)}
+  .tvh-trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;padding-block:24px}
+  .tvh-trust-item{display:flex;align-items:center;gap:12px;min-width:0;font-size:13px;line-height:1.35;color:var(--soft)}
+  .tvh-trust-item b{display:block;font-size:14px;font-weight:800;color:var(--ink)}
+  .tvh-badge-trust{display:grid;width:40px;height:40px;flex:none;place-items:center;border-radius:12px;color:#fff;background:linear-gradient(135deg,var(--trust-1),var(--trust-2));box-shadow:0 8px 18px -8px rgba(47,111,228,.6)}
+
+  .tvh-manifesto{padding-block:var(--sy);background:var(--paper)}
+  .tvh-manifesto .tvh-head{margin-bottom:0}
+  .tvh-manifesto h2{font-size:calc(var(--h2) * 1.1)}
+
+  .tvh-catalog{background:#fff;scroll-margin-top:72px}
+  .tvh-catalog>.tvh-head{padding-top:var(--sy);margin-bottom:0;padding-bottom:var(--head-gap)}
+  .tvh-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+  .tvh-chips a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-weight:700;text-decoration:none;color:var(--ink);box-shadow:var(--sh-sm);transition:background .16s,color .16s,border-color .16s}
+  .tvh-chips a:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+  .tvh-cat{padding-block:48px;scroll-margin-top:72px}
+  .tvh-cat+.tvh-cat{border-top:1px solid var(--line)}
+  .tvh-cat-paper{background:var(--paper)}
+  .tvh-cat-dark{color:#fff;border-top:0!important;background:radial-gradient(55% 50% at 0% 0%,rgba(15,168,150,.32) 0%,transparent 70%),linear-gradient(165deg,var(--navy-2) 0%,var(--navy) 100%)}
+  .tvh-cat-dark .tvh-eyebrow{color:var(--accent-light)}
+  .tvh-cat-head{display:grid;gap:10px;margin-bottom:24px}
+  .tvh-cat-head h3{font-size:var(--h3);margin-top:8px}
+  .tvh-cat-head>p{max-width:460px;color:var(--soft);font-size:14px}
+  .tvh-cat-dark .tvh-cat-head>p{color:rgba(255,255,255,.72)}
+  .tvh .tvh-cat-all{display:flex;align-items:center;gap:8px;width:max-content;min-height:44px;margin-top:6px;font-size:14px;font-weight:800;text-decoration:none;color:var(--accent-ink)}
+  .tvh .tvh-cat-all svg{width:17px;height:17px;stroke-width:2.2}
+  .tvh .tvh-cat-dark .tvh-cat-all{color:#fff}
+  .tvh-cards{--bleed:max(var(--gut),calc((100vw - 1240px) / 2 + var(--gut)));display:grid;grid-auto-flow:column;grid-auto-columns:min(74vw,280px);gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--bleed));padding:4px var(--bleed) 16px;scroll-padding-inline:var(--bleed)}
+  .tvh-cards::-webkit-scrollbar{display:none}
+  .tvh-card{display:flex;min-width:0;flex-direction:column;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:20px;overflow:hidden;scroll-snap-align:start;box-shadow:var(--sh-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),opacity .6s var(--ease)}
+  .tvh-cat-dark .tvh-card{border-color:transparent;box-shadow:var(--sh-lg)}
+  .tvh-card-media{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;background:var(--paper-2)}
+  .tvh-card-media img,.tvh-placeholder{width:100%;height:100%;object-fit:cover;transition:transform .45s var(--ease)}
+  .tvh-save{position:absolute;top:12px;left:12px;padding:5px 11px;border-radius:999px;background:linear-gradient(135deg,var(--gold-1),var(--gold-2));color:var(--gold-ink);font-size:12px;font-weight:800;line-height:1.3;box-shadow:0 6px 14px -6px rgba(0,0,0,.3)}
+  .tvh-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:6px;padding:16px 16px 18px}
+  .tvh-card-type{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink)}
+  .tvh-card h4{font-size:17px;line-height:1.25;letter-spacing:-0.01em}
+  .tvh-card h4 a{text-decoration:none}
+  .tvh-card h4 a::after{content:"";position:absolute;inset:0}
+  .tvh-card{position:relative}
+  .tvh-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-top:4px}
+  .tvh-price strong{font-family:var(--fd);font-size:20px;font-weight:800;letter-spacing:-0.02em}
+  .tvh-price s{font-size:13px;color:var(--soft)}
+  .tvh-card-link{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:auto;padding-top:8px;font-size:14px;font-weight:800;text-decoration:none;color:var(--accent-ink)}
+  .tvh-card-link svg{width:17px;height:17px;stroke-width:2.2;transition:transform .16s var(--ease)}
+  .tvh-card:hover .tvh-card-link svg{transform:translateX(4px)}
+
+  .tvh-steps{padding-block:var(--sy);background:var(--paper-2);scroll-margin-top:72px}
+  .tvh-steps-grid{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+  .tvh-step{position:relative;display:grid;gap:6px;padding:22px 20px 22px 76px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .tvh-step-n{position:absolute;left:18px;top:20px;display:grid;width:42px;height:42px;place-items:center;border-radius:50%;font-family:var(--fd);font-size:18px;font-weight:800;color:var(--navy);background:linear-gradient(135deg,var(--neon-1),var(--neon-2));box-shadow:0 10px 22px -8px rgba(46,242,201,.85);animation:tvh-float 4.5s ease-in-out infinite}
+  .tvh-step:nth-child(2) .tvh-step-n{animation-delay:-1.1s}.tvh-step:nth-child(3) .tvh-step-n{animation-delay:-2.2s}.tvh-step:nth-child(4) .tvh-step-n{animation-delay:-3.3s}
+  .tvh-step h3{font-size:18px;line-height:1.25;letter-spacing:-0.01em}
+  .tvh-step p{font-size:14px;color:var(--soft)}
+  .tvh-cta-mid{display:flex;justify-content:center;margin-top:var(--head-gap)}
+  .tvh-cta-mid .tvh-btn{width:100%;max-width:440px}
+  @keyframes tvh-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+  .tvh-inspiration{padding-block:var(--sy);background:#fff;overflow-x:clip}
+  .tvh-track-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:var(--head-gap)}
+  .tvh-track-head .tvh-head{margin-bottom:0}
+  .tvh-track-nav{display:none;gap:8px;flex:none}
+  .tvh-track-nav button{display:grid;width:48px;height:48px;place-items:center;padding:0;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);cursor:pointer;box-shadow:var(--sh-sm);transition:background .16s,color .16s,opacity .16s,transform .16s}
+  .tvh-track-nav button:hover{background:var(--ink);color:#fff}
+  .tvh-track-nav button:active{transform:scale(.94)}
+  .tvh-track-nav button:disabled{opacity:.35;cursor:default;background:#fff;color:var(--ink)}
+  .tvh-track{--bleed:max(var(--gut),calc((100vw - 1240px) / 2 + var(--gut)));display:grid;grid-auto-flow:column;grid-auto-columns:min(80vw,420px);gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--bleed));padding:4px var(--bleed) 16px;scroll-padding-inline:var(--bleed)}
+  .tvh-track::-webkit-scrollbar{display:none}
+  .tvh-track figure{position:relative;margin:0;aspect-ratio:4/5;border-radius:20px;overflow:hidden;scroll-snap-align:start;background:var(--paper-2);box-shadow:var(--sh-sm)}
+  .tvh-track img{width:100%;height:100%;object-fit:cover}
+  .tvh-track figcaption{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 16px;border-radius:14px;background:rgba(8,27,53,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:15px;font-weight:800}
+
+  .tvh-social{padding-block:var(--sy);background:var(--paper)}
+  .tvh-quotes{display:grid;gap:14px}
+  .tvh-quote{display:grid;gap:14px;margin:0;padding:26px 22px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-sm);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .tvh-stars{display:inline-flex;gap:2px;color:var(--cta-1)}
+  .tvh-stars svg{width:18px;height:18px;fill:currentColor;stroke-width:1}
+  .tvh-quote p{font-size:18px;line-height:1.5;color:var(--ink)}
+  .tvh-quote cite{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-style:normal;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#13824C}
+  .tvh-quote cite svg{width:16px;height:16px;stroke-width:3}
+
+  .tvh-faq{padding-block:var(--sy);background:#fff}
+  .tvh-faq-grid{display:grid;gap:32px}
+  .tvh-faq-grid .tvh-head{margin:0;align-content:start}
+  .tvh-faq-list{display:grid;gap:8px}
+  .tvh-faq details{background:#fff;border:1px solid var(--line);border-radius:20px;transition:border-color .16s,box-shadow .16s}
+  .tvh-faq details[open]{border-color:#BFD3DD;box-shadow:var(--sh-sm)}
+  .tvh-faq summary{display:flex;min-height:60px;align-items:center;justify-content:space-between;gap:16px;padding:16px 16px 16px 22px;border-radius:20px;font-weight:800;cursor:pointer;list-style:none}
+  .tvh-faq summary::-webkit-details-marker{display:none}
+  .tvh-faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(var(--accent-ink),var(--accent-ink)) center/12px 2px no-repeat,linear-gradient(var(--accent-ink),var(--accent-ink)) center/2px 12px no-repeat,rgba(10,122,110,.12);transition:transform .3s var(--ease)}
+  .tvh-faq details[open] summary::after{transform:rotate(45deg)}
+  .tvh-faq-a{padding:0 22px 22px;color:var(--soft)}
+  .tvh-faq details[open] .tvh-faq-a{animation:tvh-in .3s var(--ease)}
+  .tvh-faq-a a{color:var(--accent-ink);font-weight:800;text-underline-offset:3px}
+  @keyframes tvh-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+  .tvh-closing{position:relative;isolation:isolate;overflow:hidden;color:#fff;text-align:center;background:var(--navy)}
+  .tvh-closing>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+  .tvh-closing::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 60% at 50% 100%,rgba(15,168,150,.45) 0%,transparent 70%),linear-gradient(160deg,rgba(15,34,59,.92),rgba(8,27,53,.86))}
+  .tvh-closing-in{display:grid;gap:16px;justify-items:center;padding-block:calc(var(--sy) + 16px)}
+  .tvh-closing .tvh-eyebrow{color:var(--accent-light)}
+  .tvh-closing h2{max-width:780px;font-size:calc(var(--h2) * 1.15)}
+  .tvh-closing .tvh-btn{width:100%;max-width:440px;margin-top:8px}
+
+  .tvh-footer{position:relative;overflow:hidden;padding-top:48px;color:rgba(255,255,255,.66);background:var(--navy);font-size:13px}
+  .tvh-footer-top{display:grid;gap:12px;padding-bottom:24px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tvh-footer-logo{display:inline-flex;justify-self:start;border-radius:8px}
+  .tvh-footer-logo img{width:auto;height:32px}
+  .tvh-footer-top p{max-width:440px;color:rgba(255,255,255,.74)}
+  .tvh-footer-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px}
+  .tvh-footer nav{display:flex;flex-wrap:wrap;gap:4px 8px;margin-inline:-8px}
+  .tvh-footer nav a{padding:10px 8px;border-radius:8px;text-decoration:none;color:inherit;transition:color .16s}
+  .tvh-footer nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+  .tvh-echo{margin:24px 0 -0.18em;font-family:var(--fd);font-size:96px;font-weight:800;line-height:.8;letter-spacing:-0.05em;text-align:center;white-space:nowrap;color:rgba(255,255,255,.06);user-select:none}
+  .tvh-wa-float{position:fixed;right:16px;bottom:16px;z-index:40;display:grid;width:56px;height:56px;place-items:center;border:3px solid #fff;border-radius:50%;color:#fff;background:var(--wa);box-shadow:0 12px 28px -8px rgba(8,27,53,.45);transition:transform .16s var(--ease)}
+  .tvh-wa-float:hover{transform:translateY(-3px);color:#fff}
+  .tvh-wa-float svg{width:26px;height:26px}
+
+  .tvh[data-rv-on] [data-rv]{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+  .tvh[data-rv-on] [data-rv].is-in{opacity:1;transform:none}
+  @media (hover:hover){
+    .tvh-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
+    .tvh-card:hover .tvh-card-media img{transform:scale(1.04)}
+  }
+
+  @media (min-width:750px){
+    .tvh{--gut:32px;--sy:96px;--head-gap:48px;--h1:54px;--h2:40px;--h3:32px;--lead:18px;font-size:16px}
+    .tvh-header-in{height:72px}
+    .tvh-logo img{height:36px}
+    .tvh-nav{gap:14px}
+    .tvh-nav-link{display:inline-flex}
+    .tvh-nav .tvh-btn-sm{display:inline-flex}
+    .tvh-hero{padding-block:64px 88px}
+    .tvh-hero-ctas{display:flex;width:auto}
+    .tvh-hero-media img{aspect-ratio:2000/768}
+    .tvh-trust-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding-block:32px}
+    .tvh-cat{padding-block:72px}
+    .tvh-cat-head{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px;margin-bottom:32px}
+    .tvh-cards{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;margin-inline:0;padding:0}
+    .tvh-steps-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .tvh-track-nav{display:flex}
+    .tvh-quotes{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .tvh-quote{padding:36px}
+    .tvh-quote p{font-size:21px}
+    .tvh-footer-top{grid-template-columns:auto minmax(0,1fr);align-items:center;gap:32px}
+    .tvh-footer-logo img{height:36px}
+    .tvh-echo{font-size:200px}
+  }
+  @media (min-width:990px){
+    .tvh{--gut:40px;--sy:112px;--h1:66px;--h2:46px}
+    .tvh-hero-in{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:56px}
+    .tvh-hero-media img{aspect-ratio:4/3}
+    .tvh-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .tvh-steps-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+    .tvh-step{padding:76px 22px 26px}
+    .tvh-step-n{left:22px;top:22px;width:46px;height:46px;font-size:20px}
+    .tvh-faq-grid{grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px}
+    .tvh-faq-grid .tvh-head{position:sticky;top:104px}
+    .tvh-echo{font-size:260px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .tvh *,.tvh *::before,.tvh *::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}
+    .tvh[data-rv-on] [data-rv]{opacity:1;transform:none}
+  }
+{% endstylesheet %}
+
+<script>
+(() => {
+  const section = document.currentScript.closest('.shopify-section');
+  if (!section) return;
+  const root = section.querySelector('[data-tovelya-brand-home]');
+  if (!root || root.dataset.init) return;
+  root.dataset.init = '1';
+  document.querySelectorAll('.shopify-section-group-header-group, .shopify-section-group-footer-group, .header-wrapper, header.header').forEach((element) => {
+    if (!section.contains(element)) element.style.display = 'none';
+  });
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const header = root.querySelector('[data-tvh-header]');
+  if (header) {
+    const onScroll = () => header.classList.toggle('is-stuck', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  const track = root.querySelector('[data-tvh-track]');
+  const nav = root.querySelector('.tvh-track-nav');
+  if (track && nav) {
+    const prev = nav.querySelector('[data-dir="-1"]');
+    const next = nav.querySelector('[data-dir="1"]');
+    const step = () => {
+      const item = track.children[0];
+      return item ? item.getBoundingClientRect().width + 14 : 320;
+    };
+    const update = () => {
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    };
+    nav.addEventListener('click', (event) => {
+      const button = event.target.closest('button');
+      if (button) track.scrollBy({ left: step() * Number(button.dataset.dir), behavior: reduce ? 'auto' : 'smooth' });
+    });
+    track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  const items = root.querySelectorAll('[data-rv]');
+  if (items.length && 'IntersectionObserver' in window && !reduce && !(window.Shopify && window.Shopify.designMode)) {
+    root.setAttribute('data-rv-on', '');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    items.forEach((item) => observer.observe(item));
+  }
+})();
+</script>
+
+{% schema %}
+{"name":"Tovelya marca","settings":[{"type":"text","id":"announcement","label":"Anuncio superior","default":"Envío en Colombia · Confirmación por WhatsApp · Pago al recibir"}],"presets":[{"name":"Tovelya marca"}]}
+{% endschema %}

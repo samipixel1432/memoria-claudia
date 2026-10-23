@@ -38,13 +38,30 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 - Cómo se hacen: `herramientas/generar-packshots.sh <carpeta>` con `lista.txt` (`nombre|descripción`) y `ref/<nombre>.jpg`. Ver `herramientas/packshots-lista-2026-10-23.txt`. Se rehicieron el inflador (le faltaba la pantalla encendida) y el cepillo de cocina (salió cortado).
 
 ## Página principal
-- **Nueva (2026-10-23, en el tema de prueba `181906309367`, sin publicar)**. Pedido de Samuel: la principal estaba "re pailas" (foto del proyector con el logo pegado y unos caimanes rojos); la quería como el café (blanco/crema), más moderna y profesional, y con una sub-landing por categoría que explique "qué hay en esta sección" y recomiende, no los productos tirados.
-  - Orden: barra → cabecera ("Ver categorías") → portada `tovelya-home-v2-portada.jpg` ("Lo útil también puede sentirse especial", café + proyector + cepillo) → confianza → **¿Qué estás buscando?** (4 tarjetas a las 4 categorías, sección `tovelya-categoria` con ancla `categorias`) → **Lo más pedido** (6) → **Así compras** en 4 pasos con foto (sección `tovelya-cepillo-v2-pasos` en colores crema) → 2 opiniones de antes (sin nota inventada) → 4 preguntas de antes → banner "No pagas nada hasta recibirlo" + WhatsApp → pie.
-  - Respaldo del `index.json` anterior (la sección vieja `tovelya-home`): `respaldos/2026-10-23-index-ANTES-original.json`. Para volver atrás basta subir ese archivo.
-- **Sub-landings de categoría** (mismo tema de prueba): portada con texto adentro (`tovelya-cat-<cat>-portada.jpg`) → **Qué hay en esta sección** (4 subgrupos con foto) → **¿Cuál es para ti?** (pregunta de necesidad → producto con foto y precio) → **Todos los productos** → **Te recomendamos** (1 producto con 3 checks) → confianza → banner de pago + WhatsApp → **Otras categorías** → pie. Entretenimiento, con 1 solo producto, lleva un banner de "Partidos y series" en vez de subgrupos y lista.
+- **Versión actual (v3, 2026-10-23, en el tema de prueba `181906309367`, sin publicar)**:
+  - **Lo que pidió Samuel:**
+    - Dijo que la principal estaba "re pailas": foto del proyector con el logo pegado y unos caimanes rojos.
+    - Pidió una sub-landing por categoría.
+  - **Primer intento descartado:** una principal blanco/crema estilo café. Dijo que "quedó muy sencilla".
+  - **Lo que quiere:**
+    - **Toda la información de la original, con sus colores** (azul marino y verde azulado).
+    - Las categorías como **un botón para cada una**.
+    - **El café/crema es SOLO para el café con colágeno.**
+  - **Cómo está hecha:**
+    - Es la sección original copiada como `sections/tovelya-home-v3.liquid`. Copia en `herramientas/seccion-tovelya-home-v3.liquid`.
+    - La original `tovelya-home.liquid` quedó intacta. Respaldo en `respaldos/2026-10-23-seccion-tovelya-home-ORIGINAL.liquid`.
+    - `templates/index.json` usa `tovelya-home-v3`.
+  - **Cambios frente a la original:**
+    - Portada nueva `tovelya-home-v3-portada.jpg`: estudio azul marino con proyector, cepillo, café y CarPlay, sin logo pegado ni caimanes. La misma foto va en el cierre.
+    - Bloque nuevo **"Entra a la sección que buscas"**, justo después de la confianza: 4 botones con foto (Hogar y limpieza, Salud y bienestar, Carro y moto, Entretenimiento).
+    - El catálogo trae las 4 categorías nuevas con todos sus productos y un botón naranja "Entrar a …" que lleva a cada sub-landing.
+    - Enlace "Categorías" en el menú.
+  - Lo demás quedó igual: manifiesto, pasos, "vida real", opiniones, preguntas, cierre y pie.
+  - **Para volver a la original:** subir `respaldos/2026-10-23-index-ANTES-original.json` como `templates/index.json`.
+- **Sub-landings de categoría** (mismo tema de prueba, **colores originales**; portada `tovelya-cat-<cat>-portada-v2.jpg` hecha con `PALETA=tovelya herramientas/banner.sh`, banner de pago `tovelya-pago-v2.jpg`): portada con texto adentro → **Qué hay en esta sección** (4 subgrupos con foto) → **¿Cuál es para ti?** (pregunta de necesidad → producto con foto y precio) → **Todos los productos** → **Te recomendamos** (1 producto con 3 checks) → confianza → banner de pago + WhatsApp → **Otras categorías** → pie. Entretenimiento, con 1 solo producto, lleva un banner de "Partidos y series" en vez de subgrupos y lista.
   - Recomendados: Hogar → cepillo 7 en 1; Salud → café; Carro y moto → CarPlay; Entretenimiento → proyector.
   - El `templateSuffix` ya quedó puesto en las 4 categorías. Mientras no se publique el tema, el tema en vivo usa la plantilla normal de categoría.
-  - Todo se arma con `herramientas/plantillas-home-categorias.mjs` (`node … <carpeta>` genera `index.json` y las 4 `collection.*.json`). Respaldos en `respaldos/2026-10-23-*.json`.
+  - Las 4 plantillas se arman con `herramientas/plantillas-categorias.mjs` (`node … <carpeta>` genera las 4 `collection.*.json`). Respaldos en `respaldos/2026-10-23-*.json`.
 - **Antes** (en vivo hasta que Samuel publique): `templates/index.json` usa una sola sección grande, `sections/tovelya-home.liquid`, con todo escrito a mano: título "Lo útil también puede sentirse especial", 3 categorías fijas (Hogar, Entretenimiento y movimiento, Bienestar) con productos por handle, pasos, opiniones, preguntas y cierre.
 - **2026-10-22: Samuel pidió dejar la página principal "como estaba antes".** Se devolvió `templates/index.json` del tema de prueba `181906309367` a la versión original (igual a la que está en vivo, se comprobó con la huella del archivo) y se quitó la etiqueta "Tovelya destacado" que se había puesto a 6 productos. La categoría Salud **sí se dejó**. Las secciones `tovelya-imagenes`/`tovelya-productos` y los banners `tovelya-home-b*.jpg` siguen guardados por si se retoma, junto con este diseño que **no** se usó:
 - Diseño descartado (respaldo en `respaldos/2026-10-22-index-nueva.json`), en el tema de prueba `181906309367`. Estructura: barra superior → cabecera ("Ver productos") → banner de inicio ("Lo útil para tu casa y para tu día", foto con café + proyector + cepillo) → confianza → **"Lo más pedido"** (sección `tovelya-productos`, categoría Mas vendidos, 8) → banner Hogar → **banners de Salud** (rutina con báscula, café y chaleco; mujer con chaleco postural) → productos de **Salud** (6) → banner Tecnología (familia con el mini proyector) → banner "No pagas nada hasta recibirlo" con botón de WhatsApp → pie. Fotos hechas con Codex desde las fotos reales (`herramientas/generar-home.sh`), banners `tovelya-home-b1…b6.jpg`. Respaldo en `respaldos/2026-10-22-index-nueva.json`. La página vieja (`sections/tovelya-home.liquid`) sigue en el tema, solo que ya no se usa.
