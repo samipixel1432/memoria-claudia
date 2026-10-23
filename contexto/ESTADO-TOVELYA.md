@@ -13,7 +13,8 @@
 ## Cómo se trabaja la tienda (desde el proyecto local)
 - Carpeta del proyecto: `C:\Users\PC\OneDrive\Documentos\ChatGPT\1proyecto_shopifu` (repositorio git local, **sin remoto en GitHub**).
 - Scripts Python en `shopify/` que usan la Admin API con credenciales de `shopify/.env` (nunca leer ni mostrar ese archivo).
-- Tema publicado (MAIN) **desde el 2026-10-21**: `Tovelya - cepillo fotos nuevas 2026-10-21`, `gid://shopify/OnlineStoreTheme/181838774519`. El anterior ("Horizon", `180673806583`) quedó en la biblioteca sin publicar. Si un script del PC tiene el id viejo, hay que cambiarlo. Antes de editar, bajar el archivo en vivo y comparar; otras sesiones también lo modifican.
+- Tema publicado (MAIN) **desde el 2026-10-23**: `Tovelya - café colágeno con bono (prueba)`, `gid://shopify/OnlineStoreTheme/181906309367` (lo publicó Samuel; trae la principal v3, las sub-landings de categoría, el café visual y la landing nueva del CarPlay). El anterior, `Tovelya - cepillo fotos nuevas 2026-10-21` (`181838774519`), quedó en la biblioteca sin publicar, igual que "Horizon" (`180673806583`).
+- Tema de prueba vigente: `Tovelya - packs café (prueba)` (`181911585015`, copia del MAIN del 2026-10-23) con los packs del café. Como el conector no deja escribir en el MAIN, cada cambio nuevo se hace en una copia y Samuel la publica. Si un script del PC tiene el id viejo, hay que cambiarlo. Antes de editar, bajar el archivo en vivo y comparar; otras sesiones también lo modifican.
 - La llave de la app no tiene `read_publications`: para publicar un producto se usa REST `PUT /products/{id}.json {"published":true}`. Páginas y blogs se editan con el conector MCP de Shopify (la app local no tiene ese permiso).
 - Commits: `git -c user.name="Samuel" -c user.email="<su correo>" commit`, con la línea `Co-Authored-By: Claude`.
 - En el computador hay un hook (plugin matriz-viralidad) que bloquea comandos con `.env`, `.*` en regex, `python -c`, `node -e`, `env` o `printenv`: escribir scripts en archivos.
@@ -38,7 +39,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 - Cómo se hacen: `herramientas/generar-packshots.sh <carpeta>` con `lista.txt` (`nombre|descripción`) y `ref/<nombre>.jpg`. Ver `herramientas/packshots-lista-2026-10-23.txt`. Se rehicieron el inflador (le faltaba la pantalla encendida) y el cepillo de cocina (salió cortado).
 
 ## Página principal
-- **Versión actual (v3, 2026-10-23, en el tema de prueba `181906309367`, sin publicar)**:
+- **Versión actual (v3, 2026-10-23, en vivo desde que Samuel publicó el tema `181906309367` ese mismo día)**:
   - **Lo que pidió Samuel:**
     - Dijo que la principal estaba "re pailas": foto del proyector con el logo pegado y unos caimanes rojos.
     - Pidió una sub-landing por categoría.
@@ -60,7 +61,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - **Para volver a la original:** subir `respaldos/2026-10-23-index-ANTES-original.json` como `templates/index.json`.
 - **Sub-landings de categoría** (mismo tema de prueba, **colores originales**; portada `tovelya-cat-<cat>-portada-v2.jpg` hecha con `PALETA=tovelya herramientas/banner.sh`, banner de pago `tovelya-pago-v2.jpg`): portada con texto adentro → **Qué hay en esta sección** (4 subgrupos con foto) → **¿Cuál es para ti?** (pregunta de necesidad → producto con foto y precio) → **Todos los productos** → **Te recomendamos** (1 producto con 3 checks) → confianza → banner de pago + WhatsApp → **Otras categorías** → pie. Entretenimiento, con 1 solo producto, lleva un banner de "Partidos y series" en vez de subgrupos y lista.
   - Recomendados: Hogar → cepillo 7 en 1; Salud → café; Carro y moto → CarPlay; Entretenimiento → proyector.
-  - El `templateSuffix` ya quedó puesto en las 4 categorías. Mientras no se publique el tema, el tema en vivo usa la plantilla normal de categoría.
+  - El `templateSuffix` ya quedó puesto en las 4 categorías y el tema ya está publicado, así que las sub-landings están en vivo.
   - Las 4 plantillas se arman con `herramientas/plantillas-categorias.mjs` (`node … <carpeta>` genera las 4 `collection.*.json`). Respaldos en `respaldos/2026-10-23-*.json`.
 - **Antes** (en vivo hasta que Samuel publique): `templates/index.json` usa una sola sección grande, `sections/tovelya-home.liquid`, con todo escrito a mano: título "Lo útil también puede sentirse especial", 3 categorías fijas (Hogar, Entretenimiento y movimiento, Bienestar) con productos por handle, pasos, opiniones, preguntas y cierre.
 - **2026-10-22: Samuel pidió dejar la página principal "como estaba antes".** Se devolvió `templates/index.json` del tema de prueba `181906309367` a la versión original (igual a la que está en vivo, se comprobó con la huella del archivo) y se quitó la etiqueta "Tovelya destacado" que se había puesto a 6 productos. La categoría Salud **sí se dejó**. Las secciones `tovelya-imagenes`/`tovelya-productos` y los banners `tovelya-home-b*.jpg` siguen guardados por si se retoma, junto con este diseño que **no** se usó:
@@ -81,17 +82,36 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - **En vivo desde el 2026-10-21**: Samuel publicó el tema `181838774519` y se comprobó en la tienda. Respaldo del antes/después en `respaldos/`.
   - Galería del producto (en vivo): se agregaron 7 fotos v3 y se quitó la `10-oferta-final` porque decía "$119.900 pago anticipado", que contradice "no pagas nada ahora" (el archivo sigue en Files).
 - **Café con colágeno (nuevo, 2026-10-21)**: producto de **Dropi** (ID 2214172), no de Premier. Dropi pide inicio de sesión; Samuel mandó la foto del proveedor: **Natura Trends "Coffee + Colágeno", tarro de 400 g, ~13 porciones**, "alimento en polvo a base de crema de coco adicionado con vitaminas y minerales con colágeno y café soluble". La foto del proveedor dice "+ Obsequio" pero no se sabe qué regalo es: no se promete.
-  - Producto en Shopify: `gid://shopify/Product/10157413269751` (handle `cafe-con-colageno-coffee-colageno-400-g`), variante `51377169793271`, SKU `TOV-CAFE-COLAGENO-400`. **ACTIVO y publicado desde el 2026-10-21** (lo pidió Samuel) en Tienda online, Facebook & Instagram y TikTok: https://tovelya-store.myshopify.com/products/cafe-con-colageno-coffee-colageno-400-g. Se comprobó que el botón de pedir abre el formulario de EasySell. Costos en Dropi (2026-10-21): x1 $23.900 (ID 2326220), x2 $47.800 (2326221), x3 $71.700 (2326222), x5 $119.500 (2326223). Samuel pidió calcular con **$30.000 de envío y $15.000 de publicidad por pedido** (+$2.000 de otros, como en la fórmula de la tienda, sobre 0,75). Resultado: x1 **$99.900** (se deja igual; ganancia ≈ $29.000), x2 $129.900 (≈ $35.100), x3 $159.900 (≈ $41.200), x5 $229.900 (≈ $63.400). Los combos se propusieron pero aún no están en Shopify ni en la landing. Si cambia el precio, hay que cambiarlo también en la plantilla (el texto "$99.900" y "unos $7.700 por taza" están escritos a mano).
+  - Producto en Shopify: `gid://shopify/Product/10157413269751` (handle `cafe-con-colageno-coffee-colageno-400-g`), variante `51377169793271`, SKU `TOV-CAFE-COLAGENO-400`. **ACTIVO y publicado desde el 2026-10-21** (lo pidió Samuel) en Tienda online, Facebook & Instagram y TikTok: https://tovelya-store.myshopify.com/products/cafe-con-colageno-coffee-colageno-400-g. Se comprobó que el botón de pedir abre el formulario de EasySell. Costos en Dropi (2026-10-21): x1 $23.900 (ID 2326220), x2 $47.800 (2326221), x3 $71.700 (2326222), x5 $119.500 (2326223). Samuel pidió calcular con **$30.000 de envío y $15.000 de publicidad por pedido** (+$2.000 de otros, como en la fórmula de la tienda, sobre 0,75). Resultado: x1 **$99.900** (se deja igual; ganancia ≈ $29.000), x2 $129.900 (≈ $35.100), x3 $159.900 (≈ $41.200), x5 $229.900 (≈ $63.400). Esa propuesta quedó reemplazada por los packs de abajo. Si cambia el precio, hay que cambiarlo también en la plantilla (el texto "$99.900" y "unos $7.700 por taza" están escritos a mano).
   - 12 fotos `tovelya-cafe-*.jpg` en Files: 6 con el tarro real (de referencia la foto del proveedor; la etiqueta salió fiel) y 6 de estilo de vida sin empaque. Las 6 del tarro están en la galería del producto.
   - Landing: plantilla `product.cafe-colageno` (en el tema publicado `181838774519`, en vivo), hecha con las mismas secciones `tovelya-cepillo-v2-*` cambiando los colores a blanco, café y caramelo (estilo Apple, pedido por Samuel). Botones naranja y confianza azul como en las demás. No tiene precio tachado inventado: el ancla es "unos $7.700 por taza". No tiene preguntas frecuentes.  - **Versión visual (2026-10-22, sin publicar)** en el tema `Tovelya - café colágeno con bono (prueba)` (`gid://shopify/OnlineStoreTheme/181906309367`). Samuel dijo que había "demasiado texto" y pidió más imágenes con texto. Quedó: cabecera, inicio corto, confianza, **7 banners** con el texto dentro (`tovelya-cafe-b1…b7.jpg`, hechos con `herramientas/banner.sh`: foto arriba y panel crema con Inter Display) con 3 botones de pedido entre ellos (sección nueva `sections/tovelya-imagenes.liquid`, copia en `herramientas/`), pedido, cierre y barra. Se quitaron las secciones de texto (datos, beneficios, bono, pasos, momentos, comparativa, cómo pedir, garantía, preguntas).
   - Ese tema de prueba lo creó **otra sesión** el 2026-10-22 con un **"bono de $20.000"** y el precio tachado "$119.900" (precio sin bono). Se quitó, porque el tarro nunca se vendió a $119.900 y un descuento inventado se puede ver como publicidad engañosa. Respaldo completo de esa versión en `respaldos/2026-10-22-product.cafe-colageno-con-bono-otra-sesion.json`. El tema de prueba también tiene el cepillo igual al que está en vivo, así que publicarlo no lo daña.
+  - **Packs por cantidad (2026-10-23, pedidos por Samuel: "si llevas 2 o 3… cada vez más económico")**:
+    - Variantes en Shopify, **en vivo**, con la opción "Cantidad":
+
+      | Pack | Precio | Costo Dropi | Variante | Ganancia aprox. |
+      |---|---|---|---|---|
+      | 1 tarro | $99.900 | $23.900 | 51377169793271 | ≈ $29.000 |
+      | 2 tarros | $139.900 | $47.800 | 51389326754039 | ≈ $45.100 |
+      | 3 tarros | $169.900 | $71.700 | 51389326786807 | ≈ $51.200 |
+      | 5 tarros | $239.900 | $119.500 | 51389326819575 | ≈ $73.400 |
+
+      Las ganancias son con $30k de envío, $15k de publicidad y $2k de otros; el envío de 5 tarros puede salir más caro. Dropi no tiene pack de 4.
+    - SKUs `TOV-CAFE-COLAGENO-400`, `-X2`, `-X3` y `-X5`, sin control de inventario.
+    - Fotos: `tovelya-cafe-pack-x2/x3/x5.jpg`, hechas con Codex desde la foto real del tarro (`herramientas/generar-packs-cafe.sh`).
+    - Landing: en el tema de prueba `181911585015` se agregó la sección `packs` (`tovelya-cepillo-v2-packs`, ancla `#packs`) antes del formulario.
+      - Muestra el precio "por separado" y "Ahorras": es el precio real de 1 tarro × cantidad, no un descuento inventado. El 3 dice "Recomendado" y el 5 "Mejor precio".
+      - Los botones del inicio, los banners y la barra dicen "Elegir mi pack" y llevan a `#packs`.
+      - Se arma con `herramientas/plantilla-packs-cafe.mjs`. Respaldo en `respaldos/2026-10-23-product.cafe-colageno-packs.json`.
+      - **Sin publicar.**
+    - **Ojo:** el formulario de EasySell no muestra selector de variante, así que cada botón de pack abre el formulario con 1 tarro. Para que el pedido llegue con el pack correcto, Samuel tiene que crear en EasySell las ofertas por cantidad con los mismos precios. Si no, la cantidad hay que confirmarla por WhatsApp.
   - Es alimento: no prometer resultados de salud ni de belleza (INVIMA y Meta lo prohíben). El texto habla de sabor, preparación, rendimiento y lo que dice la etiqueta.
 - **Pantalla CarPlay para moto** (`/products/pantalla-carplay-para-moto`, variante 51219372933367, plantilla `product.carplay-para-moto`).
   - **Precio, cambiado en vivo el 2026-10-23:** pasó de $229.900 a **$179.900** (Samuel: "me sale a 100, ponlo en 180").
     - Costo registrado en Shopify: $100.000.
     - Con $30.000 de envío y $15.000 de publicidad quedan unos $35.000 por venta.
     - No tiene precio tachado.
-  - **Landing nueva, en el tema de prueba `181906309367`, sin publicar:**
+  - **Landing nueva, en el tema `181906309367` (en vivo desde el 2026-10-23):**
     - Mismo estándar que el café, con los **colores originales** (azul marino y verde azulado).
     - Estructura:
       - Inicio con la foto `tovelya-carplay-v2-hero.jpg`, 3 checks, precio y botón.
