@@ -1,0 +1,392 @@
+{
+  "sections": {
+    "topbar": {
+      "type": "tovelya-cepillo-v2-topbar",
+      "blocks": {
+        "t1": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "<strong>No pagas nada ahora</strong> · Pagas cuando te llega",
+            "solo_escritorio": false
+          }
+        },
+        "t2": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Envío gratis a toda Colombia",
+            "solo_escritorio": true
+          }
+        },
+        "t3": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Confirmamos tu pedido por WhatsApp",
+            "solo_escritorio": true
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "color_fondo_1": "#2A1A10",
+        "color_fondo_2": "#3B2416",
+        "color_texto": "#FFFFFF",
+        "color_punto": "#E2B98A"
+      }
+    },
+    "cabecera": {
+      "type": "tovelya-cepillo-v2-cabecera",
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-horizontal.png",
+        "tamano_logo": 32,
+        "tamano_logo_movil": 28,
+        "texto_boton": "Ver productos",
+        "precio_boton": "",
+        "variant_id": "",
+        "url_boton": "#productos",
+        "color_fondo": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_logo": "#1F1611",
+        "color_logo_punto": "#B5743A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "portada": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-salud-portada.jpg",
+            "alt": "Salud y bienestar: cuídate todos los días"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Ver productos",
+            "nota": "Pagas al recibir · Envío gratis a toda Colombia",
+            "enlace": "#productos"
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0"
+      }
+    },
+    "guia": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "sub_1": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-chaleco-catalogo.jpg",
+            "titulo": "Postura",
+            "texto": "Te recuerda ir con la espalda derecha",
+            "enlace": "/products/chaleco-soporte-postural"
+          }
+        },
+        "sub_2": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-hombro-catalogo.jpg",
+            "titulo": "Calor y descanso",
+            "texto": "Soporte térmico para el hombro",
+            "enlace": "/products/soporte-termico-hombro"
+          }
+        },
+        "sub_3": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-trampolin-catalogo.jpg",
+            "titulo": "Ejercicio en casa",
+            "texto": "Trampolín, faja y camisilla térmica",
+            "enlace": "/products/trampolin-2-en-1"
+          }
+        },
+        "sub_4": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cafe-tarro-estudio.jpg",
+            "titulo": "Tu rutina",
+            "texto": "Café con colágeno y báscula",
+            "enlace": "/products/cafe-con-colageno-coffee-colageno-400-g"
+          }
+        },
+        "nec_1": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Pasas horas sentado y te encorvas?",
+            "producto": "chaleco-soporte-postural"
+          }
+        },
+        "nec_2": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Quieres calor en el hombro al final del día?",
+            "producto": "soporte-termico-hombro"
+          }
+        },
+        "nec_3": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Quieres ver tu peso en el celular?",
+            "producto": "bascula-inteligente-bluetooth"
+          }
+        },
+        "nec_4": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Quieres hacer ejercicio en casa, con los niños?",
+            "producto": "trampolin-2-en-1"
+          }
+        },
+        "nec_5": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Buscas ajuste en la cintura al entrenar?",
+            "producto": "faja-waist-trainer"
+          }
+        },
+        "nec_6": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Entrenas y quieres una camisilla térmica?",
+            "producto": "camisilla-termica-hombre"
+          }
+        },
+        "nec_7": {
+          "type": "necesidad",
+          "settings": {
+            "pregunta": "¿Quieres un café práctico para la mañana?",
+            "producto": "cafe-con-colageno-coffee-colageno-400-g"
+          }
+        }
+      },
+      "block_order": [
+        "sub_1",
+        "sub_2",
+        "sub_3",
+        "sub_4",
+        "nec_1",
+        "nec_2",
+        "nec_3",
+        "nec_4",
+        "nec_5",
+        "nec_6",
+        "nec_7"
+      ],
+      "settings": {
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "productos": {
+      "type": "tovelya-productos",
+      "settings": {
+        "cantidad": 12,
+        "ancla": "productos",
+        "texto_boton": "Ver producto",
+        "color_fondo": "#FAF6F0",
+        "eyebrow": "Salud y bienestar",
+        "titulo": "Todos los <em>productos</em>"
+      }
+    },
+    "recomendado": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "rec": {
+          "type": "recomendado",
+          "settings": {
+            "producto": "cafe-con-colageno-coffee-colageno-400-g",
+            "imagen": "shopify://shop_images/tovelya-cafe-tarro-hero.jpg",
+            "etiqueta": "Nuevo",
+            "check_1": "Café + colágeno + vitaminas",
+            "check_2": "Listo en 1 minuto, sin cafetera",
+            "check_3": "Rinde 13 tazas por tarro",
+            "texto_boton": "Ver el café con colágeno"
+          }
+        }
+      },
+      "block_order": [
+        "rec"
+      ],
+      "settings": {
+        "titulo_recomendado": "El nuevo <em>favorito</em>",
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "confianza": {
+      "type": "tovelya-cepillo-v2-confianza",
+      "blocks": {
+        "c1": {
+          "type": "item",
+          "settings": {
+            "icono": "billete",
+            "titulo": "Pago al recibir",
+            "subtitulo": "Cero pago adelantado"
+          }
+        },
+        "c2": {
+          "type": "item",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "subtitulo": "A toda Colombia"
+          }
+        },
+        "c3": {
+          "type": "item",
+          "settings": {
+            "icono": "chat",
+            "titulo": "Confirmación personal",
+            "subtitulo": "Te escribimos antes de despachar"
+          }
+        },
+        "c4": {
+          "type": "item",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Compra respaldada",
+            "subtitulo": "Según nuestras políticas"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "color_linea": "#EADFD3",
+        "color_texto": "#1F1611",
+        "color_texto_suave": "#6B5B4E"
+      }
+    },
+    "cierre": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-home-b6-pago.jpg",
+            "alt": "No pagas nada hasta recibirlo"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Escríbenos por WhatsApp",
+            "nota": "Te respondemos y te ayudamos a elegir",
+            "enlace": "https://wa.me/573232552543?text=Hola%20Tovelya%2C%20quiero%20ayuda%20para%20elegir%20un%20producto."
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0",
+        "padding_superior_movil": 24,
+        "padding_superior": 40
+      }
+    },
+    "otras": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "sub_1": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-hogar.jpg",
+            "titulo": "Hogar y limpieza",
+            "texto": "Baño, cocina y pisos",
+            "enlace": "/collections/hogar"
+          }
+        },
+        "sub_2": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-carro-moto.jpg",
+            "titulo": "Carro y moto",
+            "texto": "Llantas, lluvia y ruta",
+            "enlace": "/collections/carro-y-moto"
+          }
+        },
+        "sub_3": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-entretenimiento-pareja.jpg",
+            "titulo": "Entretenimiento",
+            "texto": "Cine en casa",
+            "enlace": "/collections/entretenimiento"
+          }
+        }
+      },
+      "block_order": [
+        "sub_1",
+        "sub_2",
+        "sub_3"
+      ],
+      "settings": {
+        "eyebrow_subgrupos": "Sigue explorando",
+        "titulo_subgrupos": "Otras <em>categorías</em>",
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "footer": {
+      "type": "tovelya-cepillo-v2-footer",
+      "blocks": {
+        "f1": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Privacidad",
+            "enlace": "/policies/privacy-policy"
+          }
+        },
+        "f2": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Términos",
+            "enlace": "/policies/terms-of-service"
+          }
+        },
+        "f3": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Garantía y devoluciones",
+            "enlace": "/policies/refund-policy"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-white.png",
+        "color_fondo": "#2A1A10"
+      }
+    }
+  },
+  "order": [
+    "topbar",
+    "cabecera",
+    "portada",
+    "guia",
+    "productos",
+    "recomendado",
+    "confianza",
+    "cierre",
+    "otras",
+    "footer"
+  ]
+}

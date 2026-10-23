@@ -1,0 +1,225 @@
+{%- comment -%}
+  Tovelya · Guía de categoría
+  Ayuda a elegir dentro de una categoría. Muestra, en este orden y solo si hay bloques de cada tipo:
+  1) "Qué hay en esta sección" (subgrupos con foto), 2) "¿Cuál es para ti?" (necesidad → producto),
+  3) "Te recomendamos" (producto estrella).
+{%- endcomment -%}
+{% stylesheet %}
+.tov-cat{ background: var(--tov-cat-fondo); color: var(--tov-cat-tinta); padding: var(--tov-cat-pt-m) 16px var(--tov-cat-pb-m); scroll-margin-top: 72px; }
+.tov-cat__in{ max-width: 1100px; margin: 0 auto; display: grid; gap: 48px; }
+.tov-cat__head{ text-align: center; margin-bottom: 20px; }
+.tov-cat__eyebrow{ margin: 0 0 8px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--tov-cat-acento); }
+.tov-cat__title{ margin: 0; font-size: 28px; line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+.tov-cat__title em{ font-style: normal; color: var(--tov-cat-acento); }
+.tov-cat__subs{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tov-cat__sub{ position: relative; display: block; border-radius: 18px; overflow: hidden; text-decoration: none; color: #fff; aspect-ratio: 4 / 5; background: var(--tov-cat-linea); box-shadow: 0 6px 18px rgba(31, 22, 17, .08); }
+.tov-cat__sub img{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.tov-cat__sub:hover img{ transform: scale(1.05); }
+.tov-cat__sub:last-child:nth-child(odd){ grid-column: span 2; aspect-ratio: 16 / 9; }
+.tov-cat__sub::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(31, 22, 17, 0) 45%, rgba(31, 22, 17, .78) 100%); }
+.tov-cat__sub-txt{ position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 1; }
+.tov-cat__sub-txt b{ display: block; font-size: 17px; line-height: 1.15; }
+.tov-cat__sub-txt span{ display: block; margin-top: 4px; font-size: 12px; opacity: .88; line-height: 1.3; }
+.tov-cat__needs{ display: grid; gap: 12px; }
+.tov-cat__need{ display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 14px; align-items: center; padding: 12px; background: var(--tov-cat-tarjeta); border: 1px solid var(--tov-cat-linea); border-radius: 18px; text-decoration: none; color: inherit; box-shadow: 0 4px 14px rgba(31, 22, 17, .05); transition: transform .2s ease; }
+.tov-cat__need:hover{ transform: translateY(-2px); }
+.tov-cat__need-img{ width: 88px; height: 88px; border-radius: 14px; overflow: hidden; background: var(--tov-cat-linea); }
+.tov-cat__need-img img{ width: 100%; height: 100%; object-fit: cover; }
+.tov-cat__need-q{ margin: 0; font-size: 15px; font-weight: 800; line-height: 1.25; }
+.tov-cat__need-a{ margin: 4px 0 0; font-size: 13px; color: var(--tov-cat-suave); }
+.tov-cat__need-a b{ color: var(--tov-cat-acento); }
+.tov-cat__need-p{ margin-top: 6px; font-size: 15px; font-weight: 800; }
+.tov-cat__rec{ display: grid; gap: 0; background: var(--tov-cat-tarjeta); border: 1px solid var(--tov-cat-linea); border-radius: 24px; overflow: hidden; box-shadow: 0 14px 34px rgba(31, 22, 17, .1); }
+.tov-cat__rec-img{ aspect-ratio: 1 / 1; background: var(--tov-cat-linea); }
+.tov-cat__rec-img img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+.tov-cat__rec-body{ padding: 22px 20px 24px; display: grid; gap: 12px; }
+.tov-cat__rec-tag{ justify-self: start; padding: 6px 12px; border-radius: 999px; background: var(--tov-cat-pill); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.tov-cat__rec-name{ margin: 0; font-size: 24px; line-height: 1.15; font-weight: 800; letter-spacing: -.01em; }
+.tov-cat__rec-checks{ margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.tov-cat__rec-checks li{ display: flex; gap: 10px; font-size: 15px; line-height: 1.35; }
+.tov-cat__rec-checks li::before{ content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--tov-cat-ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12.5l4.2 4.2L19 7'/%3E%3C/svg%3E") center / 13px no-repeat; margin-top: 1px; }
+.tov-cat__rec-price{ font-size: 26px; font-weight: 800; }
+.tov-cat__rec-cod{ font-size: 13px; color: var(--tov-cat-suave); margin-top: -8px; }
+.tov-cat__btn{ display: flex; align-items: center; justify-content: center; min-height: 54px; border-radius: 999px; background: linear-gradient(180deg, var(--tov-cat-cta-1), var(--tov-cat-cta-2)); color: var(--tov-cat-cta-texto); font-weight: 800; font-size: 16px; text-decoration: none; box-shadow: 0 10px 24px rgba(255, 138, 31, .25); }
+@media screen and (min-width: 750px){
+  .tov-cat{ padding: var(--tov-cat-pt) 32px var(--tov-cat-pb); }
+  .tov-cat__in{ gap: 72px; }
+  .tov-cat__title{ font-size: 40px; }
+  .tov-cat__subs{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+  .tov-cat__sub:last-child:nth-child(odd){ grid-column: auto; aspect-ratio: 4 / 5; }
+  .tov-cat__needs{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .tov-cat__rec{ grid-template-columns: 1fr 1fr; align-items: center; }
+  .tov-cat__rec-body{ padding: 36px; }
+  .tov-cat__rec-name{ font-size: 32px; }
+}
+@media (prefers-reduced-motion: reduce){ .tov-cat__sub img, .tov-cat__need{ transition: none; } }
+{% endstylesheet %}
+
+{%- liquid
+  assign subs = section.blocks | where: 'type', 'subgrupo'
+  assign needs = section.blocks | where: 'type', 'necesidad'
+  assign recs = section.blocks | where: 'type', 'recomendado'
+-%}
+<section class="tov-cat"{% if section.settings.ancla != blank %} id="{{ section.settings.ancla }}"{% endif %} style="
+  --tov-cat-fondo: {{ section.settings.color_fondo }};
+  --tov-cat-tinta: {{ section.settings.color_tinta }};
+  --tov-cat-suave: {{ section.settings.color_suave }};
+  --tov-cat-acento: {{ section.settings.color_acento }};
+  --tov-cat-tarjeta: {{ section.settings.color_tarjeta }};
+  --tov-cat-linea: {{ section.settings.color_linea }};
+  --tov-cat-pill: {{ section.settings.color_pill }};
+  --tov-cat-ok: {{ section.settings.color_ok }};
+  --tov-cat-cta-1: {{ section.settings.color_cta }};
+  --tov-cat-cta-2: {{ section.settings.color_cta_2 }};
+  --tov-cat-cta-texto: {{ section.settings.color_cta_texto }};
+  --tov-cat-pt: {{ section.settings.padding_superior }}px;
+  --tov-cat-pb: {{ section.settings.padding_inferior }}px;
+  --tov-cat-pt-m: {{ section.settings.padding_superior_movil }}px;
+  --tov-cat-pb-m: {{ section.settings.padding_inferior_movil }}px;">
+  <div class="tov-cat__in">
+
+    {%- if subs.size > 0 -%}
+      <div>
+        <div class="tov-cat__head">
+          {%- if section.settings.eyebrow_subgrupos != blank -%}<p class="tov-cat__eyebrow">{{ section.settings.eyebrow_subgrupos }}</p>{%- endif -%}
+          <h2 class="tov-cat__title">{{ section.settings.titulo_subgrupos }}</h2>
+        </div>
+        <div class="tov-cat__subs">
+          {%- for block in subs -%}
+            <a class="tov-cat__sub" href="{{ block.settings.enlace | default: '#productos' }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.imagen != blank -%}
+                {{ block.settings.imagen | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 450, 600', sizes: '(min-width: 750px) 260px, 50vw', alt: block.settings.titulo }}
+              {%- endif -%}
+              <span class="tov-cat__sub-txt"><b>{{ block.settings.titulo }}</b><span>{{ block.settings.texto }}</span></span>
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if needs.size > 0 -%}
+      <div>
+        <div class="tov-cat__head">
+          {%- if section.settings.eyebrow_necesidades != blank -%}<p class="tov-cat__eyebrow">{{ section.settings.eyebrow_necesidades }}</p>{%- endif -%}
+          <h2 class="tov-cat__title">{{ section.settings.titulo_necesidades }}</h2>
+        </div>
+        <div class="tov-cat__needs">
+          {%- for block in needs -%}
+            {%- assign p = block.settings.producto -%}
+            {%- if p != blank -%}
+              <a class="tov-cat__need" href="{{ p.url }}" {{ block.shopify_attributes }}>
+                <span class="tov-cat__need-img">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 200 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}</span>
+                <span>
+                  <p class="tov-cat__need-q">{{ block.settings.pregunta }}</p>
+                  <p class="tov-cat__need-a">Te sirve: <b>{{ p.title }}</b></p>
+                  <span class="tov-cat__need-p">{{ p.price | money_without_trailing_zeros }}</span>
+                </span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- for block in recs -%}
+      {%- assign p = block.settings.producto -%}
+      {%- if p != blank -%}
+        <div {{ block.shopify_attributes }}>
+          {%- if section.settings.titulo_recomendado != blank -%}
+            <div class="tov-cat__head">
+              {%- if section.settings.eyebrow_recomendado != blank -%}<p class="tov-cat__eyebrow">{{ section.settings.eyebrow_recomendado }}</p>{%- endif -%}
+              <h2 class="tov-cat__title">{{ section.settings.titulo_recomendado }}</h2>
+            </div>
+          {%- endif -%}
+          <div class="tov-cat__rec">
+            <div class="tov-cat__rec-img">
+              {%- if block.settings.imagen != blank -%}
+                {{ block.settings.imagen | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500, 750, 1000', sizes: '(min-width: 750px) 550px, 100vw', alt: p.title }}
+              {%- elsif p.featured_media -%}
+                {{ p.featured_media | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '500, 750, 1000', sizes: '(min-width: 750px) 550px, 100vw', alt: p.title }}
+              {%- endif -%}
+            </div>
+            <div class="tov-cat__rec-body">
+              {%- if block.settings.etiqueta != blank -%}<span class="tov-cat__rec-tag">{{ block.settings.etiqueta }}</span>{%- endif -%}
+              <h3 class="tov-cat__rec-name">{{ p.title }}</h3>
+              <ul class="tov-cat__rec-checks">
+                {%- if block.settings.check_1 != blank -%}<li>{{ block.settings.check_1 }}</li>{%- endif -%}
+                {%- if block.settings.check_2 != blank -%}<li>{{ block.settings.check_2 }}</li>{%- endif -%}
+                {%- if block.settings.check_3 != blank -%}<li>{{ block.settings.check_3 }}</li>{%- endif -%}
+              </ul>
+              <span class="tov-cat__rec-price">{{ p.price | money_without_trailing_zeros }}</span>
+              <span class="tov-cat__rec-cod">Pagas al recibir · Envío gratis</span>
+              <a class="tov-cat__btn" href="{{ p.url }}">{{ block.settings.texto_boton }}</a>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Guía de categoría",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "ancla", "label": "Ancla (para enlaces #)" },
+    { "type": "text", "id": "eyebrow_subgrupos", "label": "Antetítulo de subgrupos", "default": "Qué hay en esta sección" },
+    { "type": "inline_richtext", "id": "titulo_subgrupos", "label": "Título de subgrupos", "default": "Encuentra lo que <em>necesitas</em>" },
+    { "type": "text", "id": "eyebrow_necesidades", "label": "Antetítulo de necesidades", "default": "Te ayudamos a elegir" },
+    { "type": "inline_richtext", "id": "titulo_necesidades", "label": "Título de necesidades", "default": "¿Cuál es <em>para ti?</em>" },
+    { "type": "text", "id": "eyebrow_recomendado", "label": "Antetítulo de recomendado", "default": "Nuestra recomendación" },
+    { "type": "inline_richtext", "id": "titulo_recomendado", "label": "Título de recomendado", "default": "Si solo vas a llevar <em>uno</em>" },
+    { "type": "color", "id": "color_fondo", "label": "Fondo", "default": "#FFFFFF" },
+    { "type": "color", "id": "color_tinta", "label": "Texto", "default": "#1F1611" },
+    { "type": "color", "id": "color_suave", "label": "Texto suave", "default": "#6B5B4E" },
+    { "type": "color", "id": "color_acento", "label": "Acento", "default": "#B5743A" },
+    { "type": "color", "id": "color_tarjeta", "label": "Tarjeta", "default": "#FFFFFF" },
+    { "type": "color", "id": "color_linea", "label": "Borde", "default": "#EADFD3" },
+    { "type": "color", "id": "color_pill", "label": "Etiqueta", "default": "#F1D4AE" },
+    { "type": "color", "id": "color_ok", "label": "Check", "default": "#1FB36B" },
+    { "type": "color", "id": "color_cta", "label": "Botón (arriba)", "default": "#FFB547" },
+    { "type": "color", "id": "color_cta_2", "label": "Botón (abajo)", "default": "#FF8A1F" },
+    { "type": "color", "id": "color_cta_texto", "label": "Texto del botón", "default": "#2A1A10" },
+    { "type": "range", "id": "padding_superior", "label": "Espacio superior", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_inferior", "label": "Espacio inferior", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_superior_movil", "label": "Espacio superior móvil", "min": 0, "max": 100, "step": 4, "default": 44, "unit": "px" },
+    { "type": "range", "id": "padding_inferior_movil", "label": "Espacio inferior móvil", "min": 0, "max": 100, "step": 4, "default": 44, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "subgrupo",
+      "name": "Subgrupo",
+      "settings": [
+        { "type": "image_picker", "id": "imagen", "label": "Foto" },
+        { "type": "text", "id": "titulo", "label": "Nombre", "default": "Subgrupo" },
+        { "type": "text", "id": "texto", "label": "Una línea" },
+        { "type": "text", "id": "enlace", "label": "Enlace" }
+      ]
+    },
+    {
+      "type": "necesidad",
+      "name": "Necesidad",
+      "settings": [
+        { "type": "text", "id": "pregunta", "label": "Pregunta", "default": "¿Qué necesitas?" },
+        { "type": "product", "id": "producto", "label": "Producto que la resuelve" }
+      ]
+    },
+    {
+      "type": "recomendado",
+      "name": "Recomendado",
+      "settings": [
+        { "type": "product", "id": "producto", "label": "Producto" },
+        { "type": "image_picker", "id": "imagen", "label": "Foto (opcional)" },
+        { "type": "text", "id": "etiqueta", "label": "Etiqueta", "default": "El favorito" },
+        { "type": "text", "id": "check_1", "label": "Punto 1" },
+        { "type": "text", "id": "check_2", "label": "Punto 2" },
+        { "type": "text", "id": "check_3", "label": "Punto 3" },
+        { "type": "text", "id": "texto_boton", "label": "Texto del botón", "default": "Ver producto" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Guía de categoría" }]
+}
+{% endschema %}

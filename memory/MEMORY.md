@@ -14,3 +14,4 @@
 - [Landing: clear and simple](feedback_landing_clara_y_simple.md) — say what it is and what it's for in plain words; uses with photos right after the videos
 - [Less text, more images](feedback_menos_texto_mas_imagenes.md) — THE standard for every landing (approved 2026-10-22): short hero + stacked 4:5 banners with text inside + buttons every 2–3 images
 - [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files
+- [Home + category pages](project_home_categorias.md) — 2026-10-23 white/cream home + 4 category sub-landings in test theme 181906309367; pattern, clean catalog photos, how to revert

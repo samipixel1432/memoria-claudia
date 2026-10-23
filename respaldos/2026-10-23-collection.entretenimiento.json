@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "topbar": {
+      "type": "tovelya-cepillo-v2-topbar",
+      "blocks": {
+        "t1": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "<strong>No pagas nada ahora</strong> · Pagas cuando te llega",
+            "solo_escritorio": false
+          }
+        },
+        "t2": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Envío gratis a toda Colombia",
+            "solo_escritorio": true
+          }
+        },
+        "t3": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Confirmamos tu pedido por WhatsApp",
+            "solo_escritorio": true
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "color_fondo_1": "#2A1A10",
+        "color_fondo_2": "#3B2416",
+        "color_texto": "#FFFFFF",
+        "color_punto": "#E2B98A"
+      }
+    },
+    "cabecera": {
+      "type": "tovelya-cepillo-v2-cabecera",
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-horizontal.png",
+        "tamano_logo": 32,
+        "tamano_logo_movil": 28,
+        "texto_boton": "Ver el proyector",
+        "precio_boton": "",
+        "variant_id": "",
+        "url_boton": "/products/mini-proyector-led",
+        "color_fondo": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_logo": "#1F1611",
+        "color_logo_punto": "#B5743A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "portada": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-entretenimiento-portada.jpg",
+            "alt": "Entretenimiento: cine en casa cuando quieras"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Ver el proyector",
+            "nota": "Pagas al recibir · Envío gratis a toda Colombia",
+            "enlace": "/products/mini-proyector-led"
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0"
+      }
+    },
+    "planes": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-entretenimiento-partidos.jpg",
+            "alt": "Partidos y series en grande"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Ver el mini proyector",
+            "nota": "Pagas al recibir · Envío gratis",
+            "enlace": "/products/mini-proyector-led"
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0",
+        "padding_superior_movil": 24,
+        "padding_superior": 40
+      }
+    },
+    "recomendado": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "rec": {
+          "type": "recomendado",
+          "settings": {
+            "producto": "mini-proyector-led",
+            "etiqueta": "El favorito",
+            "check_1": "Películas, series y partidos en grande",
+            "check_2": "Pequeño: fácil de mover y guardar",
+            "check_3": "Funciona mejor en un espacio oscuro",
+            "texto_boton": "Ver el mini proyector"
+          }
+        }
+      },
+      "block_order": [
+        "rec"
+      ],
+      "settings": {
+        "titulo_recomendado": "Tu plan de <em>cine en casa</em>",
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "confianza": {
+      "type": "tovelya-cepillo-v2-confianza",
+      "blocks": {
+        "c1": {
+          "type": "item",
+          "settings": {
+            "icono": "billete",
+            "titulo": "Pago al recibir",
+            "subtitulo": "Cero pago adelantado"
+          }
+        },
+        "c2": {
+          "type": "item",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "subtitulo": "A toda Colombia"
+          }
+        },
+        "c3": {
+          "type": "item",
+          "settings": {
+            "icono": "chat",
+            "titulo": "Confirmación personal",
+            "subtitulo": "Te escribimos antes de despachar"
+          }
+        },
+        "c4": {
+          "type": "item",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Compra respaldada",
+            "subtitulo": "Según nuestras políticas"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "color_linea": "#EADFD3",
+        "color_texto": "#1F1611",
+        "color_texto_suave": "#6B5B4E"
+      }
+    },
+    "cierre": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-home-b6-pago.jpg",
+            "alt": "No pagas nada hasta recibirlo"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Escríbenos por WhatsApp",
+            "nota": "Te respondemos y te ayudamos a elegir",
+            "enlace": "https://wa.me/573232552543?text=Hola%20Tovelya%2C%20quiero%20ayuda%20para%20elegir%20un%20producto."
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0",
+        "padding_superior_movil": 24,
+        "padding_superior": 40
+      }
+    },
+    "otras": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "sub_1": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-hogar.jpg",
+            "titulo": "Hogar y limpieza",
+            "texto": "Baño, cocina y pisos",
+            "enlace": "/collections/hogar"
+          }
+        },
+        "sub_2": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-salud.jpg",
+            "titulo": "Salud y bienestar",
+            "texto": "Postura, ejercicio y rutina",
+            "enlace": "/collections/salud"
+          }
+        },
+        "sub_3": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-carro-moto.jpg",
+            "titulo": "Carro y moto",
+            "texto": "Llantas, lluvia y ruta",
+            "enlace": "/collections/carro-y-moto"
+          }
+        }
+      },
+      "block_order": [
+        "sub_1",
+        "sub_2",
+        "sub_3"
+      ],
+      "settings": {
+        "eyebrow_subgrupos": "Sigue explorando",
+        "titulo_subgrupos": "Otras <em>categorías</em>",
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "footer": {
+      "type": "tovelya-cepillo-v2-footer",
+      "blocks": {
+        "f1": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Privacidad",
+            "enlace": "/policies/privacy-policy"
+          }
+        },
+        "f2": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Términos",
+            "enlace": "/policies/terms-of-service"
+          }
+        },
+        "f3": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Garantía y devoluciones",
+            "enlace": "/policies/refund-policy"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-white.png",
+        "color_fondo": "#2A1A10"
+      }
+    }
+  },
+  "order": [
+    "topbar",
+    "cabecera",
+    "portada",
+    "planes",
+    "recomendado",
+    "confianza",
+    "cierre",
+    "otras",
+    "footer"
+  ]
+}

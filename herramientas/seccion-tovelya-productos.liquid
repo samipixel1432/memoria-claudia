@@ -34,7 +34,7 @@
 @media (prefers-reduced-motion: reduce){ .tov-prod__card, .tov-prod__media img{ transition: none; } }
 {% endstylesheet %}
 
-{%- assign coleccion = section.settings.coleccion -%}
+{%- assign coleccion = section.settings.coleccion | default: collection -%}
 <section class="tov-prod"{% if section.settings.ancla != blank %} id="{{ section.settings.ancla }}"{% endif %} style="
   --tov-prod-fondo: {{ section.settings.color_fondo }};
   --tov-prod-tinta: {{ section.settings.color_tinta }};
@@ -72,7 +72,7 @@
           </a>
         {%- endfor -%}
       </div>
-      {%- if section.settings.texto_ver_todos != blank -%}
+      {%- if section.settings.texto_ver_todos != blank and coleccion.url != collection.url -%}
         <div class="tov-prod__more"><a href="{{ coleccion.url }}">{{ section.settings.texto_ver_todos }}</a></div>
       {%- endif -%}
     {%- endif -%}

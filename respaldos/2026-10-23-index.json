@@ -1,0 +1,462 @@
+{
+  "sections": {
+    "topbar": {
+      "type": "tovelya-cepillo-v2-topbar",
+      "blocks": {
+        "t1": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "<strong>No pagas nada ahora</strong> · Pagas cuando te llega",
+            "solo_escritorio": false
+          }
+        },
+        "t2": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Envío gratis a toda Colombia",
+            "solo_escritorio": true
+          }
+        },
+        "t3": {
+          "type": "mensaje",
+          "settings": {
+            "texto": "Confirmamos tu pedido por WhatsApp",
+            "solo_escritorio": true
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "color_fondo_1": "#2A1A10",
+        "color_fondo_2": "#3B2416",
+        "color_texto": "#FFFFFF",
+        "color_punto": "#E2B98A"
+      }
+    },
+    "cabecera": {
+      "type": "tovelya-cepillo-v2-cabecera",
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-horizontal.png",
+        "tamano_logo": 32,
+        "tamano_logo_movil": 28,
+        "texto_boton": "Ver categorías",
+        "precio_boton": "",
+        "variant_id": "",
+        "url_boton": "#categorias",
+        "color_fondo": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_logo": "#1F1611",
+        "color_logo_punto": "#B5743A",
+        "color_cta_texto": "#2A1A10"
+      }
+    },
+    "inicio": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-home-v2-portada.jpg",
+            "alt": "Lo útil también puede sentirse especial"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Ver categorías",
+            "nota": "Pagas al recibir · Envío gratis · Te confirmamos por WhatsApp",
+            "enlace": "#categorias"
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0"
+      }
+    },
+    "confianza": {
+      "type": "tovelya-cepillo-v2-confianza",
+      "blocks": {
+        "c1": {
+          "type": "item",
+          "settings": {
+            "icono": "billete",
+            "titulo": "Pago al recibir",
+            "subtitulo": "Cero pago adelantado"
+          }
+        },
+        "c2": {
+          "type": "item",
+          "settings": {
+            "icono": "camion",
+            "titulo": "Envío gratis",
+            "subtitulo": "A toda Colombia"
+          }
+        },
+        "c3": {
+          "type": "item",
+          "settings": {
+            "icono": "chat",
+            "titulo": "Confirmación personal",
+            "subtitulo": "Te escribimos antes de despachar"
+          }
+        },
+        "c4": {
+          "type": "item",
+          "settings": {
+            "icono": "escudo",
+            "titulo": "Compra respaldada",
+            "subtitulo": "Según nuestras políticas"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "color_linea": "#EADFD3",
+        "color_texto": "#1F1611",
+        "color_texto_suave": "#6B5B4E"
+      }
+    },
+    "categorias": {
+      "type": "tovelya-categoria",
+      "blocks": {
+        "sub_1": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-hogar.jpg",
+            "titulo": "Hogar y limpieza",
+            "texto": "Baño, cocina y pisos",
+            "enlace": "/collections/hogar"
+          }
+        },
+        "sub_2": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-salud.jpg",
+            "titulo": "Salud y bienestar",
+            "texto": "Postura, ejercicio y rutina",
+            "enlace": "/collections/salud"
+          }
+        },
+        "sub_3": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-carro-moto.jpg",
+            "titulo": "Carro y moto",
+            "texto": "Llantas, lluvia y ruta",
+            "enlace": "/collections/carro-y-moto"
+          }
+        },
+        "sub_4": {
+          "type": "subgrupo",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cat-entretenimiento-pareja.jpg",
+            "titulo": "Entretenimiento",
+            "texto": "Cine en casa",
+            "enlace": "/collections/entretenimiento"
+          }
+        }
+      },
+      "block_order": [
+        "sub_1",
+        "sub_2",
+        "sub_3",
+        "sub_4"
+      ],
+      "settings": {
+        "ancla": "categorias",
+        "eyebrow_subgrupos": "Explora por categoría",
+        "titulo_subgrupos": "¿Qué estás <em>buscando?</em>",
+        "color_fondo": "#FFFFFF"
+      }
+    },
+    "mas_pedidos": {
+      "type": "tovelya-productos",
+      "settings": {
+        "cantidad": 6,
+        "ancla": "mas-pedidos",
+        "texto_boton": "Ver producto",
+        "color_fondo": "#FAF6F0",
+        "coleccion": "lo-mas-pedido",
+        "eyebrow": "Catálogo Tovelya",
+        "titulo": "Lo más <em>pedido</em>",
+        "texto_ver_todos": ""
+      }
+    },
+    "pasos": {
+      "type": "tovelya-cepillo-v2-pasos",
+      "blocks": {
+        "p1": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cepillo-v3-pedido-1-datos.jpg",
+            "etiqueta": "Paso 1",
+            "titulo": "Elige tu producto",
+            "texto": "Entra a su página y haz el pedido en menos de un minuto."
+          }
+        },
+        "p2": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cepillo-v3-pedido-2-confirmacion.jpg",
+            "etiqueta": "Paso 2",
+            "titulo": "Te confirmamos",
+            "texto": "Revisamos contigo por WhatsApp tus datos, dirección y cobertura."
+          }
+        },
+        "p3": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-paso-despacho.jpg",
+            "etiqueta": "Paso 3",
+            "titulo": "Despachamos",
+            "texto": "Enviamos tu pedido a tu ciudad en Colombia."
+          }
+        },
+        "p4": {
+          "type": "paso",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-cepillo-v3-pedido-3-entrega.jpg",
+            "etiqueta": "Paso 4",
+            "titulo": "Recibes y pagas",
+            "texto": "Pagas al transportador cuando lo tienes en la mano."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "eyebrow": "Así compras",
+        "titulo": "Pides hoy, <em>pagas al recibir</em>",
+        "mostrar_cta": false,
+        "color_fondo": "#FAF6F0",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#B5743A",
+        "color_subrayado": "#F1D4AE",
+        "color_tinta_suave": "#6B5B4E",
+        "color_numero": "#B5743A",
+        "color_neon_1": "#FFB547",
+        "color_neon_2": "#FF8A1F",
+        "color_neon_texto": "#2A1A10",
+        "color_tarjeta": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_placeholder": "#F6EFE6",
+        "color_ok": "#1FB36B",
+        "color_confianza_1": "#E2B98A",
+        "color_confianza_2": "#B5743A",
+        "color_cta": "#FFB547",
+        "color_cta_hover": "#FF8A1F",
+        "color_cta_texto": "#2A1A10",
+        "padding_superior_movil": 48,
+        "padding_inferior_movil": 48,
+        "padding_superior": 80,
+        "padding_inferior": 80
+      }
+    },
+    "resenas": {
+      "type": "tovelya-cepillo-v2-resenas",
+      "blocks": {
+        "r1": {
+          "type": "resena",
+          "settings": {
+            "estrellas": 5,
+            "titulo": "La limpieza es más fácil",
+            "texto": "Me llegó rápido y en buen estado. Lo probé para limpiar el baño y hace la limpieza mucho más fácil.",
+            "nombre": "Cliente Tovelya",
+            "ciudad": "",
+            "verificado": "Compra confirmada en Tovelya"
+          }
+        },
+        "r2": {
+          "type": "resena",
+          "settings": {
+            "estrellas": 5,
+            "titulo": "Funcionó perfecto",
+            "texto": "Me llegó rápido y bien empacado. Ya lo probé para inflar una llanta y funcionó perfectamente.",
+            "nombre": "Cliente Tovelya",
+            "ciudad": "",
+            "verificado": "Compra confirmada en Tovelya"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2"
+      ],
+      "settings": {
+        "eyebrow": "Opiniones",
+        "titulo": "Lo que dicen <em>quienes ya compraron</em>",
+        "mostrar_nota": false,
+        "mostrar_cta": false,
+        "color_fondo": "#FFFFFF",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#B5743A",
+        "color_subrayado": "#F1D4AE",
+        "color_estrellas": "#FFB547",
+        "color_tarjeta": "#FFFFFF",
+        "color_linea": "#EADFD3",
+        "color_tinta_suave": "#6B5B4E",
+        "color_placeholder": "#F6EFE6",
+        "color_ok": "#1FB36B",
+        "color_confianza_1": "#E2B98A",
+        "color_confianza_2": "#B5743A",
+        "color_cta": "#FFB547",
+        "color_cta_hover": "#FF8A1F",
+        "color_cta_texto": "#2A1A10",
+        "padding_superior_movil": 48,
+        "padding_inferior_movil": 48,
+        "padding_superior": 80,
+        "padding_inferior": 80
+      }
+    },
+    "faq": {
+      "type": "tovelya-cepillo-v2-faq",
+      "blocks": {
+        "q1": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cómo funciona el pago al recibir?",
+            "respuesta": "<p>Haces tu pedido y pagas al transportador cuando lo recibes. Antes de despachar te confirmamos los datos por WhatsApp.</p>"
+          }
+        },
+        "q2": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Hacen envíos a toda Colombia?",
+            "respuesta": "<p>Enviamos en Colombia, sujeto a la cobertura de la transportadora en tu ciudad. Te informamos el tiempo estimado cuando confirmamos tu pedido.</p>"
+          }
+        },
+        "q3": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Qué pasa si mi producto llega con un problema?",
+            "respuesta": "<p>Escríbenos por WhatsApp y lo revisamos contigo. Aplicamos nuestra <a href=\"/policies/refund-policy\">política de devoluciones</a>.</p>"
+          }
+        },
+        "q4": {
+          "type": "pregunta",
+          "settings": {
+            "pregunta": "¿Cómo me comunico con Tovelya?",
+            "respuesta": "<p>Por <a href=\"https://wa.me/573232552543?text=Hola%20Tovelya%2C%20quiero%20ayuda%20para%20elegir%20un%20producto.\">WhatsApp al +57 323 255 2543</a>. Te respondemos y te acompañamos antes del envío.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "eyebrow": "Preguntas frecuentes",
+        "titulo": "Antes de <em>pedir</em>",
+        "entradilla": "¿Otra duda? Escríbenos por WhatsApp al +57 323 255 2543.",
+        "color_fondo": "#FAF6F0",
+        "color_titulo": "#1F1611",
+        "color_eyebrow": "#B5743A",
+        "color_subrayado": "#F1D4AE",
+        "color_lead": "#6B5B4E",
+        "color_linea": "#EADFD3",
+        "color_icono": "#B5743A",
+        "color_tarjeta": "#FFFFFF",
+        "padding_superior_movil": 48,
+        "padding_inferior_movil": 48,
+        "padding_superior": 80,
+        "padding_inferior": 80
+      }
+    },
+    "cierre": {
+      "type": "tovelya-imagenes",
+      "blocks": {
+        "img_1": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify://shop_images/tovelya-home-b6-pago.jpg",
+            "alt": "No pagas nada hasta recibirlo"
+          }
+        },
+        "btn": {
+          "type": "boton",
+          "settings": {
+            "texto": "Escríbenos por WhatsApp",
+            "nota": "Te respondemos y te ayudamos a elegir",
+            "enlace": "https://wa.me/573232552543?text=Hola%20Tovelya%2C%20quiero%20ayuda%20para%20elegir%20un%20producto."
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "btn"
+      ],
+      "settings": {
+        "color_fondo": "#FAF6F0",
+        "padding_superior_movil": 24,
+        "padding_superior": 40
+      }
+    },
+    "footer": {
+      "type": "tovelya-cepillo-v2-footer",
+      "blocks": {
+        "f1": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Privacidad",
+            "enlace": "/policies/privacy-policy"
+          }
+        },
+        "f2": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Términos",
+            "enlace": "/policies/terms-of-service"
+          }
+        },
+        "f3": {
+          "type": "enlace",
+          "settings": {
+            "texto": "Garantía y devoluciones",
+            "enlace": "/policies/refund-policy"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/tovelya-logo-white.png",
+        "color_fondo": "#2A1A10"
+      }
+    }
+  },
+  "order": [
+    "topbar",
+    "cabecera",
+    "inicio",
+    "confianza",
+    "categorias",
+    "mas_pedidos",
+    "pasos",
+    "resenas",
+    "faq",
+    "cierre",
+    "footer"
+  ]
+}
