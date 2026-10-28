@@ -141,6 +141,17 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 - 2026-10-23: Samuel pidió una campaña CBO de $20.000/día para la pantalla CarPlay, copiando la estructura de la del cepillo, desde el 2026-10-24 a las 5. No se pudo crear desde la nube porque el conector no tiene permiso en Tovelya Ads y la extensión Claude in Chrome no está conectada a la sesión. Se le dieron los pasos para duplicarla él mismo en el Administrador de anuncios. Chrome no tenía la sesión de Facebook abierta.
 - Datos de Shopify del 1 al 19 de octubre: 478 visitas a la landing → 87 empezaron el pedido → 9 pedidos → 6 válidos (3 anulados). Del 5 al 8 de octubre hubo 214 visitas de anuncios y 0 pedidos (causa sin revisar).
 - Anuncio ganador según los UTM: `cepillo-video-ducha`.
+- **Resultados en Shopify del 2026-10-24 al 2026-10-28** (revisado el 2026-10-28; Meta sigue sin dar acceso a la cuenta, así que el gasto no se vio):
+
+  | Producto | Visitas desde redes | Pedidos | Fechas | Precio |
+  |---|---|---|---|---|
+  | Cepillo | 72 | 6 | #1017–#1020, #1022, #1023 | $129.900 |
+  | Pantalla CarPlay | 40 | 3 | #1021, #1024, #1025; tres clientes distintos | $179.900 |
+
+  - Las 9 llegaron por el formulario de EasySell, todas el 24 y el 25 de octubre.
+  - El #1016 (2026-10-23) fue la prueba y quedó anulado.
+  - **Desde el 2026-10-26 no hay ni una visita desde redes ni un pedido.** Hay que revisar si los anuncios se frenaron por el pago o por otra cosa.
+  - Pedido máximo rentable por cada pedido que entra, aproximado: cepillo unos $27.000 (meta ≤ $18.000) y CarPlay unos $30.000 (meta ≤ $20.000).
 - Plan completo: `assets/ads/cepillo/PLAN-ESTRATEGIA.md` (en el proyecto local). Costo máximo por pedido ≈ $27.000; meta ≤ $18.000.
 
 ## SEO (2026-10-19)
