@@ -151,7 +151,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - Las 9 llegaron por el formulario de EasySell, todas el 24 y el 25 de octubre.
   - El #1016 (2026-10-23) fue la prueba y quedó anulado.
   - **Desde el 2026-10-26 no hay ni una visita desde redes ni un pedido.** Hay que revisar si los anuncios se frenaron por el pago o por otra cosa.
-  - Pedido máximo rentable por cada pedido que entra, aproximado: cepillo unos $27.000 (meta ≤ $18.000) y CarPlay unos $30.000 (meta ≤ $20.000).
+  - Lo máximo que se puede gastar en publicidad por cada pedido que entra, aproximado: cepillo unos $27.000 (meta ≤ $18.000) y CarPlay unos $30.000 (meta ≤ $20.000).
 - Plan completo: `assets/ads/cepillo/PLAN-ESTRATEGIA.md` (en el proyecto local). Costo máximo por pedido ≈ $27.000; meta ≤ $18.000.
 
 ## SEO (2026-10-19)
