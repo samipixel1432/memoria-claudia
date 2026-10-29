@@ -1,5 +1,6 @@
 // Plantilla product.limpiador-vidrio: landing del limpiador de vidrios con líquido (estándar del café, colores originales).
-// Fotos deslizables arriba, confianza, 7 banners con texto y un botón cada 2, formulario, cierre y barra.
+// Fotos deslizables arriba, confianza, 12 banners con texto (3 de antes y después, beneficios y pasos) y un botón
+// cada 2, formulario, cierre y barra.
 // Uso: node plantilla-limpiador-vidrio.mjs <salida.json>
 import { writeFileSync } from 'node:fs';
 const img = (f) => `shopify://shop_images/${f}`;
@@ -80,18 +81,25 @@ const t = {
       type: 'tovelya-imagenes',
       blocks: {
         img_1: banner('tovelya-vidrio-b1-claro.jpg', 'Ve la calle claro, sin grasa en el vidrio'),
-        img_2: banner('tovelya-vidrio-b2-facil.jpg', 'Presionas y el líquido sale solo'),
+        img_2: banner('tovelya-vidrio-b8-antes-parabrisas.jpg', 'Antes y después del parabrisas'),
         btn_1: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
-        img_3: banner('tovelya-vidrio-b3-parabrisas.jpg', 'Parabrisas sin película grasosa'),
-        img_4: banner('tovelya-vidrio-b4-espejos.jpg', 'Espejos sin manchas de agua'),
+        img_3: banner('tovelya-vidrio-b11-beneficios.jpg', 'Quita la película grasosa, borra las manchas de agua, trae 120 ml de líquido y cabe en la guantera'),
+        img_4: banner('tovelya-vidrio-b2-facil.jpg', 'Presionas y el líquido sale solo'),
         btn_2: boton('Pedir mi limpiador', 'No pagas nada ahora'),
-        img_5: banner('tovelya-vidrio-b5-noche.jpg', 'Maneja de noche y con lluvia viendo mejor'),
-        img_6: banner('tovelya-vidrio-b6-tamano.jpg', 'Cabe en la guantera'),
+        img_5: banner('tovelya-vidrio-b12-pasos.jpg', 'Cómo se usa: presiona, frota el vidrio y enjuaga con agua'),
+        img_6: banner('tovelya-vidrio-b3-parabrisas.jpg', 'Parabrisas sin película grasosa'),
         btn_3: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
-        img_7: banner('tovelya-vidrio-b7-pago.jpg', 'No pagas nada hasta recibirlo'),
-        btn_4: boton('Pedir contra entrega', 'Pagas al recibir · Envío gratis · Te confirmamos por WhatsApp')
+        img_7: banner('tovelya-vidrio-b9-antes-retrovisor.jpg', 'Antes y después del retrovisor'),
+        img_8: banner('tovelya-vidrio-b4-espejos.jpg', 'Espejos sin manchas de agua'),
+        btn_4: boton('Pedir mi limpiador', 'No pagas nada ahora'),
+        img_9: banner('tovelya-vidrio-b10-antes-ventana.jpg', 'Antes y después de la ventana'),
+        img_10: banner('tovelya-vidrio-b5-noche.jpg', 'Maneja de noche y con lluvia viendo mejor'),
+        btn_5: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
+        img_11: banner('tovelya-vidrio-b6-tamano.jpg', 'Cabe en la guantera'),
+        img_12: banner('tovelya-vidrio-b7-pago.jpg', 'No pagas nada hasta recibirlo'),
+        btn_6: boton('Pedir contra entrega', 'Pagas al recibir · Envío gratis · Te confirmamos por WhatsApp')
       },
-      block_order: ['img_1', 'img_2', 'btn_1', 'img_3', 'img_4', 'btn_2', 'img_5', 'img_6', 'btn_3', 'img_7', 'btn_4'],
+      block_order: ['img_1', 'img_2', 'btn_1', 'img_3', 'img_4', 'btn_2', 'img_5', 'img_6', 'btn_3', 'img_7', 'img_8', 'btn_4', 'img_9', 'img_10', 'btn_5', 'img_11', 'img_12', 'btn_6'],
       settings: { color_fondo: '#F5F9F8', color_cta_texto: '#0F223B', color_nota: '#52637A' }
     },
     pedido: {
