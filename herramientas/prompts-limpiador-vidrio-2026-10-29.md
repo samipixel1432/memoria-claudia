@@ -27,3 +27,15 @@ Vista desde adentro de un carro de noche en una avenida de Bogotá con lluvia su
 
 ## mano [Tamaño real]
 Una mano adulta sostiene el limpiador de vidrios de frente, mostrando que cabe en la palma; detrás, desenfocada, la puerta de un carro azul con la ventana abajo. Luz natural suave, lente 85 mm, fondo limpio. Formato cuadrado.
+
+## split-parabrisas [Antes y después dividido]
+Una sola foto dividida verticalmente justo por la mitad con una línea blanca fina y recta de arriba a abajo. Vista desde el asiento del conductor hacia el parabrisas de un carro en una calle de Bogotá un día nublado. MITAD IZQUIERDA (antes): el vidrio tiene una película grasosa con arcoíris, manchas de agua secas y marcas de las plumillas; la calle se ve borrosa y opaca. MITAD DERECHA (después): exactamente el mismo encuadre pero el vidrio está limpio y transparente, la calle se ve nítida y con colores vivos; abajo a la derecha, sobre el tablero, está el limpiador de vidrios rojo. Mismo ángulo, misma luz y misma escena en las dos mitades. Formato cuadrado.
+
+## split-retrovisor [Antes y después dividido]
+Una sola foto dividida verticalmente justo por la mitad con una línea blanca fina y recta. Primer plano del espejo retrovisor lateral de un carro gris en un día de lluvia. MITAD IZQUIERDA (antes): el espejo tiene manchas blancas de agua seca y gotas que no dejan ver bien el reflejo. MITAD DERECHA (después): exactamente el mismo encuadre con el espejo limpio, el reflejo de la calle y de un carro de atrás se ve claro y nítido. Mismo ángulo y luz en las dos mitades. Formato cuadrado.
+
+## split-ventana [Antes y después dividido]
+Una sola foto dividida verticalmente justo por la mitad con una línea blanca fina y recta. Vista desde afuera de la ventana lateral trasera de un carro blanco parqueado al sol. MITAD IZQUIERDA (antes): el vidrio tiene marcas circulares de agua seca, polvo y huellas de dedos grasosas. MITAD DERECHA (después): exactamente el mismo encuadre con el vidrio limpio y brillante que refleja el cielo; una mano sostiene el limpiador de vidrios rojo contra el vidrio limpio. Mismo ángulo y luz en las dos mitades. Formato cuadrado.
+
+## enjuague [Paso de uso]
+Una mano enjuaga con una manguera de jardín el parabrisas de un carro azul después de limpiarlo; el agua corre limpia por el vidrio transparente. Sobre el capó, a un lado, descansa el limpiador de vidrios rojo. Mañana soleada en el garaje de una casa colombiana. Lente 50 mm. Formato cuadrado.

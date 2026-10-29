@@ -158,6 +158,13 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
     - Galería: 7 fotos nuevas.
   - **Fotos:** las de Dropi traen texto, "LIQUIDACIÓN" y la marca del proveedor, y Samuel pidió no usarlas. Se hicieron 7 fotos nuevas con Codex tomando como referencia el producto real: `tovelya-vidrio-catalogo`, `-parabrisas`, `-antes-despues`, `-retrovisor`, `-boton`, `-noche` y `-mano`. Los prompts están en `herramientas/prompts-limpiador-vidrio-2026-10-29.md`.
   - **Banners:** 7, `tovelya-vidrio-b1-claro` … `b7-pago`, hechos con `herramientas/banners-limpiador-vidrio.sh`. El b7 reutiliza la foto de entrega del cepillo.
+  - **Segunda tanda (2026-10-29):** Samuel pidió más imágenes, con antes y después y los beneficios en imágenes. Se agregaron 5 banners y quedaron 12 en total, con 6 botones de pedir.
+    - **3 de antes y después:** `b8-antes-parabrisas`, `b9-antes-retrovisor` y `b10-antes-ventana`.
+      - Cada uno sale de una sola foto de Codex dividida a la mitad, para que las dos partes sean la misma escena: `split-*`.
+      - Las cápsulas "ANTES" y "DESPUÉS" se ponen con `herramientas/banner-antes-despues.sh`.
+    - **1 de beneficios:** `b11-beneficios`, con 4 checks verdes y la foto de catálogo. Se hace con `herramientas/banner-lista.sh`.
+    - **1 de cómo se usa en 3 pasos:** `b12-pasos` (presiona, frota y enjuaga), con foto, número naranja y texto. Se hace con `herramientas/banner-pasos.sh`. La foto del paso 3 es nueva: `enjuague`.
+    - Estas 3 herramientas sirven para cualquier landing.
   - **Landing:** plantilla `product.limpiador-vidrio` en el tema de prueba `182115893495` (el mismo del cepillo v4), hecha con `herramientas/plantilla-limpiador-vidrio.mjs`. **Sin publicar.**
     - Mientras no se publique, la tienda en vivo muestra el producto con la plantilla normal.
     - Orden: 7 fotos deslizables, confianza, 7 banners con un botón cada 2, formulario, cierre y barra.
