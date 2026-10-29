@@ -1,0 +1,172 @@
+{%- style -%}
+#shopify-section-{{ section.id }} .tov-encasa{ --c-fondo-1: {{ section.settings.color_fondo_1 }} !important; --c-fondo-2: {{ section.settings.color_fondo_2 }} !important; --c-acento: {{ section.settings.color_acento }} !important; --c-texto: {{ section.settings.color_texto }} !important; --c-eyebrow: {{ section.settings.color_eyebrow }} !important; --c-titulo: var(--c-texto) !important; --c-acento-titulo: var(--c-eyebrow) !important; --c-acento-titulo-2: {{ section.settings.color_barra_2 }} !important; --c-lead: color-mix(in srgb, var(--c-texto) 72%, transparent) !important; --c-ph: {{ section.settings.color_placeholder }} !important; --c-barra-1: {{ section.settings.color_barra }} !important; --c-barra-2: {{ section.settings.color_barra_2 }} !important; --c-nav-fondo: color-mix(in srgb, var(--c-texto) 6%, transparent) !important; --c-nav-icono: var(--c-texto) !important; --c-nav-borde: color-mix(in srgb, var(--c-texto) 14%, transparent) !important; --c-nav-fondo-hover: var(--c-fondo-2) !important; --tt: {{ section.settings.tamano_titulo_movil }}px !important; --tl: {{ section.settings.tamano_entradilla_movil }}px !important; --tx: {{ section.settings.tamano_texto_movil }}px !important; --tc: {{ section.settings.ancho_tarjeta_movil }}px !important; --te: 12px !important; --mb-head: 32px !important; --radio: {{ section.settings.radio }}px !important; --fd: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important; --fb: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif !important; --ancho: {{ section.settings.ancho_contenido }}px !important; --gut: 20px !important; padding-top: {{ section.settings.padding_superior_movil }}px !important; padding-bottom: {{ section.settings.padding_inferior_movil }}px !important; font-family: var(--fb) !important; font-size: var(--tx) !important; line-height: 1.6 !important; letter-spacing: normal !important; -webkit-font-smoothing: antialiased !important; text-align: left !important; color: var(--c-texto) !important; background: radial-gradient(60% 50% at 0% 0%, color-mix(in srgb, var(--c-acento) 35%, transparent) 0%, transparent 70%), linear-gradient(165deg, var(--c-fondo-1) 0%, var(--c-fondo-2) 100%) !important; overflow-x: clip !important; }
+#shopify-section-{{ section.id }} .tov-encasa :where(h1,h2,h3,h4,h5,p,a,ul,ol,li,b,s,em,strong,span,small,summary,blockquote,figcaption){ color: inherit !important; font-family: inherit !important; }
+#shopify-section-{{ section.id }} .tov-encasa *, #shopify-section-{{ section.id }} .tov-encasa *::before, #shopify-section-{{ section.id }} .tov-encasa *::after{ box-sizing: border-box !important; }
+#shopify-section-{{ section.id }} .tov-encasa :where(h1,h2,h3,h4,p,ul,ol,figure,blockquote){ margin: 0 !important; }
+#shopify-section-{{ section.id }} .tov-encasa :where(img,video){ max-width: 100% !important; display: block !important; }
+#shopify-section-{{ section.id }} .tov-encasa__c{ max-width: var(--ancho) !important; margin-inline: auto !important; padding-inline: var(--gut) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__ico{ width: 24px !important; height: 24px !important; stroke: currentColor !important; fill: none !important; stroke-width: 1.8 !important; stroke-linecap: round !important; stroke-linejoin: round !important; flex: none !important; display: block !important; }
+#shopify-section-{{ section.id }} .tov-encasa__head{ display: grid !important; gap: 12px !important; max-width: 660px !important; margin: 0 0 var(--mb-head) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__head--center{ text-align: center !important; margin-inline: auto !important; justify-items: center !important; }
+#shopify-section-{{ section.id }} .tov-encasa__eyebrow{ display: inline-flex !important; align-items: center !important; gap: 8px !important; font-family: var(--fb) !important; font-size: var(--te) !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--c-eyebrow) !important; line-height: 1.4 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__eyebrow::before{ content: "" !important; width: 18px !important; height: 2px !important; border-radius: 2px !important; background: currentColor !important; opacity: .7 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__titulo{ font-family: var(--fd) !important; font-weight: 800 !important; font-size: var(--tt) !important; line-height: 1.08 !important; letter-spacing: -0.025em !important; margin: 0 !important; overflow-wrap: break-word !important; text-wrap: balance !important; min-width: 0 !important; color: var(--c-titulo) !important; font-style: normal !important; }
+#shopify-section-{{ section.id }} .tov-encasa__titulo em{ font-style: normal !important; color: var(--c-acento-titulo) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__titulo strong{ font-weight: 800 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__lead{ font-size: var(--tl) !important; color: var(--c-lead) !important; line-height: 1.6 !important; text-wrap: pretty !important; }
+#shopify-section-{{ section.id }} .tov-encasa__titulo em{ background: linear-gradient(135deg, var(--c-acento-titulo) 0%, var(--c-acento-titulo-2) 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; -webkit-text-fill-color: transparent !important; }
+#shopify-section-{{ section.id }} .tov-encasa__trackhead{ display: flex !important; align-items: flex-end !important; justify-content: space-between !important; gap: 16px !important; margin-bottom: var(--mb-head) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__trackhead .tov-encasa__head{ margin: 0 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__track{ --bleed: max(var(--gut), calc((100vw - var(--ancho)) / 2 + var(--gut))) !important; position: relative !important; display: grid !important; grid-auto-flow: column !important; grid-auto-columns: min(var(--tc), 64vw) !important; gap: 16px !important; overflow-x: auto !important; overscroll-behavior-x: contain !important; scroll-snap-type: x mandatory !important; padding-block: 4px 16px !important; margin-inline: calc(-1 * var(--bleed)) !important; padding-inline: var(--bleed) !important; scroll-padding-inline: var(--bleed) !important; scrollbar-width: none !important; -webkit-overflow-scrolling: touch !important; }
+#shopify-section-{{ section.id }} .tov-encasa__track::-webkit-scrollbar{ display: none !important; }
+#shopify-section-{{ section.id }} .tov-encasa__track > *{ scroll-snap-align: start !important; min-width: 0 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__track:focus-visible{ outline: 3px solid #2E6FD9 !important; outline-offset: -3px !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav{ display: none !important; gap: 8px !important; flex: none !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav button{ width: 48px !important; height: 48px !important; display: grid !important; place-items: center !important; padding: 0 !important; margin: 0 !important; border-radius: 50% !important; border: 1px solid var(--c-nav-borde) !important; background: var(--c-nav-fondo) !important; color: var(--c-nav-icono) !important; cursor: pointer !important; transition: background 160ms cubic-bezier(.22,.8,.35,1), color 160ms cubic-bezier(.22,.8,.35,1), opacity 160ms cubic-bezier(.22,.8,.35,1), transform 160ms cubic-bezier(.22,.8,.35,1) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav button:hover{ background: var(--c-nav-icono) !important; color: var(--c-nav-fondo-hover) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav button:active{ transform: scale(.94) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav button:focus-visible{ outline: 3px solid #2E6FD9 !important; outline-offset: 3px !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav button:disabled{ opacity: .35 !important; cursor: default !important; background: var(--c-nav-fondo) !important; color: var(--c-nav-icono) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav .tov-encasa__ico{ width: 20px !important; height: 20px !important; stroke-width: 2.2 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__clip{ display: grid !important; gap: 12px !important; margin: 0 !important; align-content: start !important; }
+#shopify-section-{{ section.id }} .tov-encasa__media{ position: relative !important; aspect-ratio: 9/16 !important; border-radius: var(--radio) !important; overflow: hidden !important; background: var(--c-ph) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound{ position: absolute !important; top: 10px !important; right: 10px !important; z-index: 2 !important; display: grid !important; width: 44px !important; height: 44px !important; place-items: center !important; padding: 0 !important; margin: 0 !important; color: #FFFFFF !important; background: rgba(4,16,34,.62) !important; border: 1px solid rgba(255,255,255,.35) !important; border-radius: 50% !important; cursor: pointer !important; backdrop-filter: blur(6px) !important; -webkit-backdrop-filter: blur(6px) !important; transition: background 160ms cubic-bezier(.22,.8,.35,1), transform 160ms cubic-bezier(.22,.8,.35,1) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound:hover{ background: rgba(4,16,34,.85) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound:active{ transform: scale(.94) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound:focus-visible{ outline: 3px solid #2E6FD9 !important; outline-offset: 2px !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound svg{ width: 20px !important; height: 20px !important; fill: none !important; stroke: currentColor !important; stroke-width: 2 !important; stroke-linecap: round !important; stroke-linejoin: round !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound .tov-encasa__on, #shopify-section-{{ section.id }} .tov-encasa__sound[aria-pressed="true"] .tov-encasa__off{ display: none !important; }
+#shopify-section-{{ section.id }} .tov-encasa__sound[aria-pressed="true"] .tov-encasa__on{ display: block !important; }
+#shopify-section-{{ section.id }} .tov-encasa__media video, #shopify-section-{{ section.id }} .tov-encasa__media img{ width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#shopify-section-{{ section.id }} .tov-encasa__ph{ display: block !important; width: 100% !important; height: 100% !important; border: 2px dashed color-mix(in srgb, var(--c-texto) 22%, transparent) !important; border-radius: var(--radio) !important; background: var(--c-ph) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__who{ font-weight: 800 !important; font-size: var(--tx) !important; line-height: 1.4 !important; }
+#shopify-section-{{ section.id }} .tov-encasa__who span{ display: block !important; font-weight: 500 !important; font-size: calc(var(--tx) - 1px) !important; color: color-mix(in srgb, var(--c-texto) 66%, transparent) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__bar{ position: relative !important; height: 4px !important; max-width: 420px !important; margin: 24px auto 0 !important; border-radius: 999px !important; background: color-mix(in srgb, var(--c-texto) 14%, transparent) !important; cursor: pointer !important; touch-action: none !important; }
+#shopify-section-{{ section.id }} .tov-encasa__thumb{ position: absolute !important; top: -3px !important; left: 0 !important; height: 10px !important; width: 20% !important; border-radius: 999px !important; background: linear-gradient(90deg, var(--c-barra-1) 0%, var(--c-barra-2) 100%) !important; transition: height 160ms cubic-bezier(.22,.8,.35,1), top 160ms cubic-bezier(.22,.8,.35,1) !important; }
+#shopify-section-{{ section.id }} .tov-encasa__bar:hover .tov-encasa__thumb, #shopify-section-{{ section.id }} .tov-encasa__bar.is-drag .tov-encasa__thumb{ height: 14px !important; top: -5px !important; }
+#shopify-section-{{ section.id }} .tov-encasa__bar.is-drag .tov-encasa__thumb{ transition: none !important; }
+@media screen and (min-width: 750px){
+#shopify-section-{{ section.id }} .tov-encasa{ --tt: calc({{ section.settings.tamano_titulo }}px * 0.87) !important; --tl: {{ section.settings.tamano_entradilla }}px !important; --tx: {{ section.settings.tamano_texto }}px !important; --tc: {{ section.settings.ancho_tarjeta }}px !important; --te: 13px !important; --mb-head: 48px !important; --gut: 32px !important; padding-top: {{ section.settings.padding_superior }}px !important; padding-bottom: {{ section.settings.padding_inferior }}px !important; }
+#shopify-section-{{ section.id }} .tov-encasa__nav{ display: flex !important; }
+}
+@media screen and (min-width: 990px){ #shopify-section-{{ section.id }} .tov-encasa{ --tt: {{ section.settings.tamano_titulo }}px !important; --gut: 40px !important; } }
+@media (prefers-reduced-motion: reduce){
+#shopify-section-{{ section.id }} .tov-encasa *, #shopify-section-{{ section.id }} .tov-encasa *::before, #shopify-section-{{ section.id }} .tov-encasa *::after{ transition-duration: 1ms !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; }
+}
+{%- endstyle -%}
+
+<div class="tov-encasa tov-encasa-{{ section.id }}"{% if section.settings.reproducir_todos %} data-todos="1"{% endif %}>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="tov-izq-{{ section.id }}" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol><symbol id="tov-der-{{ section.id }}" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol></defs></svg>
+  <div class="tov-encasa__c">
+    <div class="tov-encasa__trackhead">
+      <div class="tov-encasa__head">
+        {%- if section.settings.eyebrow != blank -%}<span class="tov-encasa__eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+        <h2 class="tov-encasa__titulo">{{ section.settings.titulo }}</h2>
+        {%- if section.settings.entradilla != blank -%}<p class="tov-encasa__lead">{{ section.settings.entradilla }}</p>{%- endif -%}
+      </div>
+      <div class="tov-encasa__nav"><button type="button" data-dir="-1" aria-label="{{ section.settings.etiqueta_anterior | escape }}"><svg class="tov-encasa__ico" aria-hidden="true" focusable="false"><use href="#tov-izq-{{ section.id }}"/></svg></button><button type="button" data-dir="1" aria-label="{{ section.settings.etiqueta_siguiente | escape }}"><svg class="tov-encasa__ico" aria-hidden="true" focusable="false"><use href="#tov-der-{{ section.id }}"/></svg></button></div>
+    </div>
+    <div class="tov-encasa__track" tabindex="0" role="region" aria-label="{{ section.settings.etiqueta_carrusel | escape }}">
+      {%- for block in section.blocks -%}
+        <figure class="tov-encasa__clip" {{ block.shopify_attributes }}>
+          <div class="tov-encasa__media">
+            {%- if block.settings.video != blank -%}
+              {{ block.settings.video | video_tag: autoplay: false, loop: true, muted: true, playsinline: true, controls: false, preload: 'none', image_size: '540x' }}
+              {%- if block.settings.sonido -%}<button type="button" class="tov-encasa__sound" aria-pressed="false" aria-label="{{ section.settings.etiqueta_sonido | escape }}"><svg class="tov-encasa__off" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><svg class="tov-encasa__on" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></button>{%- endif -%}
+            {%- elsif block.settings.imagen != blank -%}
+              {{ block.settings.imagen | image_url: width: 600 | image_tag: widths: '300, 480, 600', sizes: '(min-width: 750px) 240px, 64vw', loading: 'lazy' }}
+            {%- else -%}
+              <div class="tov-encasa__ph"></div>
+            {%- endif -%}
+          </div>
+          <figcaption class="tov-encasa__who">{{ block.settings.nombre }}{%- if block.settings.detalle != blank -%}<span>{{ block.settings.detalle }}</span>{%- endif -%}</figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.mostrar_barra -%}
+      <div class="tov-encasa__bar" aria-hidden="true"><div class="tov-encasa__thumb"></div></div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function(){
+    var root = document.querySelector('.tov-encasa-{{ section.id }}');
+    if (!root || root.dataset.init) return;
+    root.dataset.init = '1';
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var track = root.querySelector('.tov-encasa__track'), nav = root.querySelector('.tov-encasa__nav');
+    if (track && nav){
+      var prev = nav.querySelector('[data-dir="-1"]'), next = nav.querySelector('[data-dir="1"]');
+      var step = function(){ var c = track.children[0]; return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 16) : 260; };
+      var upd = function(){ var max = track.scrollWidth - track.clientWidth - 2; prev.disabled = track.scrollLeft <= 2; next.disabled = track.scrollLeft >= max; };
+      nav.addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; track.scrollBy({ left: step() * +b.dataset.dir, behavior: reduce ? 'auto' : 'smooth' }); });
+      track.addEventListener('scroll', function(){ requestAnimationFrame(upd); }, { passive: true });
+      addEventListener('resize', upd);
+      upd();
+    }
+    var bar = root.querySelector('.tov-encasa__bar'), thumb = root.querySelector('.tov-encasa__thumb');
+    if (track && bar && thumb){
+      var sync = function(){
+        var max = track.scrollWidth - track.clientWidth;
+        var w = Math.max(track.clientWidth / Math.max(track.scrollWidth, 1) * 100, 10);
+        thumb.style.width = w + '%';
+        thumb.style.left = ((max > 0 ? track.scrollLeft / max : 0) * (100 - w)) + '%';
+      };
+      var seek = function(x){
+        var r = bar.getBoundingClientRect();
+        var f = Math.min(1, Math.max(0, (x - r.left) / r.width));
+        track.scrollLeft = f * (track.scrollWidth - track.clientWidth);
+      };
+      bar.addEventListener('pointerdown', function(e){ bar.classList.add('is-drag'); bar.setPointerCapture(e.pointerId); seek(e.clientX); });
+      bar.addEventListener('pointermove', function(e){ if (bar.classList.contains('is-drag')) seek(e.clientX); });
+      ['pointerup', 'pointercancel'].forEach(function(ev){ bar.addEventListener(ev, function(){ bar.classList.remove('is-drag'); }); });
+      track.addEventListener('scroll', function(){ requestAnimationFrame(sync); }, { passive: true });
+      addEventListener('resize', function(){ requestAnimationFrame(sync); });
+      sync();
+    }
+    var vids = root.querySelectorAll('.tov-encasa__media video');
+    var mute = function(v){
+      v.muted = true;
+      var b = v.parentElement.querySelector('.tov-encasa__sound');
+      if (b) b.setAttribute('aria-pressed', 'false');
+    };
+    root.querySelectorAll('.tov-encasa__sound').forEach(function(b){
+      b.addEventListener('click', function(){
+        var v = b.parentElement.querySelector('video');
+        if (!v) return;
+        var on = v.muted;
+        vids.forEach(mute);
+        v.muted = !on;
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        if (on){ v.currentTime = 0; v.play().catch(function(){}); }
+      });
+    });
+    if (reduce || !('IntersectionObserver' in window)){
+      vids.forEach(function(v){ v.controls = true; v.preload = 'metadata'; });
+    } else if (root.dataset.todos){
+      var todos = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          vids.forEach(function(v){
+            if (en.isIntersecting) v.play().catch(function(){});
+            else { v.pause(); mute(v); }
+          });
+        });
+      }, { threshold: [0, .15] });
+      todos.observe(track || root);
+    } else {
+      var vio = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          var v = en.target;
+          if (en.isIntersecting && en.intersectionRatio >= .55) v.play().catch(function(){});
+          else { v.pause(); mute(v); }
+        });
+      }, { threshold: [0, .55] });
+      vids.forEach(function(v){ vio.observe(v); });
+    }
+  })();
+</script>
+
+{% schema %}
+{"name":"Así lo usan en casa","tag":"section","settings":[{"type":"header","content":"Encabezado"},{"type":"text","id":"eyebrow","label":"Antetítulo","default":"Así lo usan en casa"},{"type":"inline_richtext","id":"titulo","label":"Título","default":"Casas reales, <em>baños reales</em>"},{"type":"text","id":"entradilla","label":"Entradilla","default":"Videos de clientes Tovelya usándolo en su día a día."},{"type":"header","content":"Carrusel"},{"type":"text","id":"etiqueta_carrusel","label":"Etiqueta accesible","default":"Videos de clientes"},{"type":"text","id":"etiqueta_anterior","label":"Flecha anterior (accesible)","default":"Video anterior"},{"type":"text","id":"etiqueta_siguiente","label":"Flecha siguiente (accesible)","default":"Video siguiente"},{"type":"text","id":"etiqueta_sonido","label":"Botón de sonido (accesible)","default":"Activar o silenciar sonido"},{"type":"checkbox","id":"reproducir_todos","label":"Reproducir todos los videos a la vez","info":"Si está apagado, solo se reproduce el video que se ve en pantalla","default":false},{"type":"checkbox","id":"mostrar_barra","label":"Mostrar barra de desplazamiento","default":true},{"type":"range","id":"radio","label":"Radio de esquinas","min":0,"max":32,"step":2,"default":20,"unit":"px"},{"type":"header","content":"Colores"},{"type":"color","id":"color_fondo_1","label":"Fondo (inicio)","default":"#0F223B"},{"type":"color","id":"color_fondo_2","label":"Fondo (fin)","default":"#081B35"},{"type":"color","id":"color_acento","label":"Brillo de fondo","default":"#0FA896"},{"type":"color","id":"color_texto","label":"Texto","default":"#FFFFFF"},{"type":"color","id":"color_eyebrow","label":"Antetítulo y acento del título","default":"#5EF0D8"},{"type":"color","id":"color_placeholder","label":"Fondo sin vídeo","default":"#16304F"},{"type":"color","id":"color_barra","label":"Barra de desplazamiento (inicio)","default":"#8BFFF1"},{"type":"color","id":"color_barra_2","label":"Barra y acento (degradado fin)","default":"#19D3FF"},{"type":"header","content":"Tipografía"},{"type":"range","id":"tamano_titulo","label":"Tamaño del título (escritorio)","min":20,"max":64,"step":2,"default":46,"unit":"px"},{"type":"range","id":"tamano_titulo_movil","label":"Tamaño del título (móvil)","min":20,"max":64,"step":2,"default":30,"unit":"px"},{"type":"range","id":"tamano_entradilla","label":"Tamaño de la entradilla (escritorio)","min":12,"max":24,"step":1,"default":18,"unit":"px"},{"type":"range","id":"tamano_entradilla_movil","label":"Tamaño de la entradilla (móvil)","min":12,"max":24,"step":1,"default":16,"unit":"px"},{"type":"range","id":"tamano_texto","label":"Tamaño del nombre (escritorio)","min":11,"max":20,"step":1,"default":14,"unit":"px"},{"type":"range","id":"tamano_texto_movil","label":"Tamaño del nombre (móvil)","min":11,"max":20,"step":1,"default":13,"unit":"px"},{"type":"range","id":"ancho_tarjeta","label":"Ancho de tarjeta (escritorio)","min":160,"max":360,"step":4,"default":240,"unit":"px"},{"type":"range","id":"ancho_tarjeta_movil","label":"Ancho de tarjeta (móvil)","min":160,"max":360,"step":4,"default":240,"unit":"px"},{"type":"header","content":"Espaciado"},{"type":"range","id":"padding_superior","label":"Padding superior (escritorio)","min":0,"max":120,"step":4,"default":112,"unit":"px"},{"type":"range","id":"padding_inferior","label":"Padding inferior (escritorio)","min":0,"max":120,"step":4,"default":112,"unit":"px"},{"type":"range","id":"padding_superior_movil","label":"Padding superior (móvil)","min":0,"max":120,"step":4,"default":64,"unit":"px"},{"type":"range","id":"padding_inferior_movil","label":"Padding inferior (móvil)","min":0,"max":120,"step":4,"default":64,"unit":"px"},{"type":"header","content":"Layout"},{"type":"range","id":"ancho_contenido","label":"Ancho máximo del contenido","min":1000,"max":1800,"step":40,"default":1240,"unit":"px"}],"max_blocks":12,"blocks":[{"type":"clip","name":"Vídeo de cliente","settings":[{"type":"video","id":"video","label":"Vídeo vertical 9:16"},{"type":"checkbox","id":"sonido","label":"Mostrar botón de sonido","info":"Solo si el video tiene audio","default":false},{"type":"image_picker","id":"imagen","label":"Imagen (si no hay vídeo)"},{"type":"text","id":"nombre","label":"Nombre","default":"[Nombre]"},{"type":"text","id":"detalle","label":"Detalle","default":"[Ciudad]"}]}],"presets":[{"name":"Así lo usan en casa","blocks":[{"type":"clip","settings":{"nombre":"[Nombre]","detalle":"[Ciudad] · Baño"}},{"type":"clip","settings":{"nombre":"[Nombre]","detalle":"[Ciudad] · Cocina"}},{"type":"clip","settings":{"nombre":"[Nombre]","detalle":"[Ciudad] · Vehículo"}},{"type":"clip","settings":{"nombre":"[Nombre]","detalle":"[Ciudad] · Patio"}},{"type":"clip","settings":{"nombre":"[Nombre]","detalle":"[Ciudad] · Unboxing"}}]}]}
+{% endschema %}

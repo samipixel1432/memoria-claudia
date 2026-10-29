@@ -1,0 +1,240 @@
+{%- style -%}
+#shopify-section-{{ section.id }} .tov-hero{ --c-fondo-1: {{ section.settings.color_fondo_1 }} !important; --c-fondo-2: {{ section.settings.color_fondo_2 }} !important; --c-texto: {{ section.settings.color_texto }} !important; --c-acento: {{ section.settings.color_acento }} !important; --c-acento-claro: {{ section.settings.color_acento_claro }} !important; --c-acento-titulo-2: {{ section.settings.color_acento_titulo_2 }} !important; --c-tarjeta: {{ section.settings.color_tarjeta }} !important; --c-tinta: {{ section.settings.color_tinta }} !important; --c-tinta-suave: {{ section.settings.color_tinta_suave }} !important; --c-linea: {{ section.settings.color_linea }} !important; --c-pay-fondo: {{ section.settings.color_papel }} !important; --c-pay-texto: {{ section.settings.color_pagos_texto }} !important; --c-pay-borde: {{ section.settings.color_linea }} !important; --c-ok: {{ section.settings.color_ok }} !important; --c-conf-1: {{ section.settings.color_confianza_1 }} !important; --c-conf-2: {{ section.settings.color_confianza_2 }} !important; --c-ahorro-1: {{ section.settings.color_ahorro_1 }} !important; --c-ahorro-2: {{ section.settings.color_ahorro_2 }} !important; --c-ahorro-texto: {{ section.settings.color_ahorro_texto }} !important; --c-cta: {{ section.settings.color_cta }} !important; --c-cta-hover: {{ section.settings.color_cta_hover }} !important; --c-cta-texto: {{ section.settings.color_cta_texto }} !important; --c-risk: var(--c-tinta-suave) !important; --tt: {{ section.settings.tamano_titulo_movil }}px !important; --tl: {{ section.settings.tamano_entradilla_movil }}px !important; --tx: {{ section.settings.tamano_texto_movil }}px !important; --tp: {{ section.settings.tamano_precio_movil }}px !important; --tb: {{ section.settings.tamano_boton_movil }}px !important; --te: 12px !important; --alto-boton: 54px !important; --radio: {{ section.settings.radio }}px !important; --fd: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important; --fb: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif !important; --ancho: {{ section.settings.ancho_contenido }}px !important; --gut: 20px !important; padding-top: {{ section.settings.padding_superior_movil }}px !important; padding-bottom: {{ section.settings.padding_inferior_movil }}px !important; font-family: var(--fb) !important; font-size: var(--tx) !important; line-height: 1.6 !important; letter-spacing: normal !important; -webkit-font-smoothing: antialiased !important; text-align: left !important; background: radial-gradient(60% 50% at 18% 22%, color-mix(in srgb, var(--c-acento) 42%, transparent) 0%, transparent 70%), radial-gradient(45% 40% at 92% 92%, color-mix(in srgb, var(--c-cta-hover) 16%, transparent) 0%, transparent 70%), linear-gradient(165deg, var(--c-fondo-1) 0%, var(--c-fondo-2) 100%) !important; color: var(--c-texto) !important; }
+#shopify-section-{{ section.id }} .tov-hero :where(h1,h2,h3,h4,h5,p,a,ul,ol,li,b,s,em,strong,span,small,summary,blockquote,figcaption){ color: inherit !important; font-family: inherit !important; }
+#shopify-section-{{ section.id }} .tov-hero *, #shopify-section-{{ section.id }} .tov-hero *::before, #shopify-section-{{ section.id }} .tov-hero *::after{ box-sizing: border-box !important; }
+#shopify-section-{{ section.id }} .tov-hero :where(h1,h2,h3,h4,p,ul,ol,figure,blockquote){ margin: 0 !important; }
+#shopify-section-{{ section.id }} .tov-hero :where(img,video){ max-width: 100% !important; display: block !important; }
+#shopify-section-{{ section.id }} .tov-hero__c{ max-width: var(--ancho) !important; margin-inline: auto !important; padding-inline: var(--gut) !important; }
+#shopify-section-{{ section.id }} .tov-hero__ico{ width: 24px !important; height: 24px !important; stroke: currentColor !important; fill: none !important; stroke-width: 1.8 !important; stroke-linecap: round !important; stroke-linejoin: round !important; flex: none !important; display: block !important; }
+#shopify-section-{{ section.id }} .tov-hero__grid{ display: grid !important; gap: 24px !important; }
+#shopify-section-{{ section.id }} .tov-hero__media{ display: grid !important; gap: 8px !important; min-width: 0 !important; align-content: start !important; }
+#shopify-section-{{ section.id }} .tov-hero__main{ position: relative !important; display: block !important; width: 100% !important; aspect-ratio: 4/3 !important; border-radius: var(--radio) !important; overflow: hidden !important; box-shadow: 0 28px 70px -24px rgba(8,27,53,.45) !important; }
+#shopify-section-{{ section.id }} .tov-hero__main img{ width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#shopify-section-{{ section.id }} .tov-hero__ph{ display: block !important; width: 100% !important; height: 100% !important; border: 2px dashed color-mix(in srgb, var(--c-texto) 22%, transparent) !important; border-radius: var(--radio) !important; background: color-mix(in srgb, var(--c-fondo-2) 80%, var(--c-texto) 6%) !important; }
+#shopify-section-{{ section.id }} .tov-hero__tags{ position: absolute !important; left: 12px !important; top: 12px !important; display: flex !important; flex-wrap: wrap !important; gap: 6px !important; }
+#shopify-section-{{ section.id }} .tov-hero__tags span{ font-size: 12px !important; font-weight: 800 !important; padding: 6px 11px !important; border-radius: 999px !important; line-height: 1.3 !important; box-shadow: 0 6px 14px -6px rgba(0,0,0,.35) !important; }
+#shopify-section-{{ section.id }} .tov-hero__tag--save{ background: linear-gradient(135deg, var(--c-ahorro-1) 0%, var(--c-ahorro-2) 100%) !important; color: var(--c-ahorro-texto) !important; }
+#shopify-section-{{ section.id }} .tov-hero__tag--trust{ background: linear-gradient(135deg, var(--c-conf-1) 0%, var(--c-conf-2) 100%) !important; color: #FFFFFF !important; }
+#shopify-section-{{ section.id }} .tov-hero__thumbs{ display: none !important; grid-template-columns: repeat(4, minmax(0,1fr)) !important; gap: 8px !important; }
+#shopify-section-{{ section.id }} .tov-hero__thumb{ aspect-ratio: 1/1 !important; border-radius: 12px !important; overflow: hidden !important; }
+#shopify-section-{{ section.id }} .tov-hero__thumb img{ width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#shopify-section-{{ section.id }} .tov-hero__thumb .tov-hero__ph{ border-radius: 12px !important; }
+#shopify-section-{{ section.id }} .tov-hero__copy{ display: grid !important; gap: 16px !important; align-content: start !important; min-width: 0 !important; color: var(--c-texto) !important; }
+#shopify-section-{{ section.id }} .tov-hero__eyebrow{ display: inline-flex !important; align-items: center !important; gap: 8px !important; font-size: var(--te) !important; font-weight: 800 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: var(--c-acento-claro) !important; line-height: 1.4 !important; }
+#shopify-section-{{ section.id }} .tov-hero__eyebrow::before{ content: "" !important; width: 18px !important; height: 2px !important; border-radius: 2px !important; background: currentColor !important; opacity: .7 !important; }
+#shopify-section-{{ section.id }} .tov-hero__titulo{ font-family: var(--fd) !important; font-weight: 800 !important; font-size: var(--tt) !important; line-height: 1.02 !important; letter-spacing: -0.025em !important; margin: 0 !important; overflow-wrap: break-word !important; text-wrap: balance !important; min-width: 0 !important; color: var(--c-texto) !important; }
+#shopify-section-{{ section.id }} .tov-hero__titulo em{ font-style: normal !important; background: linear-gradient(135deg, var(--c-acento-claro) 0%, var(--c-acento-titulo-2) 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; -webkit-text-fill-color: transparent !important; }
+#shopify-section-{{ section.id }} .tov-hero__rating{ display: flex !important; align-items: center !important; gap: 8px !important; font-size: 14px !important; color: color-mix(in srgb, var(--c-texto) 74%, transparent) !important; flex-wrap: wrap !important; }
+#shopify-section-{{ section.id }} .tov-hero__rating a{ color: var(--c-texto) !important; font-weight: 700 !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
+#shopify-section-{{ section.id }} .tov-hero__stars{ display: inline-flex !important; gap: 2px !important; color: var(--c-cta) !important; }
+#shopify-section-{{ section.id }} .tov-hero__stars .tov-hero__ico{ width: 16px !important; height: 16px !important; fill: currentColor !important; stroke-width: 1 !important; }
+#shopify-section-{{ section.id }} .tov-hero__lead{ font-size: var(--tl) !important; color: color-mix(in srgb, var(--c-texto) 74%, transparent) !important; line-height: 1.6 !important; order: 2 !important; }
+#shopify-section-{{ section.id }} .tov-hero__checks{ list-style: none !important; margin: 0 !important; padding: 0 !important; display: grid !important; gap: 10px !important; order: 2 !important; }
+#shopify-section-{{ section.id }} .tov-hero__checks li{ display: flex !important; gap: 12px !important; align-items: flex-start !important; font-weight: 600 !important; margin: 0 !important; color: color-mix(in srgb, var(--c-texto) 92%, transparent) !important; }
+#shopify-section-{{ section.id }} .tov-hero__checks .tov-hero__ico{ width: 22px !important; height: 22px !important; padding: 4px !important; border-radius: 50% !important; background: var(--c-ok) !important; color: #FFFFFF !important; stroke-width: 3 !important; margin-top: 1px !important; }
+#shopify-section-{{ section.id }} .tov-hero__box{ order: 1 !important; background: var(--c-tarjeta) !important; color: var(--c-tinta) !important; border-radius: calc(var(--radio) + 8px) !important; padding: 24px 16px !important; display: grid !important; gap: 16px !important; box-shadow: 0 28px 70px -24px rgba(8,27,53,.45) !important; }
+#shopify-section-{{ section.id }} .tov-hero__ctas{ display: grid !important; gap: 8px !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn{ position: relative !important; overflow: hidden !important; isolation: isolate !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 10px !important; min-height: var(--alto-boton) !important; padding: 0 1.8em !important; border-radius: 999px !important; border: 0 !important; font-family: var(--fb) !important; font-weight: 800 !important; font-size: var(--tb) !important; line-height: 1.2 !important; letter-spacing: normal !important; text-align: center !important; text-decoration: none !important; cursor: pointer !important; -webkit-tap-highlight-color: transparent !important; background: linear-gradient(135deg, var(--c-cta) 0%, var(--c-cta-hover) 100%) !important; color: var(--c-cta-texto) !important; box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--c-cta-hover) 55%, transparent) !important; transition: transform 160ms cubic-bezier(.22,.8,.35,1), box-shadow 160ms cubic-bezier(.22,.8,.35,1), filter 160ms cubic-bezier(.22,.8,.35,1), background-color 160ms cubic-bezier(.22,.8,.35,1), color 160ms cubic-bezier(.22,.8,.35,1) !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn:hover{ color: var(--c-cta-texto) !important; transform: translateY(-2px) !important; filter: saturate(1.1) brightness(1.03) !important; box-shadow: 0 16px 30px -10px color-mix(in srgb, var(--c-cta-hover) 65%, transparent) !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn:active{ transform: translateY(1px) scale(.98) !important; box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--c-cta-hover) 60%, transparent) !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn:focus-visible{ outline: 3px solid #2E6FD9 !important; outline-offset: 3px !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn::before, #shopify-section-{{ section.id }} .tov-hero__btn::after{ display: none !important; content: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn[aria-disabled="true"]{ opacity: .5 !important; pointer-events: none !important; box-shadow: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn.is-loading{ pointer-events: none !important; color: transparent !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn.is-loading::after{ content: "" !important; display: block !important; position: absolute !important; inset: 0 !important; margin: auto !important; width: 20px !important; height: 20px !important; border-radius: 50% !important; border: 2.5px solid var(--c-cta-texto) !important; border-right-color: transparent !important; animation: tov-spin .7s linear infinite !important; }
+#shopify-section-{{ section.id }} .tov-hero__sep{ opacity: .5 !important; font-weight: 600 !important; }
+#shopify-section-{{ section.id }} .tov-hero__ripple{ position: absolute !important; z-index: -1 !important; border-radius: 50% !important; background: rgba(255,255,255,.4) !important; transform: scale(0) !important; animation: tov-ripple 560ms cubic-bezier(.22,.8,.35,1) forwards !important; pointer-events: none !important; }
+@keyframes tov-ripple{ to{ transform: scale(1); opacity: 0; } }
+@keyframes tov-spin{ to{ transform: rotate(360deg); } }
+#shopify-section-{{ section.id }} .tov-hero__btn--ghost{ background: transparent !important; color: var(--c-tinta) !important; box-shadow: inset 0 0 0 2px var(--c-tinta) !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn--ghost:hover{ background: var(--c-tinta) !important; color: #FFFFFF !important; box-shadow: inset 0 0 0 2px var(--c-tinta) !important; filter: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn--ghost.is-loading{ color: transparent !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn--ghost.is-loading::after{ border-color: var(--c-tinta) !important; border-right-color: transparent !important; }
+#shopify-section-{{ section.id }} .tov-hero__btn--block{ width: 100% !important; }
+#shopify-section-{{ section.id }} .tov-hero__risk{ display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 6px 16px !important; font-size: 14px !important; font-weight: 600 !important; color: var(--c-risk) !important; line-height: 1.5 !important; }
+#shopify-section-{{ section.id }} .tov-hero__risk span{ display: inline-flex !important; align-items: center !important; gap: 6px !important; }
+#shopify-section-{{ section.id }} .tov-hero__risk .tov-hero__ico{ width: 18px !important; height: 18px !important; padding: 3px !important; border-radius: 50% !important; background: linear-gradient(135deg, var(--c-conf-1) 0%, var(--c-conf-2) 100%) !important; color: #FFFFFF !important; stroke-width: 2.6 !important; }
+#shopify-section-{{ section.id }} .tov-hero__price-block{ display: flex !important; flex-wrap: wrap !important; align-items: baseline !important; gap: 4px 12px !important; }
+#shopify-section-{{ section.id }} .tov-hero__price{ font-family: var(--fd) !important; font-size: var(--tp) !important; font-weight: 800 !important; letter-spacing: -0.03em !important; line-height: 1 !important; color: inherit !important; }
+#shopify-section-{{ section.id }} .tov-hero__price-old{ font-family: var(--fd) !important; font-weight: 600 !important; font-size: calc(var(--tp) * .5) !important; color: var(--c-tinta-suave) !important; text-decoration: line-through !important; text-decoration-thickness: 2px !important; line-height: 1.1 !important; }
+#shopify-section-{{ section.id }} .tov-hero__save{ align-self: center !important; display: inline-flex !important; align-items: center !important; font-size: 12px !important; font-weight: 800 !important; letter-spacing: .02em !important; padding: 5px 11px !important; border-radius: 999px !important; background: linear-gradient(135deg, var(--c-ahorro-1) 0%, var(--c-ahorro-2) 100%) !important; color: var(--c-ahorro-texto) !important; line-height: 1.3 !important; }
+#shopify-section-{{ section.id }} .tov-hero__price-note{ flex-basis: 100% !important; font-size: 14px !important; color: var(--c-tinta-suave) !important; line-height: 1.5 !important; }
+#shopify-section-{{ section.id }} .tov-hero__pay{ display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 6px !important; }
+#shopify-section-{{ section.id }} .tov-hero__pay span{ font-size: 11px !important; font-weight: 800 !important; letter-spacing: .05em !important; text-transform: uppercase !important; padding: 5px 10px !important; border-radius: 8px !important; color: var(--c-pay-texto) !important; background: var(--c-pay-fondo) !important; border: 1px solid var(--c-pay-borde) !important; line-height: 1.3 !important; }
+#shopify-section-{{ section.id }} .tov-hero__main--carrusel{ aspect-ratio: 1/1 !important; }
+#shopify-section-{{ section.id }} .tov-hero__slides{ display: flex !important; width: 100% !important; height: 100% !important; overflow-x: auto !important; overflow-y: hidden !important; scroll-snap-type: x mandatory !important; overscroll-behavior-x: contain !important; scrollbar-width: none !important; -webkit-overflow-scrolling: touch !important; }
+#shopify-section-{{ section.id }} .tov-hero__slides::-webkit-scrollbar{ display: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__slide{ flex: 0 0 100% !important; height: 100% !important; scroll-snap-align: start !important; scroll-snap-stop: always !important; }
+#shopify-section-{{ section.id }} .tov-hero__slide img{ width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#shopify-section-{{ section.id }} .tov-hero__tags{ z-index: 2 !important; pointer-events: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__count{ position: absolute !important; right: 12px !important; bottom: 12px !important; z-index: 2 !important; font-size: 12px !important; font-weight: 800 !important; padding: 5px 10px !important; border-radius: 999px !important; background: rgba(4,16,34,.62) !important; color: #FFFFFF !important; line-height: 1.3 !important; pointer-events: none !important; }
+#shopify-section-{{ section.id }} .tov-hero__arrow{ position: absolute !important; top: 50% !important; z-index: 2 !important; display: none !important; width: 44px !important; height: 44px !important; place-items: center !important; padding: 0 !important; margin: -22px 0 0 !important; border-radius: 50% !important; border: 1px solid rgba(255,255,255,.4) !important; background: rgba(4,16,34,.55) !important; color: #FFFFFF !important; cursor: pointer !important; }
+#shopify-section-{{ section.id }} .tov-hero__arrow--izq{ left: 12px !important; }
+#shopify-section-{{ section.id }} .tov-hero__arrow--der{ right: 12px !important; }
+#shopify-section-{{ section.id }} .tov-hero__arrow .tov-hero__ico{ width: 20px !important; height: 20px !important; stroke-width: 2.4 !important; }
+#shopify-section-{{ section.id }} .tov-hero__arrow:focus-visible, #shopify-section-{{ section.id }} .tov-hero__dot:focus-visible{ outline: 3px solid #2E6FD9 !important; outline-offset: 2px !important; }
+#shopify-section-{{ section.id }} .tov-hero__dots{ display: flex !important; justify-content: center !important; flex-wrap: wrap !important; gap: 2px !important; }
+#shopify-section-{{ section.id }} .tov-hero__dot{ display: grid !important; place-items: center !important; width: 26px !important; height: 26px !important; padding: 0 !important; margin: 0 !important; border: 0 !important; background: none !important; cursor: pointer !important; }
+#shopify-section-{{ section.id }} .tov-hero__dot::before{ content: "" !important; display: block !important; width: 8px !important; height: 8px !important; border-radius: 999px !important; background: color-mix(in srgb, var(--c-texto) 35%, transparent) !important; transition: width 160ms cubic-bezier(.22,.8,.35,1), background-color 160ms cubic-bezier(.22,.8,.35,1) !important; }
+#shopify-section-{{ section.id }} .tov-hero__dot[aria-current="true"]::before{ width: 22px !important; background: var(--c-acento-claro) !important; }
+@media screen and (min-width: 750px){
+#shopify-section-{{ section.id }} .tov-hero__arrow{ display: grid !important; }
+#shopify-section-{{ section.id }} .tov-hero{ --tt: calc({{ section.settings.tamano_titulo }}px * 0.84) !important; --tl: {{ section.settings.tamano_entradilla }}px !important; --tx: {{ section.settings.tamano_texto }}px !important; --tp: {{ section.settings.tamano_precio }}px !important; --tb: {{ section.settings.tamano_boton }}px !important; --te: 13px !important; --gut: 32px !important; padding-top: {{ section.settings.padding_superior }}px !important; padding-bottom: {{ section.settings.padding_inferior }}px !important; }
+#shopify-section-{{ section.id }} .tov-hero__thumbs{ display: grid !important; }
+#shopify-section-{{ section.id }} .tov-hero__box{ padding: 24px !important; }
+#shopify-section-{{ section.id }} .tov-hero__ctas{ grid-template-columns: minmax(0,1.35fr) minmax(0,1fr) !important; }
+}
+@media screen and (min-width: 990px){
+#shopify-section-{{ section.id }} .tov-hero{ --tt: {{ section.settings.tamano_titulo }}px !important; --gut: 40px !important; }
+#shopify-section-{{ section.id }} .tov-hero__grid{ grid-template-columns: minmax(0,6fr) minmax(0,5fr) !important; gap: 56px !important; align-items: start !important; }
+#shopify-section-{{ section.id }} .tov-hero__media{ position: sticky !important; top: 96px !important; }
+#shopify-section-{{ section.id }} .tov-hero__main{ aspect-ratio: 1/1 !important; }
+#shopify-section-{{ section.id }} .tov-hero__lead, #shopify-section-{{ section.id }} .tov-hero__checks, #shopify-section-{{ section.id }} .tov-hero__box{ order: 0 !important; }
+}
+@media (prefers-reduced-motion: reduce){
+#shopify-section-{{ section.id }} .tov-hero *, #shopify-section-{{ section.id }} .tov-hero *::before, #shopify-section-{{ section.id }} .tov-hero *::after{ transition-duration: 1ms !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; }
+}
+{%- endstyle -%}
+
+{%- if section.settings.url_boton != blank -%}{%- assign enlace = section.settings.url_boton -%}{%- else -%}{%- assign enlace = routes.cart_url | append: '/' | append: section.settings.variant_id | append: ':1' -%}{%- endif -%}
+<div class="tov-hero tov-hero-{{ section.id }}">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="tov-check-{{ section.id }}" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol><symbol id="tov-estrella-{{ section.id }}" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8 6.8 19.6l1-5.8L3.5 9.7l5.9-.8z"/></symbol><symbol id="tov-izq-{{ section.id }}" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol><symbol id="tov-der-{{ section.id }}" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol></defs></svg>
+  {%- liquid
+    assign fotos = ''
+    if section.settings.carrusel
+      assign claves = 'imagen,miniatura_1,miniatura_2,miniatura_3,miniatura_4,miniatura_5,miniatura_6' | split: ','
+      for clave in claves
+        if section.settings[clave] != blank
+          assign fotos = fotos | append: clave | append: ','
+        endif
+      endfor
+    endif
+    assign fotos = fotos | split: ','
+  -%}
+  <div class="tov-hero__c tov-hero__grid">
+    <div class="tov-hero__media">
+      <div class="tov-hero__main{% if fotos.size > 1 %} tov-hero__main--carrusel{% endif %}">
+        {%- if fotos.size > 1 -%}
+          <div class="tov-hero__slides" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="{{ section.settings.etiqueta_carrusel | escape }}">
+            {%- for clave in fotos -%}
+              <div class="tov-hero__slide" role="group" aria-roledescription="foto" aria-label="{{ forloop.index }} de {{ fotos.size }}">
+                {%- if forloop.first -%}
+                  {{ section.settings[clave] | image_url: width: 1500 | image_tag: widths: '400, 750, 1100, 1500', sizes: '(min-width: 990px) 55vw, 100vw', loading: 'eager', fetchpriority: 'high' }}
+                {%- else -%}
+                  {{ section.settings[clave] | image_url: width: 1500 | image_tag: widths: '400, 750, 1100, 1500', sizes: '(min-width: 990px) 55vw, 100vw', loading: 'lazy' }}
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+          <button type="button" class="tov-hero__arrow tov-hero__arrow--izq" data-dir="-1" aria-label="Foto anterior"><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-izq-{{ section.id }}"/></svg></button>
+          <button type="button" class="tov-hero__arrow tov-hero__arrow--der" data-dir="1" aria-label="Foto siguiente"><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-der-{{ section.id }}"/></svg></button>
+          <span class="tov-hero__count" aria-hidden="true"><span data-actual>1</span>/{{ fotos.size }}</span>
+        {%- elsif section.settings.imagen != blank -%}
+          {{ section.settings.imagen | image_url: width: 1500 | image_tag: widths: '400, 750, 1100, 1500', sizes: '(min-width: 990px) 55vw, 100vw', loading: 'eager', fetchpriority: 'high' }}
+        {%- else -%}
+          <div class="tov-hero__ph"></div>
+        {%- endif -%}
+        {%- if section.settings.etiqueta_ahorro != blank or section.settings.etiqueta_confianza != blank -%}
+        <div class="tov-hero__tags">{%- if section.settings.etiqueta_ahorro != blank -%}<span class="tov-hero__tag--save">{{ section.settings.etiqueta_ahorro }}</span>{%- endif -%}{%- if section.settings.etiqueta_confianza != blank -%}<span class="tov-hero__tag--trust">{{ section.settings.etiqueta_confianza }}</span>{%- endif -%}</div>
+        {%- endif -%}
+      </div>
+      {%- if fotos.size > 1 -%}
+      <div class="tov-hero__dots">
+        {%- for clave in fotos -%}
+          <button type="button" class="tov-hero__dot" data-i="{{ forloop.index0 }}" aria-label="Ver foto {{ forloop.index }} de {{ fotos.size }}"{% if forloop.first %} aria-current="true"{% endif %}></button>
+        {%- endfor -%}
+      </div>
+      {%- elsif section.settings.mostrar_miniaturas -%}
+      <div class="tov-hero__thumbs">
+        {%- for i in (1..4) -%}
+          {%- assign clave = 'miniatura_' | append: i -%}
+          {%- assign mini = section.settings[clave] -%}
+          <div class="tov-hero__thumb">
+            {%- if mini != blank -%}
+              {{ mini | image_url: width: 400 | image_tag: widths: '200, 400', sizes: '(min-width: 990px) 13vw, 25vw', loading: 'lazy' }}
+            {%- else -%}
+              <div class="tov-hero__ph"></div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+    </div>
+
+    <div class="tov-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}<span class="tov-hero__eyebrow">{{ section.settings.eyebrow }}</span>{%- endif -%}
+      <h1 class="tov-hero__titulo">{{ section.settings.titulo }}</h1>
+      {%- if section.settings.mostrar_valoracion -%}
+      <div class="tov-hero__rating">
+        <span class="tov-hero__stars" aria-hidden="true"><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-estrella-{{ section.id }}"/></svg><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-estrella-{{ section.id }}"/></svg><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-estrella-{{ section.id }}"/></svg><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-estrella-{{ section.id }}"/></svg><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-estrella-{{ section.id }}"/></svg></span>
+        <span>{{ section.settings.texto_valoracion }} {% if section.settings.texto_enlace_valoracion != blank %}<a href="{{ section.settings.enlace_valoracion }}">{{ section.settings.texto_enlace_valoracion }}</a>{% endif %}</span>
+      </div>
+      {%- endif -%}
+      {%- if section.settings.entradilla != blank -%}<p class="tov-hero__lead">{{ section.settings.entradilla }}</p>{%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+      <ul class="tov-hero__checks">
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-check-{{ section.id }}"/></svg><span>{{ block.settings.texto }}</span></li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+      <div class="tov-hero__box">
+        <div class="tov-hero__price-block"><span class="tov-hero__price">{{ section.settings.precio }}</span>{%- if section.settings.precio_anterior != blank -%}<span class="tov-hero__price-old" aria-label="{{ section.settings.aria_precio_anterior | escape }}">{{ section.settings.precio_anterior }}</span>{%- endif -%}{%- if section.settings.ahorro != blank -%}<span class="tov-hero__save">{{ section.settings.ahorro }}</span>{%- endif -%}{%- if section.settings.nota_precio != blank -%}<span class="tov-hero__price-note">{{ section.settings.nota_precio }}</span>{%- endif -%}</div>
+        <div class="tov-hero__ctas">
+          <a class="tov-hero__btn tov-hero__btn--block" href="{{ enlace }}">{{ section.settings.texto_boton }}{%- if section.settings.precio_boton != blank %} <span class="tov-hero__sep">·</span> {{ section.settings.precio_boton }}{%- endif -%}</a>
+          {%- if section.settings.texto_boton_2 != blank -%}
+            <a class="tov-hero__btn tov-hero__btn--ghost tov-hero__btn--block" href="{{ section.settings.enlace_boton_2 }}">{{ section.settings.texto_boton_2 }}</a>
+          {%- endif -%}
+        </div>
+        <div class="tov-hero__risk">{%- if section.settings.riesgo_1 != blank -%}<span><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-check-{{ section.id }}"/></svg>{{ section.settings.riesgo_1 }}</span>{%- endif -%}{%- if section.settings.riesgo_2 != blank -%}<span><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-check-{{ section.id }}"/></svg>{{ section.settings.riesgo_2 }}</span>{%- endif -%}{%- if section.settings.riesgo_3 != blank -%}<span><svg class="tov-hero__ico" aria-hidden="true" focusable="false"><use href="#tov-check-{{ section.id }}"/></svg>{{ section.settings.riesgo_3 }}</span>{%- endif -%}</div>
+        {%- if section.settings.mostrar_pagos and section.settings.metodos_pago != blank -%}{%- assign metodos = section.settings.metodos_pago | split: ',' -%}<div class="tov-hero__pay" aria-label="{{ section.settings.etiqueta_pagos | escape }}">{%- for m in metodos -%}<span>{{ m | strip }}</span>{%- endfor -%}</div>{%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var root = document.querySelector('.tov-hero-{{ section.id }}');
+    if (!root || root.dataset.init) return;
+    root.dataset.init = '1';
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    root.querySelectorAll('.tov-hero__btn').forEach(function(b){
+      if (!reduce) b.addEventListener('pointerdown', function(e){
+        var r = b.getBoundingClientRect(), s = Math.max(r.width, r.height) * 2.2, el = document.createElement('span');
+        el.className = 'tov-hero__ripple';
+        el.style.width = el.style.height = s + 'px';
+        el.style.left = (e.clientX - r.left - s / 2) + 'px';
+        el.style.top = (e.clientY - r.top - s / 2) + 'px';
+        b.appendChild(el);
+        el.addEventListener('animationend', function(){ el.remove(); });
+      });
+      if ((b.getAttribute('href') || '').indexOf('/cart/') > -1) b.addEventListener('click', function(e){
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        b.classList.add('is-loading');
+        b.setAttribute('aria-busy', 'true');
+      });
+    });
+    addEventListener('pageshow', function(){
+      root.querySelectorAll('.tov-hero__btn.is-loading').forEach(function(b){ b.classList.remove('is-loading'); b.removeAttribute('aria-busy'); });
+    });
+    var slides = root.querySelector('.tov-hero__slides');
+    if (slides){
+      var dots = root.querySelectorAll('.tov-hero__dot'), actual = root.querySelector('[data-actual]'), total = slides.children.length;
+      var idx = function(){ return Math.round(slides.scrollLeft / Math.max(slides.clientWidth, 1)); };
+      var ir = function(i){ i = (i + total) % total; slides.scrollTo({ left: i * slides.clientWidth, behavior: reduce ? 'auto' : 'smooth' }); };
+      var marcar = function(){
+        var i = idx();
+        dots.forEach(function(d, j){ if (j === i) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+        if (actual) actual.textContent = i + 1;
+      };
+      slides.addEventListener('scroll', function(){ requestAnimationFrame(marcar); }, { passive: true });
+      dots.forEach(function(d){ d.addEventListener('click', function(){ ir(+d.dataset.i); }); });
+      root.querySelectorAll('.tov-hero__arrow').forEach(function(b){ b.addEventListener('click', function(){ ir(idx() + +b.dataset.dir); }); });
+    }
+  })();
+</script>
+
+{% schema %}
+{"name":"Hero","tag":"section","settings":[{"type":"header","content":"Imágenes"},{"type":"image_picker","id":"imagen","label":"Imagen principal"},{"type":"checkbox","id":"mostrar_miniaturas","label":"Mostrar miniaturas (escritorio)","default":true},{"type":"checkbox","id":"carrusel","label":"Fotos deslizables (carrusel)","info":"La imagen principal y las miniaturas se pasan con el dedo","default":false},{"type":"text","id":"etiqueta_carrusel","label":"Carrusel (accesible)","default":"Fotos del producto"},{"type":"image_picker","id":"miniatura_1","label":"Miniatura 1"},{"type":"image_picker","id":"miniatura_2","label":"Miniatura 2"},{"type":"image_picker","id":"miniatura_3","label":"Miniatura 3"},{"type":"image_picker","id":"miniatura_4","label":"Miniatura 4"},{"type":"image_picker","id":"miniatura_5","label":"Foto 6 (solo carrusel)"},{"type":"image_picker","id":"miniatura_6","label":"Foto 7 (solo carrusel)"},{"type":"header","content":"Textos"},{"type":"text","id":"eyebrow","label":"Antetítulo","default":"Cepillo eléctrico recargable · 7 en 1"},{"type":"inline_richtext","id":"titulo","label":"Título","default":"Limpia más. <em>Frota menos.</em>"},{"type":"checkbox","id":"mostrar_valoracion","label":"Mostrar valoración","default":true},{"type":"text","id":"texto_valoracion","label":"Texto de valoración","default":"[4,8] ·"},{"type":"text","id":"texto_enlace_valoracion","label":"Texto del enlace de reseñas","default":"[N] reseñas"},{"type":"text","id":"enlace_valoracion","label":"Enlace de reseñas","default":"#resenas"},{"type":"header","content":"Etiquetas sobre la imagen"},{"type":"text","id":"etiqueta_ahorro","label":"Etiqueta de ahorro","default":"-28% hoy","info":"Vacío = oculta"},{"type":"text","id":"etiqueta_confianza","label":"Etiqueta de confianza","default":"Pagas al recibir","info":"Vacío = oculta"},{"type":"text","id":"entradilla","label":"Entradilla","default":"Siete cabezales y un mango extensible para baño, cocina y rincones difíciles. El cepillo gira, tú solo lo guías."},{"type":"header","content":"Precio"},{"type":"text","id":"precio","label":"Precio","default":"$129.900"},{"type":"text","id":"precio_anterior","label":"Precio anterior","default":"$179.900","info":"Vacío = oculto"},{"type":"text","id":"aria_precio_anterior","label":"Precio anterior (lectores de pantalla)","default":"Precio anterior 179.900 pesos"},{"type":"text","id":"ahorro","label":"Chip de ahorro","default":"Ahorra $50.000","info":"Vacío = oculto"},{"type":"text","id":"nota_precio","label":"Nota bajo el precio","default":"Pago único · Pagas en efectivo cuando te llega"},{"type":"header","content":"Botón principal"},{"type":"text","id":"texto_boton","label":"Texto del botón","default":"Pedir ahora"},{"type":"text","id":"precio_boton","label":"Precio en el botón","default":"$129.900","info":"Vacío = sin precio"},{"type":"text","id":"variant_id","label":"ID de variante","default":"51179919900919","info":"ID de la variante para checkout directo"},{"type":"url","id":"url_boton","label":"Enlace alternativo","info":"Si se rellena, sustituye al checkout directo"},{"type":"header","content":"Botón secundario"},{"type":"text","id":"texto_boton_2","label":"Texto","default":"Elegir mi pack","info":"Vacío = oculto"},{"type":"text","id":"enlace_boton_2","label":"Enlace","default":"#packs"},{"type":"header","content":"Garantías cortas"},{"type":"text","id":"riesgo_1","label":"Garantía corta 1","default":"Pagas al recibir","info":"Vacío = oculto"},{"type":"text","id":"riesgo_2","label":"Garantía corta 2","default":"Envío a toda Colombia"},{"type":"text","id":"riesgo_3","label":"Garantía corta 3","default":"Garantía [X] días"},{"type":"header","content":"Métodos de pago"},{"type":"checkbox","id":"mostrar_pagos","label":"Mostrar métodos de pago","default":true},{"type":"text","id":"metodos_pago","label":"Métodos (separados por coma)","default":"Contraentrega, Efectivo, [Nequi], [Tarjeta]"},{"type":"text","id":"etiqueta_pagos","label":"Etiqueta accesible","default":"Métodos de pago"},{"type":"header","content":"Forma"},{"type":"range","id":"radio","label":"Radio de esquinas","min":0,"max":32,"step":2,"default":28,"unit":"px"},{"type":"header","content":"Colores"},{"type":"color","id":"color_fondo_1","label":"Fondo (oscuro 1)","default":"#081B35"},{"type":"color","id":"color_fondo_2","label":"Fondo (oscuro 2)","default":"#0F223B"},{"type":"color","id":"color_texto","label":"Texto","default":"#FFFFFF"},{"type":"color","id":"color_acento","label":"Acento (brillo)","default":"#0FA896"},{"type":"color","id":"color_acento_claro","label":"Acento claro (titular)","default":"#5EF0D8"},{"type":"color","id":"color_acento_titulo_2","label":"Acento del título (degradado fin)","default":"#19D3FF"},{"type":"color","id":"color_tarjeta","label":"Caja de precio","default":"#FFFFFF"},{"type":"color","id":"color_tinta","label":"Texto de la caja","default":"#10243F"},{"type":"color","id":"color_tinta_suave","label":"Texto secundario","default":"#52637A"},{"type":"color","id":"color_linea","label":"Borde de chips de pago","default":"#D6E4FF"},{"type":"color","id":"color_papel","label":"Fondo de chips de pago","default":"#EEF4FF"},{"type":"color","id":"color_pagos_texto","label":"Texto de chips de pago","default":"#2459C4"},{"type":"color","id":"color_ok","label":"Checks de beneficios","default":"#1FB36B"},{"type":"color","id":"color_confianza_1","label":"Iconos de confianza (inicio)","default":"#6AA8FF"},{"type":"color","id":"color_confianza_2","label":"Iconos de confianza (fin)","default":"#2F6FE4"},{"type":"color","id":"color_ahorro_1","label":"Chip de ahorro (inicio)","default":"#FFE08A"},{"type":"color","id":"color_ahorro_2","label":"Chip de ahorro (fin)","default":"#FFC23D"},{"type":"color","id":"color_ahorro_texto","label":"Chip de ahorro (texto)","default":"#5A3D00"},{"type":"color","id":"color_cta","label":"Botón principal","default":"#FFB547"},{"type":"color","id":"color_cta_hover","label":"Botón principal (hover)","default":"#FF8A1F"},{"type":"color","id":"color_cta_texto","label":"Texto del botón","default":"#0F223B"},{"type":"header","content":"Tipografía"},{"type":"range","id":"tamano_titulo","label":"Tamaño del título (escritorio)","min":24,"max":80,"step":2,"default":62,"unit":"px"},{"type":"range","id":"tamano_titulo_movil","label":"Tamaño del título (móvil)","min":24,"max":80,"step":2,"default":36,"unit":"px"},{"type":"range","id":"tamano_entradilla","label":"Tamaño de la entradilla (escritorio)","min":12,"max":24,"step":1,"default":18,"unit":"px"},{"type":"range","id":"tamano_entradilla_movil","label":"Tamaño de la entradilla (móvil)","min":12,"max":24,"step":1,"default":16,"unit":"px"},{"type":"range","id":"tamano_texto","label":"Tamaño del texto (escritorio)","min":12,"max":22,"step":1,"default":16,"unit":"px"},{"type":"range","id":"tamano_texto_movil","label":"Tamaño del texto (móvil)","min":12,"max":22,"step":1,"default":15,"unit":"px"},{"type":"range","id":"tamano_precio","label":"Tamaño del precio (escritorio)","min":20,"max":56,"step":2,"default":38,"unit":"px"},{"type":"range","id":"tamano_precio_movil","label":"Tamaño del precio (móvil)","min":20,"max":56,"step":2,"default":30,"unit":"px"},{"type":"range","id":"tamano_boton","label":"Tamaño del botón (escritorio)","min":12,"max":22,"step":1,"default":16,"unit":"px"},{"type":"range","id":"tamano_boton_movil","label":"Tamaño del botón (móvil)","min":12,"max":22,"step":1,"default":15,"unit":"px"},{"type":"header","content":"Espaciado"},{"type":"range","id":"padding_superior","label":"Padding superior (escritorio)","min":0,"max":120,"step":4,"default":52,"unit":"px"},{"type":"range","id":"padding_inferior","label":"Padding inferior (escritorio)","min":0,"max":120,"step":4,"default":112,"unit":"px"},{"type":"range","id":"padding_superior_movil","label":"Padding superior (móvil)","min":0,"max":120,"step":4,"default":16,"unit":"px"},{"type":"range","id":"padding_inferior_movil","label":"Padding inferior (móvil)","min":0,"max":120,"step":4,"default":56,"unit":"px"},{"type":"header","content":"Layout"},{"type":"range","id":"ancho_contenido","label":"Ancho máximo del contenido","min":1000,"max":1800,"step":40,"default":1240,"unit":"px"}],"max_blocks":6,"blocks":[{"type":"check","name":"Beneficio","settings":[{"type":"text","id":"texto","label":"Texto","default":"Beneficio"}]}],"presets":[{"name":"Hero","blocks":[{"type":"check","settings":{"texto":"7 cabezales intercambiables, uno por superficie"}},{"type":"check","settings":{"texto":"Mango extensible: llegas al piso sin agacharte"}},{"type":"check","settings":{"texto":"Recargable: sin cables mientras limpias"}}]}]}
+{% endschema %}
