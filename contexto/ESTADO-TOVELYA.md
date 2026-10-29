@@ -30,7 +30,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 |---|---|---|---|---|---|
 | Hogar y limpieza | `/collections/hogar` | 505565315319 | ya existía (tipo de producto) | `collection.hogar` | 6: cepillo 7 en 1, cepillo de cocina, robot, hidrolavadora, trapero, bomba de vacío |
 | Salud y bienestar | `/collections/salud` | 507579269367 | etiqueta `Salud` | `collection.salud` | 7: café, hombro, chaleco, báscula, faja, camisilla, trampolín |
-| Carro y moto | `/collections/carro-y-moto` | 507580907767 | etiqueta `Carro y moto` | `collection.carro-moto` | 5: CarPlay moto, TPMS, inflador 4 en 1, compresor, traje impermeable |
+| Carro y moto | `/collections/carro-y-moto` | 507580907767 | etiqueta `Carro y moto` | `collection.carro-moto` | 6: CarPlay moto, TPMS, inflador 4 en 1, compresor, traje impermeable, limpiador de vidrios (desde el 2026-10-29) |
 | Entretenimiento | `/collections/entretenimiento` | 507580940535 | etiqueta `Entretenimiento` | `collection.entretenimiento` | 1: mini proyector (el peluche de Jesús entra cuando tenga fotos; hoy no tiene ninguna) |
 - **Lo más pedido** (`/collections/lo-mas-pedido`, 507581497591, etiqueta `Lo mas pedido`): cepillo 7 en 1, café, proyector, CarPlay, compresor y chaleco. La usa la página principal. Se creó nueva para no tocar la etiqueta vieja "Tovelya destacado", que usa la principal en vivo.
 - Ya existían y no se usan en el diseño nuevo: Tecnologia, Belleza, Bienestar, Mascotas, Mas vendidos.
@@ -148,6 +148,22 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
     - Siempre "con la moto detenida".
     - No se promete resistencia al agua.
     - Se ofrece confirmar por WhatsApp la compatibilidad con el celular y la moto.
+- **Limpiador de vidrios con líquido (nuevo, 2026-10-29)**: producto de Dropi (ID 1918768, proveedor "Impulsa").
+  - **Costo:** $6.375, precio de liquidación; antes costaba $8.500, así que puede volver a subir.
+  - **Precio:** $69.900, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $16.500 por venta, poco. Conviene ofrecer packs de 2 o 3.
+  - Es un bloque rojo de 10,5 × 7,2 cm con esponja blanca y 120 ml de líquido adentro: se presiona, se frota el vidrio y se enjuaga.
+  - **Producto en Shopify:** `gid://shopify/Product/10174771921143` (handle `limpiador-de-vidrios-con-liquido`), variante `51602091278583`, SKU `TOV-LIMPIA-VIDRIO-120`.
+    - Etiquetas: `Carro y moto`, `Dropi`, `Dropi 1918768`, `Pago contra entrega`, `Tovelya`. Por la etiqueta entra a la categoría Carro y moto.
+    - ACTIVO y publicado en Tienda online, Facebook & Instagram y TikTok.
+    - Galería: 7 fotos nuevas.
+  - **Fotos:** las de Dropi traen texto, "LIQUIDACIÓN" y la marca del proveedor, y Samuel pidió no usarlas. Se hicieron 7 fotos nuevas con Codex tomando como referencia el producto real: `tovelya-vidrio-catalogo`, `-parabrisas`, `-antes-despues`, `-retrovisor`, `-boton`, `-noche` y `-mano`. Los prompts están en `herramientas/prompts-limpiador-vidrio-2026-10-29.md`.
+  - **Banners:** 7, `tovelya-vidrio-b1-claro` … `b7-pago`, hechos con `herramientas/banners-limpiador-vidrio.sh`. El b7 reutiliza la foto de entrega del cepillo.
+  - **Landing:** plantilla `product.limpiador-vidrio` en el tema de prueba `182115893495` (el mismo del cepillo v4), hecha con `herramientas/plantilla-limpiador-vidrio.mjs`. **Sin publicar.**
+    - Mientras no se publique, la tienda en vivo muestra el producto con la plantilla normal.
+    - Orden: 7 fotos deslizables, confianza, 7 banners con un botón cada 2, formulario, cierre y barra.
+    - Sin precio tachado.
+    - **No tiene videos:** el proveedor tiene creativos en Google Drive, pero esta sesión no llega a drive.google.com.
+  - **Textos:** solo lo que hace (quitar la película grasosa y las manchas de agua). No se promete repelente de lluvia ni "hidrofobicidad".
 - Otros productos activos con landing: trapero, bomba de vacío, compresor/arrancador, mini proyector, inflador 4 en 1, hidrolavadora, camisilla térmica, faja, soporte térmico de hombro, chaleco postural, CarPlay para moto, traje impermeable, báscula, trampolín, robot limpiador, cepillo de cocina, monitor TPMS, peluche de Jesús (rojo/azul).
 - Peluche de Jesús: las imágenes nuevas se generan con los prompts de `assets/products/peluche-jesus/landing/PROMPTS-CODEX.md`. Cuando estén en `.../landing/generated/`, se suben con `shopify/deploy-peluche-jesus-images.py`.
 
