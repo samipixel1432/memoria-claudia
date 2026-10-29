@@ -20,6 +20,10 @@ In the cloud:
   - For a real form test, either allow `challenges.cloudflare.com` (Turnstile may still reject a headless browser) or ask Samuel to place the order from his phone. Then find it with an `orders` query (tag `easysell_cod_form`) and cancel or delete it.
   - The script is in the `herramientas/pedido-prueba.mjs`. Field placeholders: "Eje: Camilo Andres", "Eje: 3045675789", Departamento/Ciudad selects (option text has spaces, so pick by index), "Eje: Calle 45 # 13-25", "#Casa / Torre / Apto / Barrio o Referencia". Submit button: "PEDIR Y PAGAR AL RECIBIR".
 - Meta connector (checked 2026-10-23): the "Tovelya Ads" account (`1814097669595453`) has `is_ads_mcp_enabled: false` ("gradually being rolled out"), so campaigns there cannot be created or read from the cloud. Check `ads_get_ad_accounts` again before saying no. The Claude in Chrome tools were not available in the session either.
+- Dropi (checked 2026-10-29): Samuel added `app.dropi.co` and `api.dropi.co` to the network allowlist and both answer.
+  - Without a session, every product page sends you to `/auth/login`, and the API (`api.dropi.co/api/products/{id}`, `/api/products/v4/index`) answers 401 "token could not be parsed".
+  - The login has reCAPTCHA, so it can't be automated, and his password must never be asked for in chat.
+  - Ways in: Samuel imports the product to Shopify from Dropi's own Shopify integration, or he sends screenshots of the photos and the cost. A Dropi API token saved as an environment secret would be a third way, but that is untested.
 - A cloud session cannot control Samuel's PC (no computer-use tools, checked 2026-10-21), and the Shopify connector cannot publish themes. Publishing a theme copy is always his click.
 
 **Why:** Samuel wants to switch devices and keep the same memory.
