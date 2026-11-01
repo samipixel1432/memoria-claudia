@@ -29,7 +29,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
 | Categoría | URL | id | Regla | Plantilla | Productos activos |
 |---|---|---|---|---|---|
 | Hogar y limpieza | `/collections/hogar` | 505565315319 | ya existía (tipo de producto) | `collection.hogar` | 6: cepillo 7 en 1, cepillo de cocina, robot, hidrolavadora, trapero, bomba de vacío |
-| Salud y bienestar | `/collections/salud` | 507579269367 | etiqueta `Salud` | `collection.salud` | 7: café, hombro, chaleco, báscula, faja, camisilla, trampolín |
+| Salud y bienestar | `/collections/salud` | 507579269367 | etiqueta `Salud` | `collection.salud` | 8: café, hombro, chaleco, báscula, faja, camisilla, trampolín, Happy Cleaner (desde el 2026-11-01) |
 | Carro y moto | `/collections/carro-y-moto` | 507580907767 | etiqueta `Carro y moto` | `collection.carro-moto` | 6: CarPlay moto, TPMS, inflador 4 en 1, compresor, traje impermeable, limpiador de vidrios (desde el 2026-10-29) |
 | Entretenimiento | `/collections/entretenimiento` | 507580940535 | etiqueta `Entretenimiento` | `collection.entretenimiento` | 1: mini proyector (el peluche de Jesús entra cuando tenga fotos; hoy no tiene ninguna) |
 - **Lo más pedido** (`/collections/lo-mas-pedido`, 507581497591, etiqueta `Lo mas pedido`): cepillo 7 en 1, café, proyector, CarPlay, compresor y chaleco. La usa la página principal. Se creó nueva para no tocar la etiqueta vieja "Tovelya destacado", que usa la principal en vivo.
@@ -152,6 +152,22 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - Los pedidos entran por EasySell, no hay ninguna app de Dropi ni bodega de Dropi en Shopify, y Samuel los mueve a mano ("en curso" o "en espera" desde el celular).
   - Los productos de Dropi en Shopify (café, `Dropi 2214172`, y limpiador, `Dropi 1918768`) se crearon a mano. Cuando se conecte la integración hay que **vincularlos**, no importarlos otra vez, para no duplicarlos.
   - La conexión se hace desde la cuenta de Dropi de Samuel (Integraciones → Shopify) y él aprueba la app en Shopify. Desde la nube no se puede, porque el inicio de sesión de Dropi tiene captcha.
+- **Happy Cleaner, mix de frutas sabor sandía (nuevo, 2026-11-01, para una campaña)**: producto de Dropi (ID 2228763, proveedor NutraNova Labs, bodega Bogotá).
+  - **Costo y precio:** costo $15.100 (Dropi sugiere $35.000). Precio **$79.900**, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $17.800 por venta. Conviene ofrecer packs de 2 o 3.
+  - **Producto:** tarro de 250 g, unas 25 porciones, con copa dosificadora de 10 g. Sabor artificial sandía. La etiqueta dice "fibra e inulina".
+  - **Producto en Shopify:** `gid://shopify/Product/10180394582263` (handle `happy-cleaner-sabor-sandia`), variante `51858274550007`, SKU `TOV-HAPPY-CLEANER-250`.
+    - Etiquetas: `Salud`, `Dropi`, `Dropi 2228763`, `NutraNova Labs`, `Pago contra entrega`, `Tovelya`.
+    - ACTIVO y publicado en Tienda online, Facebook & Instagram y TikTok.
+    - Galería: 7 fotos.
+  - **Promesas:** el proveedor lo vende como "detox": reduce la hinchazón, mejora la digestión, equilibra la microbiota, probióticos, enzimas. **Nada de eso va en la landing ni en los anuncios.**
+    - Es un alimento: INVIMA y Meta no permiten prometer salud, y Meta rechaza antes/después de cuerpo, "detox" y adelgazar.
+    - La landing habla solo de sabor, preparación, porciones y lo que dice la etiqueta.
+    - Lleva el aviso "Este producto no es un medicamento…".
+    - Por eso **no tiene antes y después**. En su lugar va "Lo que trae cada tarro" (lista) y "Cómo se prepara en 3 pasos".
+  - **Fotos:** 7 hechas con Codex desde el tarro real: `tovelya-happy-catalogo`, `-vaso`, `-manana`, `-preparar`, `-porciones`, `-oficina` y `-mezclar`. Ninguna muestra cuerpos ni cinturas.
+  - **Banners:** 8, `tovelya-happy-b1-sabor` … `b8-pago`, hechos con `herramientas/banners-happy-cleaner.sh`.
+  - **Landing:** plantilla `product.happy-cleaner` en el tema de prueba `182115893495`, hecha con `herramientas/plantilla-happy-cleaner.mjs`. **Sin publicar.**
+  - **Pendiente:** Samuel va a mandar videos para la campaña. Cuando lleguen, agregar la sección `tovelya-cepillo-v2-encasa` con `reproducir_todos` después de la confianza.
 - **Limpiador de vidrios con líquido (nuevo, 2026-10-29)**: producto de Dropi (ID 1918768, proveedor "Impulsa").
   - **Costo:** $6.375, precio de liquidación; antes costaba $8.500, así que puede volver a subir.
   - **Precio:** $69.900, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $16.500 por venta, poco. Conviene ofrecer packs de 2 o 3.
