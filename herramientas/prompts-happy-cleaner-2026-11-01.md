@@ -27,3 +27,15 @@ Vista cenital sobre una mesa de madera clara: el tarro abierto con el polvo rosa
 
 ## mezclar [Paso de preparación]
 Primer plano de una mano que revuelve con una cuchara larga un vaso de agua fría donde el polvo rosado se está disolviendo y el agua se vuelve rosada, sobre el mesón de la cocina, con el tarro desenfocado detrás. Luz suave, lente 85 mm. Formato cuadrado.
+
+## verano [Ambiente refrescante]
+En la terraza soleada de un apartamento en Medellín, una mujer latina de unos 28 años con gafas de sol en la cabeza y vestido de verano sonríe con un vaso alto de bebida rosada de sandía con hielo en la mano; sobre la mesa de madera, al lado, el tarro y un plato con tajadas de sandía. Plantas verdes, luz de tarde dorada. Plano medio, lente 50 mm. Formato cuadrado.
+
+## amigas [Para compartir]
+Dos amigas latinas de unos 30 años ríen en la cocina mientras chocan sus vasos de bebida rosada de sandía con hielo; el tarro está sobre el mesón entre las dos, bien visible, con tajadas de sandía. Ambiente alegre y natural, luz de ventana. Plano medio, lente 35 mm. Formato cuadrado.
+
+## splash [Bodegón de impacto]
+El tarro de pie en el centro sobre una superficie roja brillante, rodeado de tajadas de sandía que vuelan y salpicaduras de agua congeladas en el aire, fondo rojo y rosado degradado, luz de estudio dramática con brillo en el tarro. Estilo de fotografía publicitaria real, nítida. Formato cuadrado.
+
+## termo [Para llevar]
+Sobre la mesa de un café de barrio, un termo transparente con la bebida rosada de sandía, unas llaves, un celular y una mochila abierta de la que asoma el tarro; una mano toma el termo. Luz natural, colores vivos, lente 50 mm. Formato cuadrado.

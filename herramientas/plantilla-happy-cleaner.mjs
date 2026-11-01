@@ -4,7 +4,7 @@
 // Uso: node plantilla-happy-cleaner.mjs <salida.json>
 import { writeFileSync } from 'node:fs';
 const img = (f) => `shopify://shop_images/${f}`;
-const PRECIO = '$79.900';
+const PRECIO = '$89.900';
 const VARIANTE = '51858274550007';
 const AVISO = 'Este producto no es un medicamento. Su consumo es responsabilidad de quien lo recomienda y de quien lo usa.';
 const banner = (f, alt) => ({ type: 'imagen', settings: { imagen: img(f), alt } });
@@ -36,13 +36,13 @@ const t = {
       settings: {
         carrusel: true,
         etiqueta_carrusel: 'Fotos del Happy Cleaner',
-        imagen: img('tovelya-happy-vaso.jpg'),
-        miniatura_1: img('tovelya-happy-catalogo.jpg'),
-        miniatura_2: img('tovelya-happy-manana.jpg'),
-        miniatura_3: img('tovelya-happy-preparar.jpg'),
-        miniatura_4: img('tovelya-happy-porciones.jpg'),
-        miniatura_5: img('tovelya-happy-oficina.jpg'),
-        miniatura_6: img('tovelya-happy-mezclar.jpg'),
+        imagen: img('tovelya-happy-splash.jpg'),
+        miniatura_1: img('tovelya-happy-vaso.jpg'),
+        miniatura_2: img('tovelya-happy-verano.jpg'),
+        miniatura_3: img('tovelya-happy-amigas.jpg'),
+        miniatura_4: img('tovelya-happy-preparar.jpg'),
+        miniatura_5: img('tovelya-happy-termo.jpg'),
+        miniatura_6: img('tovelya-happy-catalogo.jpg'),
         eyebrow: 'Happy Cleaner · Mix de frutas sabor sandía · 250 g',
         titulo: 'Tu bebida de sandía <em>para cada mañana</em>',
         mostrar_valoracion: false,
@@ -78,23 +78,52 @@ const t = {
       block_order: ['c1', 'c2', 'c3', 'c4'],
       settings: {}
     },
+    // Videos: solo los tramos limpios de los videos del proveedor (sin textos de salud, sin cinturas, sin la caja vieja),
+    // recortados y sin audio con herramientas/clip-vertical.sh. Se reproducen todos a la vez.
+    videos: {
+      type: 'tovelya-cepillo-v2-encasa',
+      blocks: {
+        v1: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-vaso.mp4', nombre: 'Frío y con hielo', detalle: 'Así queda el vaso', sonido: false } },
+        v2: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-tomando.mp4', nombre: 'Rico de verdad', detalle: 'Sabor a frutas', sonido: false } },
+        v3: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-polvo.mp4', nombre: 'Así es el polvo', detalle: 'Una copa por vaso', sonido: false } }
+      },
+      block_order: ['v1', 'v2', 'v3'],
+      settings: {
+        eyebrow: 'Míralo',
+        titulo: 'Así se ve <em>tu vaso</em>',
+        entradilla: 'Rosado, frío y listo en segundos.',
+        etiqueta_carrusel: 'Videos de la bebida',
+        reproducir_todos: true,
+        mostrar_barra: false,
+        ancho_tarjeta_movil: 168,
+        ancho_tarjeta: 220,
+        padding_superior_movil: 48,
+        padding_inferior_movil: 48
+      }
+    },
     imagenes: {
       type: 'tovelya-imagenes',
       blocks: {
+        img_9: banner('tovelya-happy-b9-splash.jpg', 'Pura sandía en cada vaso'),
         img_1: banner('tovelya-happy-b1-sabor.jpg', 'Un vaso rosado, rico y refrescante'),
-        img_2: banner('tovelya-happy-b2-facil.jpg', 'Una copa en agua, revuelves y listo'),
         btn_1: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
+        img_2: banner('tovelya-happy-b2-facil.jpg', 'Una copa en agua, revuelves y listo'),
         img_3: banner('tovelya-happy-b3-trae.jpg', 'Lo que trae cada tarro: fibra e inulina, sabor a sandía, copa dosificadora de 10 g y unas 25 porciones'),
-        img_4: banner('tovelya-happy-b4-manana.jpg', 'Empieza el día con algo rico'),
         btn_2: boton('Pedir mi tarro', 'No pagas nada ahora'),
+        img_10: banner('tovelya-happy-b10-verano.jpg', 'Frío y con hielo, sabe a verano'),
+        img_4: banner('tovelya-happy-b4-manana.jpg', 'Empieza el día con algo rico'),
+        btn_3: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
         img_5: banner('tovelya-happy-b5-pasos.jpg', 'Cómo se prepara: sirve una copa, agrega agua fría y disfrútalo'),
         img_6: banner('tovelya-happy-b6-porciones.jpg', '25 porciones en un solo tarro'),
-        btn_3: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
+        btn_4: boton('Pedir mi tarro', 'No pagas nada ahora'),
+        img_11: banner('tovelya-happy-b11-amigas.jpg', 'Prepara uno para cada quien'),
+        img_12: banner('tovelya-happy-b12-termo.jpg', 'En tu termo, a donde vayas'),
+        btn_5: boton('Lo quiero', 'Pagas al recibir · Envío gratis'),
         img_7: banner('tovelya-happy-b7-oficina.jpg', 'En la casa o en la oficina'),
         img_8: banner('tovelya-happy-b8-pago.jpg', 'No pagas nada hasta recibirlo'),
-        btn_4: boton('Pedir contra entrega', 'Pagas al recibir · Envío gratis · Te confirmamos por WhatsApp')
+        btn_6: boton('Pedir contra entrega', 'Pagas al recibir · Envío gratis · Te confirmamos por WhatsApp')
       },
-      block_order: ['img_1', 'img_2', 'btn_1', 'img_3', 'img_4', 'btn_2', 'img_5', 'img_6', 'btn_3', 'img_7', 'img_8', 'btn_4'],
+      block_order: ['img_9', 'img_1', 'btn_1', 'img_2', 'img_3', 'btn_2', 'img_10', 'img_4', 'btn_3', 'img_5', 'img_6', 'btn_4', 'img_11', 'img_12', 'btn_5', 'img_7', 'img_8', 'btn_6'],
       settings: { color_fondo: '#F5F9F8', color_cta_texto: '#0F223B', color_nota: '#52637A' }
     },
     pedido: {
@@ -141,7 +170,7 @@ const t = {
       settings: { etiqueta: 'Precio final · pagas al recibir', precio: PRECIO, precio_anterior: '', aria_precio_anterior: '', texto_boton: 'Pedir · pago al recibir', variant_id: VARIANTE, url_boton: '#pedido' }
     }
   },
-  order: ['topbar', 'cabecera', 'hero', 'confianza', 'imagenes', 'pedido', 'ctafinal', 'footer', 'barracompra']
+  order: ['topbar', 'cabecera', 'hero', 'confianza', 'videos', 'imagenes', 'pedido', 'ctafinal', 'footer', 'barracompra']
 };
 writeFileSync(process.argv[2], JSON.stringify(t));
 console.log('listo');

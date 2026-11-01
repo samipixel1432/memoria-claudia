@@ -153,7 +153,7 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - Los productos de Dropi en Shopify (café, `Dropi 2214172`, y limpiador, `Dropi 1918768`) se crearon a mano. Cuando se conecte la integración hay que **vincularlos**, no importarlos otra vez, para no duplicarlos.
   - La conexión se hace desde la cuenta de Dropi de Samuel (Integraciones → Shopify) y él aprueba la app en Shopify. Desde la nube no se puede, porque el inicio de sesión de Dropi tiene captcha.
 - **Happy Cleaner, mix de frutas sabor sandía (nuevo, 2026-11-01, para una campaña)**: producto de Dropi (ID 2228763, proveedor NutraNova Labs, bodega Bogotá).
-  - **Costo y precio:** costo $15.100 (Dropi sugiere $35.000). Precio **$79.900**, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $17.800 por venta. Conviene ofrecer packs de 2 o 3.
+  - **Costo y precio:** costo $15.100 (Dropi sugiere $35.000). Precio inicial $79.900, hoy **$89.900** (ver abajo), con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $17.800 por venta. Conviene ofrecer packs de 2 o 3.
   - **Producto:** tarro de 250 g, unas 25 porciones, con copa dosificadora de 10 g. Sabor artificial sandía. La etiqueta dice "fibra e inulina".
   - **Producto en Shopify:** `gid://shopify/Product/10180394582263` (handle `happy-cleaner-sabor-sandia`), variante `51858274550007`, SKU `TOV-HAPPY-CLEANER-250`.
     - Etiquetas: `Salud`, `Dropi`, `Dropi 2228763`, `NutraNova Labs`, `Pago contra entrega`, `Tovelya`.
@@ -167,7 +167,24 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
   - **Fotos:** 7 hechas con Codex desde el tarro real: `tovelya-happy-catalogo`, `-vaso`, `-manana`, `-preparar`, `-porciones`, `-oficina` y `-mezclar`. Ninguna muestra cuerpos ni cinturas.
   - **Banners:** 8, `tovelya-happy-b1-sabor` … `b8-pago`, hechos con `herramientas/banners-happy-cleaner.sh`.
   - **Landing:** plantilla `product.happy-cleaner` en el tema de prueba `182115893495`, hecha con `herramientas/plantilla-happy-cleaner.mjs`. **Sin publicar.**
-  - **Pendiente:** Samuel va a mandar videos para la campaña. Cuando lleguen, agregar la sección `tovelya-cepillo-v2-encasa` con `reproducir_todos` después de la confianza.
+  - **2026-11-01, segunda vuelta:**
+    - **Precio:** Samuel lo subió $10.000 y quedó en **$89.900** (ganancia aprox. $27.800).
+    - **Tarro, no sobres:** se queda el tarro, como en Dropi. Los videos del proveedor muestran la versión vieja (caja con sobres, marca Newellme, sabor frutos rojos), y uno dice "nueva versión en tarro".
+    - **4 fotos nuevas más llamativas:** `-splash`, `-verano`, `-amigas` y `-termo`, con sus banners `b9`–`b12`. La landing quedó con 12 banners y 6 botones, y arriba abre con la foto splash.
+  - **Videos de Samuel (4, del proveedor):** casi todos traen cosas prohibidas para un alimento.
+    - Textos de salud quemados: "alivia la hinchazón", "mejora la digestión", "menos abdomen".
+    - Un señor de bata diciendo "en 4 semanas ves resultados".
+    - Mujeres mostrando la cintura.
+    - Una demostración de "aceite" en un vaso de laboratorio.
+    - La caja vieja con sobres.
+    - **Lo que se usó:** Samuel aprobó recortar. Solo sirvieron 3 tramos del video `785c…`: el vaso con hielo (5,9–8 s), la muchacha tomando (8–11 s) y el polvo en la copa (13,2–14,9 s).
+      - Se recortaron en vertical y **sin audio** con `herramientas/clip-vertical.sh`.
+      - En Shopify: `tovelya-happy-video-vaso`, `-tomando` y `-polvo`.
+      - En la landing van en la sección de videos (`encasa` con `reproducir_todos`) después de la confianza.
+    - **Para anuncios** se le entregaron:
+      - 2 videos verticales de unos 15 s, sin audio para que él les ponga música, con texto en franja abajo y sin promesas: `happy-anuncio-1.mp4` y `-2.mp4`. Se hacen con `herramientas/anuncio-vertical.sh` y un guion.
+      - Los 3 clips sueltos en 1080×1920.
+      - Copias locales en `entregas/happy-cleaner/`, que no se suben a git.
 - **Limpiador de vidrios con líquido (nuevo, 2026-10-29)**: producto de Dropi (ID 1918768, proveedor "Impulsa").
   - **Costo:** $6.375, precio de liquidación; antes costaba $8.500, así que puede volver a subir.
   - **Precio:** $69.900, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $16.500 por venta, poco. Conviene ofrecer packs de 2 o 3.

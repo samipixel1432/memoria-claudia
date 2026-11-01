@@ -17,3 +17,9 @@ bash $H/banner.sh "$g/porciones.png" "$o/tovelya-happy-b6-porciones.jpg" "Rinde"
 bash $H/banner.sh "$g/oficina.png"  "$o/tovelya-happy-b7-oficina.jpg"   "Donde estés"         "En la casa"         "o en la oficina"    "Solo necesitas agua." 40
 bash $H/banner.sh "$ENTREGA"        "$o/tovelya-happy-b8-pago.jpg"      "Pago contra entrega" "No pagas nada"      "hasta recibirlo"    "Envío gratis a toda Colombia." 30
 ls "$o"
+# Segunda tanda (2026-11-01): imágenes más llamativas
+bash $H/banner.sh "$g/splash.png" "$o/tovelya-happy-b9-splash.jpg"   "Sabor sandía"   "Pura sandía"      "en cada vaso"     "Mix de frutas, rico y refrescante." 50
+bash $H/banner.sh "$g/verano.png" "$o/tovelya-happy-b10-verano.jpg"  "Refrescante"    "Frío y con hielo" "sabe a verano"    "Perfecto para las tardes de calor." 40
+bash $H/banner.sh "$g/amigas.png" "$o/tovelya-happy-b11-amigas.jpg"  "Para compartir" "Prepara uno"      "para cada quien"  "Un tarro rinde unas 25 porciones." 40
+bash $H/banner.sh "$g/termo.png"  "$o/tovelya-happy-b12-termo.jpg"   "Para llevar"    "En tu termo,"     "a donde vayas"    "Lo preparas en la casa y te lo llevas." 50
+ls "$o"

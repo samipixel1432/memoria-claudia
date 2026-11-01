@@ -1,0 +1,7 @@
+foto|/home/user/trabajo/happy/generadas/splash.png|2.2|Pura sandía en cada vaso
+video|/home/user/trabajo/happy/videos/limpios/tovelya-happy-video-tomando.mp4|0|Rica y refrescante
+foto|/home/user/trabajo/happy/generadas/verano.png|2.2|Fría y con hielo
+foto|/home/user/trabajo/happy/generadas/amigas.png|2.2|Para compartir
+video|/home/user/trabajo/happy/videos/limpios/tovelya-happy-video-polvo.mp4|0|Una copa en agua fría
+foto|/home/user/trabajo/happy/generadas/termo.png|2.2|Llévala a donde vayas
+foto|/home/user/trabajo/happy/generadas/catalogo.png|3|Pagas al recibir · Envío gratis
