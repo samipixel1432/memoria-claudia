@@ -79,15 +79,17 @@ const t = {
       settings: {}
     },
     // Videos: solo los tramos limpios de los videos del proveedor (sin textos de salud, sin cinturas, sin la caja vieja),
-    // recortados y sin audio con herramientas/clip-vertical.sh. Se reproducen todos a la vez.
+    // recortados y sin audio con herramientas/clip-vertical.sh. Se reproducen todos a la vez. Los dos primeros (tarro y
+    // preparando) salen del video del tarro real; el clip del polvo suelto (tovelya-happy-video-polvo) quedó fuera.
     videos: {
       type: 'tovelya-cepillo-v2-encasa',
       blocks: {
+        v0: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-tarro.mp4', nombre: 'El tarro', detalle: '250 g · sabor sandía', sonido: false } },
+        v4: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-preparando.mp4', nombre: 'Así se prepara', detalle: 'Una copa en agua', sonido: false } },
         v1: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-vaso.mp4', nombre: 'Frío y con hielo', detalle: 'Así queda el vaso', sonido: false } },
-        v2: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-tomando.mp4', nombre: 'Rico de verdad', detalle: 'Sabor a frutas', sonido: false } },
-        v3: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-polvo.mp4', nombre: 'Así es el polvo', detalle: 'Una copa por vaso', sonido: false } }
+        v2: { type: 'clip', settings: { video: 'shopify://files/videos/tovelya-happy-video-tomando.mp4', nombre: 'Rico de verdad', detalle: 'Sabor a frutas', sonido: false } }
       },
-      block_order: ['v1', 'v2', 'v3'],
+      block_order: ['v0', 'v4', 'v1', 'v2'],
       settings: {
         eyebrow: 'Míralo',
         titulo: 'Así se ve <em>tu vaso</em>',

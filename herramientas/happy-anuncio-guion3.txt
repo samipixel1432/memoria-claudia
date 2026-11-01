@@ -1,0 +1,6 @@
+video|/home/user/trabajo/happy/anuncios/clips/happy-clip-tarro.mp4|0|Happy Cleaner sabor sandía
+video|/home/user/trabajo/happy/anuncios/clips/happy-clip-preparando.mp4|0|Una copa en agua fría
+foto|/home/user/trabajo/happy/generadas/vaso.png|2.2|Revuelves y listo
+video|/home/user/trabajo/happy/anuncios/clips/happy-clip-tomando.mp4|0|Rica y refrescante
+foto|/home/user/trabajo/happy/generadas/splash.png|2.2|Unas 25 porciones por tarro
+foto|/home/user/trabajo/happy/generadas/catalogo.png|3|Pagas al recibir · Envío gratis

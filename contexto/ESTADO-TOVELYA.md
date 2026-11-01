@@ -185,6 +185,13 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
       - 2 videos verticales de unos 15 s, sin audio para que él les ponga música, con texto en franja abajo y sin promesas: `happy-anuncio-1.mp4` y `-2.mp4`. Se hacen con `herramientas/anuncio-vertical.sh` y un guion.
       - Los 3 clips sueltos en 1080×1920.
       - Copias locales en `entregas/happy-cleaner/`, que no se suben a git.
+    - **Quinto video (`07c18c66…`), el mejor porque muestra el TARRO real:** un influencer con subtítulos de "probióticos", "ayuda a dormir" y "pastillas", que no se usan. Sirvieron 2 tramos:
+      - El tarro en la mano (2,9–5,5 s).
+      - La copa del tarro al vaso (8,9–12,45 s).
+      - En Shopify: `tovelya-happy-video-tarro` y `-preparando`.
+      - La fila de videos de la landing quedó así: tarro, preparando, vaso, tomando. El del polvo suelto salió.
+      - Se le entregó un tercer anuncio con estos tramos, `happy-anuncio-3.mp4` (guion en `herramientas/happy-anuncio-guion3.txt`), más los clips sueltos.
+    - **Para más videos** se le sugirió pedirle al proveedor los videos sin subtítulos y de la versión en tarro, o grabar uno propio cuando llegue el producto.
 - **Limpiador de vidrios con líquido (nuevo, 2026-10-29)**: producto de Dropi (ID 1918768, proveedor "Impulsa").
   - **Costo:** $6.375, precio de liquidación; antes costaba $8.500, así que puede volver a subir.
   - **Precio:** $69.900, con la fórmula de la tienda. Con $30k de envío, $15k de publicidad y $2k de otros quedan unos $16.500 por venta, poco. Conviene ofrecer packs de 2 o 3.
