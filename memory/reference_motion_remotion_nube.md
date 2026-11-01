@@ -18,6 +18,7 @@ Used on 2026-11-01 for the Happy Cleaner ads (`/motion-architect:motion`).
   - Text runs in a red pill, word by word. Photos sit in a card on a blurred background so the jar is never cropped. The ending has an orange "Pídelo hoy" button with a pulse.
   - A `|` in the text forces a line break.
   - To reuse: copy `HappyAd.tsx` and `index.ts` into `studio/src/compositions/` and `brand.ts` into `studio/src/brand/`.
+- **UGC with a new voiceover (no Remotion needed):** `herramientas/happy-ugc-senor.sh` / `happy-ugc-muchacha.sh` replace the original audio with an ElevenLabs voice, blur claim overlays, cover burned subtitles with `subtitulo-png.sh` boxes and end with the Remotion closing. ElevenLabs: `creative_generate_speech` (eleven_v4) → poll `creative_get_flow_run_status` → curl the content_url; if it says "Free generations are busy", try again in a later turn.
 - **Quicker option without Remotion:** `herramientas/anuncio-vertical.sh` (ffmpeg) builds a simple ad from a script of clips and photos.
 
 **Why:** the session container is wiped, so the studio and these fixes have to be redone each time.

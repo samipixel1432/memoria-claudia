@@ -191,6 +191,13 @@ Cada una tiene su propia página ("sub-landing") con la plantilla `collection.<s
       - En Shopify: `tovelya-happy-video-tarro` y `-preparando`.
       - La fila de videos de la landing quedó así: tarro, preparando, vaso, tomando. El del polvo suelto salió.
       - Se le entregó un tercer anuncio con estos tramos, `happy-anuncio-3.mp4` (guion en `herramientas/happy-anuncio-guion3.txt`), más los clips sueltos.
+    - **Animados (Remotion), 2026-11-01:** `happy-animado-{tarro,verano}-{vertical,feed-4x5}.mp4`, sin audio. Ver [[reference-motion-remotion-nube]].
+    - **2 videos UGC con voz nueva (2026-11-01).** Samuel dijo que lo animado "es pura foto"; pidió los 2 mejores videos con un audio parecido al original pero sin promesas.
+      - `happy-ugc-senor.mp4` (17 s): el influencer del tarro solo en el gancho (0–2,65 s, para que no se note que la boca no cuadra), luego el tarro, la copa al vaso, la foto de porciones y el cierre animado. Voz de ElevenLabs "Lizardo". Guion: "Si buscas algo rico y fácil para tu rutina, chécate este: el Happy Cleaner, mix de frutas sabor sandía. Le echas una copita al agua fría, revuelves y listo. Trae fibra e inulina, y el tarro te rinde como veinticinco porciones. Pídelo hoy: lo pagas al recibir y el envío es gratis."
+      - `happy-ugc-muchacha.mp4` (19,7 s): video `4104ffaa…` de la muchacha preparándolo y tomándolo, con los letreros de salud difuminados. El final, donde ella muestra la cintura, se cambió por el tarro en la mano y el cierre animado. Voz "Catalina". Guion: "Les cuento cuál es mi bebida favorita de la mañana: el Happy Cleaner sabor sandía. Echas una porción en agua fría, revuelves... ¡y miren ese color! Sabe delicioso, súper refrescante. Ahora viene en tarro: rinde más y ahorras más. Y lo pagas cuando te llega, con envío gratis."
+      - Los subtítulos nuevos son cajas blancas fijas que tapan los subtítulos viejos quemados (`herramientas/subtitulo-png.sh`).
+      - Se arman con `herramientas/happy-ugc-senor.sh` y `happy-ugc-muchacha.sh` (ffmpeg). Los originales y las voces quedan solo en la sesión; para rehacerlos hay que volver a subir los videos y generar las voces.
+      - **Riesgos:** los videos son de otros creadores (pueden reclamar derechos) y en el del señor los labios no cuadran del todo con la voz nueva.
     - **Para más videos** se le sugirió pedirle al proveedor los videos sin subtítulos y de la versión en tarro, o grabar uno propio cuando llegue el producto.
 - **Limpiador de vidrios con líquido (nuevo, 2026-10-29)**: producto de Dropi (ID 1918768, proveedor "Impulsa").
   - **Costo:** $6.375, precio de liquidación; antes costaba $8.500, así que puede volver a subir.
