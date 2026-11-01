@@ -15,3 +15,4 @@
 - [Less text, more images](feedback_menos_texto_mas_imagenes.md) — THE standard for every landing (approved 2026-10-22): short hero + stacked 4:5 banners with text inside + buttons every 2–3 images
 - [Images end to end](feedback_images_end_to_end.md) — generate AND upload images to the landing/ad yourself; never hand him files
 - [Home + category pages](project_home_categorias.md) — home = original info + original navy/teal colors + a button per category (cream is ONLY for the café); 4 category sub-landings; test theme 181906309367
+- [Edited ad videos (Remotion) from the cloud](reference_motion_remotion_nube.md) — install the motion-architect studio, local fonts, Playwright headless_shell; code in herramientas/motion/
